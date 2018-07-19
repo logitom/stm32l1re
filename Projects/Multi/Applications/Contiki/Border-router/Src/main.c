@@ -101,7 +101,7 @@ int main()
     BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
 
     USARTConfig();
-
+    //tset for git //
     /* Initialize RTC */
     RTC_Config();
     RTC_TimeStampConfig();
