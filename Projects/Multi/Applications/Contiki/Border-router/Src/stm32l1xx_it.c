@@ -66,6 +66,7 @@ extern volatile unsigned long seconds;
 extern volatile clock_time_t ticks;
 extern volatile uint32_t rtimer_clock;
 
+extern DMA_HandleTypeDef hdma_usart1_rx;
 
 /******************************************************************************/
 /*            Cortex-M3 Processor Exceptions Handlers                         */
@@ -413,5 +414,18 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 * @}
 */
 
+/**
+* @brief This function handles DMA1 channel5 global interrupt.
+*/
+void DMA1_Channel5_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel5_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel5_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_usart1_rx);
+  /* USER CODE BEGIN DMA1_Channel5_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel5_IRQn 1 */
+}
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

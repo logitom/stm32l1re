@@ -132,7 +132,6 @@
 ".\stm32l152re_nucleo\leds.o"
 ".\stm32l152re_nucleo\slip.o"
 --library_type=microlib --strict --scatter ".\STM32L152RE_Nucleo\border-router_l152.sct"
-
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "border-router_l152.map" -o .\STM32L152RE_Nucleo\border-router_l152.axf

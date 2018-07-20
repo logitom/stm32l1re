@@ -3,12 +3,12 @@
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/mac/mac.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\contiki-conf.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\platform-conf.h
-.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\inttypes.h
-.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\stm32l152re_nucleo\csma.o: ..\..\Inc\project-conf.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\dev/radio.h
-.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/packetbuf.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/linkaddr.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/llsec/llsec802154.h
@@ -45,4 +45,4 @@
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/mac/framer.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib/list.h
 .\stm32l152re_nucleo\csma.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib/memb.h
-.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\stm32l152re_nucleo\csma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

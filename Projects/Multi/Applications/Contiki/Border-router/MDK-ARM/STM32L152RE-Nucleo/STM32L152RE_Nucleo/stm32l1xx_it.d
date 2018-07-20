@@ -4,9 +4,9 @@
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-version.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\contiki-conf.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\platform-conf.h
-.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\inttypes.h
-.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\Inc\project-conf.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-default-conf.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\sys/process.h
@@ -40,7 +40,7 @@
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_rcc_ex.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_gpio.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_gpio_ex.h
@@ -82,7 +82,7 @@
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\BSP\STM32L1xx_Nucleo\stm32l1xx_nucleo.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\spirit1.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\dev\radio.h
-.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\stm32l152re_nucleo\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Config.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Regs.h
 .\stm32l152re_nucleo\stm32l1xx_it.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Aes.h

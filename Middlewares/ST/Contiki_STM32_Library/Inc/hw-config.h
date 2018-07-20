@@ -228,6 +228,9 @@
 #define USARTx_RX_AF                     GPIO_AF7_USART2
 
 
+/* Definition for USARTx clock resources  for USART1 */
+
+
   /* Enable sensor mask */
 #define PRESSURE_SENSOR                         0x00000001
 #define TEMPERATURE_SENSOR                      0x00000002

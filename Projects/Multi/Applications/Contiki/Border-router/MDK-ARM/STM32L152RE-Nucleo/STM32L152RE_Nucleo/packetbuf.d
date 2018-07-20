@@ -1,12 +1,12 @@
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net\packetbuf.c
-.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-net.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-version.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\contiki-conf.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\platform-conf.h
-.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\inttypes.h
-.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\Inc\project-conf.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-default-conf.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\sys/process.h
@@ -47,7 +47,7 @@
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/llsec/llsec.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/mac/mac.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\dev/radio.h
-.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\stm32l152re_nucleo\packetbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/mac/rdc.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/llsec/llsec802154.h
 .\stm32l152re_nucleo\packetbuf.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/mac/frame802154.h

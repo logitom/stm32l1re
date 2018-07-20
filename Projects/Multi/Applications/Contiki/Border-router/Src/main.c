@@ -64,6 +64,7 @@
 #include "spirit1.h"
 #include "process.h"
 
+
 /** @defgroup Border_router
   * @{
   */
@@ -73,10 +74,21 @@
   */
 
 
-/* Private function prototypes -----------------------------------------------*/
 
+
+/* Private function prototypes -----------------------------------------------*/
+static void MX_DMA_Init(void);
+
+static void MX_USART1_UART_Init();
 void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
+
+
+/* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_rx;
+uint8_t Rx[5];
+uint16_t Rx_len=5;
 
 /**
   * @brief  main()
@@ -99,9 +111,15 @@ int main()
     RadioShieldLedInit(RADIO_SHIELD_LED);
 
     BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
-
+    
     USARTConfig();
-    //tset for git //
+    
+    /* USART1 for wifi module */
+    MX_USART1_UART_Init();  
+ 
+    /* Initialize USART1 with DMA */
+    MX_DMA_Init();
+  
     /* Initialize RTC */
     RTC_Config();
     RTC_TimeStampConfig();
@@ -124,7 +142,8 @@ int main()
 
 
     Stack_6LoWPAN_Init();
-
+    HAL_UART_Receive_DMA(&huart1, (uint8_t *)Rx, 5);
+    
     while(1) {
       int r = 0;
       do {
@@ -133,6 +152,42 @@ int main()
     }
 
 }
+
+/* USART1 init function */
+static void MX_USART1_UART_Init(void)
+{
+
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    ;//_Error_Handler(__FILE__, __LINE__);
+  }
+
+}
+
+
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+
+}
+
 
 /**
   * @}

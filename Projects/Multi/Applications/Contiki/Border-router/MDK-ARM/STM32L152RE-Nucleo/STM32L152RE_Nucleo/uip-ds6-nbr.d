@@ -1,14 +1,14 @@
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net\ipv6\uip-ds6-nbr.c
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib/list.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/link-stats.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core/net/linkaddr.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\contiki-conf.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\platform-conf.h
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\inttypes.h
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\Inc\project-conf.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/packetbuf.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/llsec/llsec802154.h
@@ -52,4 +52,4 @@
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/ipv6/uip-ds6-nbr.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/ip/uip-debug.h
 .\stm32l152re_nucleo\uip-ds6-nbr.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\net/net-debug.h
-.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\stm32l152re_nucleo\uip-ds6-nbr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

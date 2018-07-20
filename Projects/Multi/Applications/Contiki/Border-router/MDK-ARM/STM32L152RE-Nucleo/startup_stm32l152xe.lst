@@ -558,14 +558,15 @@ ARM Macro Assembler    Page 9
   362 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\stm32l
-152re_nucleo\startup_stm32l152xe.d -o.\stm32l152re_nucleo\startup_stm32l152xe.o
- -IC:\project\en.x-cube-subg1_firmware\STM32CubeExpansion_SUBG1_V2.0.0\Projects
-\Multi\Applications\Contiki\Border-router\MDK-ARM\STM32L152RE-Nucleo\RTE -IC:\K
-eil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32L
-1xx_DFP\1.2.0 --predefine="__MICROLIB SETA 1" --list=startup_stm32l152xe.lst ..
-\..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L1xx\Source\Templates\arm\start
-up_stm32l152xe.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\stm32l152re_nucleo\startup_stm32l152xe.d -o.\stm32l152re_nucleo\
+startup_stm32l152xe.o -ID:\cd\stm32l1re\Projects\Multi\Applications\Contiki\Bor
+der-router\MDK-ARM\STM32L152RE-Nucleo\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1
+\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include --
+predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 518" --predef
+ine="_RTE_ SETA 1" --predefine="STM32L152xE SETA 1" --list=startup_stm32l152xe.
+lst ..\..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L1xx\Source\Templates\arm
+\startup_stm32l152xe.s
 
 
 
@@ -1635,4 +1636,4 @@ x\Source\Templates\arm\startup_stm32l152xe.s
 x\Source\Templates\arm\startup_stm32l152xe.s
 Comment: __main used once
 2 symbols
-415 symbols in table
+418 symbols in table

@@ -2,8 +2,8 @@
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Radio.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Regs.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Types.h
-.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Config.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Aes.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Calibration.h
@@ -24,4 +24,4 @@
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\MCU_Interface.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Management.h
 .\stm32l152re_nucleo\spirit_radio.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Config.h
-.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+.\stm32l152re_nucleo\spirit_radio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

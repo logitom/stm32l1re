@@ -2,8 +2,8 @@
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_PktMbus.h
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Regs.h
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Types.h
-.\stm32l152re_nucleo\spirit_pktmbus.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\stm32l152re_nucleo\spirit_pktmbus.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\stm32l152re_nucleo\spirit_pktmbus.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152re_nucleo\spirit_pktmbus.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_PktCommon.h
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Radio.h
 .\stm32l152re_nucleo\spirit_pktmbus.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Library\Inc\SPIRIT_Config.h
