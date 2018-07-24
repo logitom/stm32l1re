@@ -156,7 +156,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l1xx_hal.h"
-
+#include "st-lib.h"
 /** @addtogroup STM32L1xx_HAL_Driver
   * @{
   */
@@ -1040,7 +1040,7 @@ HAL_StatusTypeDef HAL_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData
     huart->hdmarx->XferCpltCallback = UART_DMAReceiveCplt;
 
     /* Set the UART DMA Half transfer complete callback */
-    huart->hdmarx->XferHalfCpltCallback = UART_DMARxHalfCplt;
+    huart->hdmarx->XferHalfCpltCallback = NULL; //UART_DMARxHalfCplt;
 
     /* Set the DMA error callback */
     huart->hdmarx->XferErrorCallback = UART_DMAError;
@@ -1304,6 +1304,23 @@ __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
            the HAL_UART_RxCpltCallback can be implemented in the user file
    */
 }
+
+/**
+  * @brief  Rx Transfer completed callbacks.
+  * @param  huart: Pointer to a UART_HandleTypeDef structure that contains
+  *                the configuration information for the specified UART module.
+  * @retval None
+  */
+__weak void HAL_UART_U4RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(huart);
+
+  /* NOTE: This function should not be modified, when the callback is needed,
+           the HAL_UART_RxCpltCallback can be implemented in the user file
+   */
+}
+
 
 /**
   * @brief  Rx Half Transfer completed callbacks.
@@ -1618,8 +1635,10 @@ static void UART_DMAReceiveCplt(DMA_HandleTypeDef *hdma)
       huart->State = HAL_UART_STATE_READY;
     }
   }
-  HAL_UART_RxCpltCallback(huart);
   
+   HAL_UART_U4RxCpltCallback(huart);  
+  //HAL_UART_RxCpltCallback(huart);
+  //st_lib_hal_uart_rx_cplt_callback(huart);
 }
 
 /**

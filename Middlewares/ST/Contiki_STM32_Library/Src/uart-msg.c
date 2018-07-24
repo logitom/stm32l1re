@@ -69,6 +69,7 @@ void uart_send_msg(unsigned char *);
 extern st_lib_uart_handle_typedef st_lib_uart_handle;
 /*---------------------------------------------------------------------------*/
 unsigned char databyte[1] = {0};
+extern uint8_t Rx[5];
 /*---------------------------------------------------------------------------*/
 /**
 * @brief  Rx Transfer completed callbacks.
@@ -79,8 +80,16 @@ unsigned char databyte[1] = {0};
 #ifndef USE_X_CUBE_IDW01M1
 void st_lib_hal_uart_rx_cplt_callback(st_lib_uart_handle_typedef *huart)
 {   
-  slip_input_byte(databyte[0]);
-  st_lib_hal_uart_receive_it(&st_lib_uart_handle, databyte, 1);
+  if(huart->Instance==UART4)
+  {
+    HAL_UART_Transmit(huart,(uint8_t*)Rx,5,200); 
+    HAL_UART_Receive_DMA(huart,(uint8_t*)Rx,5);
+  }
+  else if(huart->Instance == USART2)
+  {
+    //slip_input_byte(databyte[0]);
+    //st_lib_hal_uart_receive_it(&st_lib_uart_handle, databyte, 1);
+  }
 }
 #endif
 /*---------------------------------------------------------------------------*/

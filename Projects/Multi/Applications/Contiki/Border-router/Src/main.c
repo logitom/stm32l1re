@@ -79,16 +79,18 @@
 /* Private function prototypes -----------------------------------------------*/
 static void MX_DMA_Init(void);
 
-static void MX_USART1_UART_Init();
+static void MX_UART4_UART_Init();
 void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
 
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart1;
-DMA_HandleTypeDef hdma_usart1_rx;
-uint8_t Rx[5];
-uint16_t Rx_len=5;
+UART_HandleTypeDef huart4;
+DMA_HandleTypeDef hdma_uart4_rx;
+
+volatile uint8_t Rx[5];
+//uint8_t Tx[5]={'1',};
+static uint16_t Rx_len=5;
 
 /**
   * @brief  main()
@@ -112,13 +114,15 @@ int main()
 
     BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
     
-    USARTConfig();
+   // USARTConfig();
     
-    /* USART1 for wifi module */
-    MX_USART1_UART_Init();  
- 
     /* Initialize USART1 with DMA */
     MX_DMA_Init();
+
+    /* USART1 for wifi module */
+    MX_UART4_UART_Init();  
+ 
+
   
     /* Initialize RTC */
     RTC_Config();
@@ -142,30 +146,32 @@ int main()
 
 
     Stack_6LoWPAN_Init();
-    HAL_UART_Receive_DMA(&huart1, (uint8_t *)Rx, 5);
+    HAL_UART_Receive_DMA(&huart4, (uint8_t *)Rx, Rx_len);
+    
     
     while(1) {
       int r = 0;
       do {
-        r = process_run();
+       //   HAL_Delay(1000);
+         // HAL_UART_Transmit(&huart3,(uint8_t *)"test",Rx_len,200);
+          r = process_run();
       } while(r > 0);
     }
 
 }
 
 /* USART1 init function */
-static void MX_USART1_UART_Init(void)
+static void MX_UART4_UART_Init(void)
 {
-
-  huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart1) != HAL_OK)
+  huart4.Instance = UART4;
+  huart4.Init.BaudRate = 115200;
+  huart4.Init.WordLength = UART_WORDLENGTH_8B;
+  huart4.Init.StopBits = UART_STOPBITS_1;
+  huart4.Init.Parity = UART_PARITY_NONE;
+  huart4.Init.Mode = UART_MODE_TX_RX;
+  huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart4.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart4) != HAL_OK)
   {
     ;//_Error_Handler(__FILE__, __LINE__);
   }
@@ -173,19 +179,31 @@ static void MX_USART1_UART_Init(void)
 }
 
 
+void HAL_UART_U4RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    HAL_UART_Transmit(huart,(uint8_t*)Rx,5,200); 
+    HAL_UART_Receive_DMA(huart,(uint8_t*)Rx,5);
+
+  /* NOTE: This function should not be modified, when the callback is needed,
+           the HAL_UART_RxCpltCallback can be implemented in the user file
+   */
+}
+
 /** 
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void) 
 {
-  /* DMA controller clock enable */
-  __HAL_RCC_DMA1_CLK_ENABLE();
+  
+   /* DMA controller clock enable */
+  __HAL_RCC_DMA2_CLK_ENABLE();
 
   /* DMA interrupt init */
-  /* DMA1_Channel5_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+  /* DMA2_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Channel3_IRQn);
 
+  
 }
 
 
