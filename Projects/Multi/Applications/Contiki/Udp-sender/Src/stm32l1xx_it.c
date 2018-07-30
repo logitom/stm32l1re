@@ -233,12 +233,20 @@ void EXTI9_5_IRQHandler(void)
 
     spirit1_interrupt_callback();
   }
+  
+  if(__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_8))
+  {
+      HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_8);     
+  }
+  
   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_9);
   
   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_8);
   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_7);
   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_6);
   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_5);
+  
+ 
   
 #ifndef  LPM_ENABLE
   
@@ -354,6 +362,8 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *UartHandle)
 
 }
 
+
+
 /**
 * @brief  Systick Handler
 * @param  None
@@ -400,9 +410,20 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     /* Resume Tick interrupt if disabled prior to sleep mode entry*/
     HAL_ResumeTick();
 #endif
-
-
-  if (GPIO_Pin == USER_BUTTON_PIN)
+ #if 0 
+  if(GPIO_Pin==GPIO_PIN_8) 
+  {
+     //for door sensor
+     //HAL_Delay(500);
+  
+     if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8))
+     {
+        ;
+     }/* Prevent unused argument(s) compilation warning */
+   }
+ #endif    
+  //if (GPIO_Pin == USER_BUTTON_PIN)
+  if (GPIO_Pin == GPIO_PIN_8)
   {
     sensors_changed(&button_sensor);
   }

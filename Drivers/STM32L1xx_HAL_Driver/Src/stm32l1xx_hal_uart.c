@@ -1636,9 +1636,9 @@ static void UART_DMAReceiveCplt(DMA_HandleTypeDef *hdma)
     }
   }
   
-   HAL_UART_U4RxCpltCallback(huart);  
+   //HAL_UART_U4RxCpltCallback(huart);  
   //HAL_UART_RxCpltCallback(huart);
-  //st_lib_hal_uart_rx_cplt_callback(huart);
+  st_lib_hal_uart_rx_cplt_callback(huart);
 }
 
 /**

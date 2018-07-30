@@ -88,7 +88,7 @@ void Stack_6LoWPAN_Init(void);
 UART_HandleTypeDef huart4;
 DMA_HandleTypeDef hdma_uart4_rx;
 
-volatile uint8_t Rx[5];
+uint8_t Rx[5];
 //uint8_t Tx[5]={'1',};
 static uint16_t Rx_len=5;
 
@@ -114,7 +114,7 @@ int main()
 
     BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
     
-   // USARTConfig();
+    USARTConfig();
     
     /* Initialize USART1 with DMA */
     MX_DMA_Init();
@@ -152,9 +152,7 @@ int main()
     while(1) {
       int r = 0;
       do {
-       //   HAL_Delay(1000);
-         // HAL_UART_Transmit(&huart3,(uint8_t *)"test",Rx_len,200);
-          r = process_run();
+        r = process_run();
       } while(r > 0);
     }
 

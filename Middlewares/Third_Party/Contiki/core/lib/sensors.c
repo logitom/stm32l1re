@@ -38,8 +38,11 @@
 
 #include "lib/sensors.h"
 
+#include "stm32l1xx_hal.h"
+
 const extern struct sensors_sensor *sensors[];
 extern unsigned char sensors_flags[];
+extern process_event_t sender_event;
 
 #define FLAG_CHANGED    0x80
 
@@ -103,7 +106,8 @@ PROCESS_THREAD(sensors_process, ev, data)
 {
   static int i;
   static int events;
-
+  static int sensor_pin;
+  
   PROCESS_BEGIN();
 
   sensors_event = process_alloc_event();
@@ -117,13 +121,28 @@ PROCESS_THREAD(sensors_process, ev, data)
   while(1) {
 
     PROCESS_WAIT_EVENT();
-
+    
     do {
       events = 0;
       for(i = 0; i < num_sensors; ++i) {
-	if(sensors_flags[i] & FLAG_CHANGED) {
-	  if(process_post(PROCESS_BROADCAST, sensors_event, (void *)sensors[i]) == PROCESS_ERR_OK) {
-	    PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event);
+   if(sensors_flags[i] & FLAG_CHANGED) {
+     
+     
+	   HAL_Delay(2000);
+     
+     //read sensor pin
+     if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8)==GPIO_PIN_SET)
+     {
+         sensor_pin=1;      
+     }
+     else
+     {
+         sensor_pin=0; 
+     }       
+     
+     process_post(PROCESS_BROADCAST, sender_event, (void *)sensor_pin);
+     if(process_post(PROCESS_BROADCAST, sensors_event, (void *)sensors[i]) == PROCESS_ERR_OK) {
+	   PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event);
 	  }
 	  sensors_flags[i] &= ~FLAG_CHANGED;
 	  events++;

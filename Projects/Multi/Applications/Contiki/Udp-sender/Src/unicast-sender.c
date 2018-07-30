@@ -57,7 +57,7 @@
 #define SEND_TIME		(random_rand() % (SEND_INTERVAL))
 
 static struct simple_udp_connection unicast_connection;
-
+process_event_t sender_event;
 /*---------------------------------------------------------------------------*/
 PROCESS(unicast_sender_process, "Unicast sender example process");
 AUTOSTART_PROCESSES(&unicast_sender_process);
@@ -102,9 +102,12 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   static struct etimer periodic_timer;
   static struct etimer send_timer;
   uip_ipaddr_t *addr;
-
+  char buf[20];
+ 
+  
   PROCESS_BEGIN();
 
+  sender_event = process_alloc_event();
   servreg_hack_init();
 
   set_global_address();
@@ -115,6 +118,15 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   etimer_set(&periodic_timer, SEND_INTERVAL);
   while(1) {
 
+    PROCESS_WAIT_EVENT();
+    addr = servreg_hack_lookup(SERVICE_ID);
+    
+    if(addr != NULL) {
+    simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
+    }
+    
+    
+ #if 0   
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
     etimer_reset(&periodic_timer);
     etimer_set(&send_timer, SEND_TIME);
@@ -136,8 +148,9 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     } else {
       printf("Service %d not found\n", SERVICE_ID);
     }
+     #endif 
   }
-
+  
   PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/

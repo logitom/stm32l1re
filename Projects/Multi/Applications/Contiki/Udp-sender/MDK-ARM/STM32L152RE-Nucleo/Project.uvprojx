@@ -10,7 +10,7 @@
       <TargetName>STM32L152RE_Nucleo</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L152RE</Device>
@@ -328,9 +328,6 @@
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
             <vShortWch>0</vShortWch>
-            <v6Lto>0</v6Lto>
-            <v6WtE>0</v6WtE>
-            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--C99 --gnu  --diag-suppress=188  --diag-suppress=1295</MiscControls>
               <Define>X_NUCLEO_IDS01A4,STM32L152xE,USE_USART2,USE_STM32L1XX_NUCLEO,USE_HAL_DRIVER,HSE_VALUE=32000000ul,USE_STDPERIPH_DRIVER,NO_EEPROM,SPIRIT1_ST_SHIELD,SPIRIT_MODULE,USE_SPIRIT1_DEFAULT,WITH_UIP6,IAR_ARM_CM3,VECT_TAB_FLASH,WITH_UIP,WITH_ASCII,CONTIKI=1,UIP_CONF_TCP=1,NETSTACK_CONF_WITH_IPV6=1,UIP_CONF_IPV6_RPL=1,AUTOSTART_ENABLE=1,PROJECT_CONF_H=1,</Define>
@@ -348,7 +345,6 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
