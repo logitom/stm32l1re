@@ -198,12 +198,16 @@ void EXTI1_IRQHandler(void)
 
 void EXTI2_IRQHandler(void)
 {
+   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2); 
+  
   /* EXTI line interrupt detected */
   if(__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_2) != RESET) 
   { 
     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_2);
   }
-  while(1);
+  
+   HAL_GPIO_EXTI_Callback(GPIO_PIN_2);
+  //while(1);
 }
 
 void EXTI3_IRQHandler(void)
@@ -423,7 +427,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
    }
  #endif    
   //if (GPIO_Pin == USER_BUTTON_PIN)
-  if (GPIO_Pin == GPIO_PIN_8)
+  if (GPIO_Pin == GPIO_PIN_2)
   {
     sensors_changed(&button_sensor);
   }

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM32L152RE_Nucleo\udp-sender_l152.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM32L152RE_Nucleo\udp-sender_l152.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Jul 30 16:45:55 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue Jul 31 09:32:10 2018
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -823,7 +823,12 @@ Global Symbols
 <P><STRONG><a name="[28]"></a>EXTI1_IRQHandler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32l1xx_it.o(i.EXTI1_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l152xe.o(RESET)
 </UL>
-<P><STRONG><a name="[29]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32l1xx_it.o(i.EXTI2_IRQHandler))
+<P><STRONG><a name="[29]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32l1xx_it.o(i.EXTI2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = EXTI2_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; sensors_changed &rArr; get_sensor_index
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l152xe.o(RESET)
 </UL>
 <P><STRONG><a name="[2a]"></a>EXTI3_IRQHandler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32l1xx_it.o(i.EXTI3_IRQHandler))
@@ -867,13 +872,14 @@ Global Symbols
 <LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_sensors_process
 </UL>
 
-<P><STRONG><a name="[bc]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32l1xx_it.o(i.HAL_GPIO_EXTI_Callback))
+<P><STRONG><a name="[bc]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32l1xx_it.o(i.HAL_GPIO_EXTI_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_GPIO_EXTI_Callback &rArr; sensors_changed &rArr; get_sensor_index
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensors_changed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[bb]"></a>HAL_GPIO_EXTI_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32l1xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler))
@@ -882,6 +888,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_IRQHandler
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 </UL>
 
@@ -1255,7 +1262,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l152xe.o(RESET)
 </UL>
-<P><STRONG><a name="[f0]"></a>MX_GPIO_Init</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, cube_hal_l1.o(i.MX_GPIO_Init))
+<P><STRONG><a name="[f0]"></a>MX_GPIO_Init</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, cube_hal_l1.o(i.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
@@ -4795,7 +4802,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensors_changed
 </UL>
 
-<P><STRONG><a name="[2]"></a>process_thread_sensors_process</STRONG> (Thumb, 214 bytes, Stack size 32 bytes, sensors.o(i.process_thread_sensors_process))
+<P><STRONG><a name="[2]"></a>process_thread_sensors_process</STRONG> (Thumb, 212 bytes, Stack size 32 bytes, sensors.o(i.process_thread_sensors_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = process_thread_sensors_process &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin

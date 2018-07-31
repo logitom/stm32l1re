@@ -203,7 +203,7 @@
           <Type>0</Type>
           <LineNumber>136</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257238</Address>
+          <Address>134257296</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -219,7 +219,7 @@
           <Type>0</Type>
           <LineNumber>140</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257244</Address>
+          <Address>134257264</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -229,6 +229,38 @@
           <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\140</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>206</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134221020</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Src\stm32l1xx_it.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\udp_sender_l152\../../Src/stm32l1xx_it.c\206</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>122</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134258102</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\Src\unicast-sender.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\udp_sender_l152\../../Src/unicast-sender.c\122</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
