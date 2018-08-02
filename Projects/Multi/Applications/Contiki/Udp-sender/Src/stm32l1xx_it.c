@@ -59,13 +59,14 @@
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
+/* External variables --------------------------------------------------------*/
 extern UART_HandleTypeDef UartHandle;
 extern TIM_HandleTypeDef htim2;
 extern const struct sensors_sensor button_sensor;
 extern volatile unsigned long seconds;
 extern volatile clock_time_t ticks;
 extern volatile uint32_t rtimer_clock;
-
+extern DMA_HandleTypeDef hdma_adc;
 
 /******************************************************************************/
 /*            Cortex-M3 Processor Exceptions Handlers                         */
@@ -219,6 +220,22 @@ void EXTI3_IRQHandler(void)
   }
   while(1);
 }
+
+
+/**
+* @brief This function handles DMA1 channel1 global interrupt.
+*/
+void DMA1_Channel1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
+}
+
 
 
 /**

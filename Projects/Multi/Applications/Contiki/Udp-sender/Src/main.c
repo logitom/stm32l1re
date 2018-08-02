@@ -59,6 +59,11 @@
 void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
 
+/* Private variable prototypes -----------------------------------------------*/
+ADC_HandleTypeDef hadc;
+DMA_HandleTypeDef hdma_adc;
+uint32_t adcValue;
+
 /**
   * @brief  main()
   * @param  None
@@ -73,7 +78,14 @@ int main()
     HAL_EnableDBGStopMode();
     
     MX_GPIO_Init();
-    
+    MX_DMA_Init();
+    MX_ADC_Init();
+ 
+   /* USER CODE BEGIN 2 */
+   HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
+   /* USER CODE END 2 */  
+  
+  
     /* Initialize LEDs */
     BSP_LED_Init(LED2);
 
@@ -82,7 +94,7 @@ int main()
     BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
 
     USARTConfig();
-
+   
     /* Initialize RTC */
     RTC_Config();
     RTC_TimeStampConfig();
@@ -115,6 +127,22 @@ int main()
 
 }
 
+
+/* USER CODE BEGIN 4 */
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+  volatile int i;
+  HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
+  if(adcValue<=500)
+  {
+      i=0;
+  }
+  else
+  {
+      i=1;
+  }    
+}  
+/* USER CODE END 4 */
 
 
 /**

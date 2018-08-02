@@ -201,9 +201,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>136</LineNumber>
+          <LineNumber>139</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257296</Address>
+          <Address>134257262</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -212,14 +212,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\136</Expression>
+          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\139</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>140</LineNumber>
+          <LineNumber>135</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257264</Address>
+          <Address>134257294</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -228,7 +228,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\140</Expression>
+          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\135</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
@@ -245,22 +245,6 @@
           <Filename>..\..\Src\stm32l1xx_it.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\udp_sender_l152\../../Src/stm32l1xx_it.c\206</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>122</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134258102</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\Src\unicast-sender.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../Src/unicast-sender.c\122</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -970,7 +954,7 @@
 
   <Group>
     <GroupName>Middlewares/Contiki/apps/servreg-hack</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1138,7 +1122,7 @@
 
   <Group>
     <GroupName>Middlewares/Contiki/core/net/ip</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1858,7 +1842,7 @@
 
   <Group>
     <GroupName>Middlewares/Contiki_STM32_Library</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

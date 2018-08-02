@@ -53,7 +53,11 @@
   #include "stm32l1xx_nucleo.h"
 #endif
 
+
 void MX_GPIO_Init(void);
+void MX_ADC_Init(void);
+void MX_DMA_Init(void);
+
 void Error_Handler(void);
 void SystemClock_Config(void);
 
