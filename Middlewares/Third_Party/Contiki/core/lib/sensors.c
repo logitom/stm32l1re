@@ -128,7 +128,7 @@ PROCESS_THREAD(sensors_process, ev, data)
    if(sensors_flags[i] & FLAG_CHANGED) {
           
 	   HAL_Delay(1000);
-     
+#if 1     
      //read sensor pin
      if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)==GPIO_PIN_SET)
      {
@@ -138,9 +138,10 @@ PROCESS_THREAD(sensors_process, ev, data)
      {
          sensor_pin=0; 
      }       
+#endif     
      
-     process_post(PROCESS_BROADCAST, sender_event, (void *)sensor_pin);
-     if(process_post(PROCESS_BROADCAST, sensors_event, (void *)sensors[i]) == PROCESS_ERR_OK) {
+    // process_post(PROCESS_BROADCAST, sender_event, (void *)sensor_pin);
+     if(process_post(PROCESS_BROADCAST, sensors_event, (void *)sensor_pin) == PROCESS_ERR_OK) {
 	   PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event);
 	  }
 	  sensors_flags[i] &= ~FLAG_CHANGED;

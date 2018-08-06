@@ -44,6 +44,7 @@
 #include "radio_shield_config.h"
 #include "spirit1.h"
 #include "process.h"
+#include "sensors.h"
 
 /** @defgroup Udp_sender
   * @{
@@ -64,6 +65,9 @@ ADC_HandleTypeDef hadc;
 DMA_HandleTypeDef hdma_adc;
 uint32_t adcValue;
 
+/* extern variable prototypes -----------------------------------------------*/
+extern const struct sensors_sensor button_sensor;
+
 /**
   * @brief  main()
   * @param  None
@@ -78,11 +82,11 @@ int main()
     HAL_EnableDBGStopMode();
     
     MX_GPIO_Init();
-    MX_DMA_Init();
-    MX_ADC_Init();
+    //MX_DMA_Init();
+    //MX_ADC_Init();
  
    /* USER CODE BEGIN 2 */
-   HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
+  // HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
    /* USER CODE END 2 */  
   
   
@@ -140,6 +144,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
   else
   {
       i=1;
+     // sensors_changed(&button_sensor);
   }    
 }  
 /* USER CODE END 4 */

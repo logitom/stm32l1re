@@ -201,50 +201,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>139</LineNumber>
+          <LineNumber>136</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257262</Address>
+          <Address>134221802</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
+          <Filename>..\..\Src\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\139</Expression>
+          <Expression>\\udp_sender_l152\../../Src/main.c\136</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>135</LineNumber>
+          <LineNumber>152</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134257294</Address>
+          <Address>134222248</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
+          <Filename>..\..\Src\stm32l1xx_hal_msp.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\135</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>206</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134221020</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\Src\stm32l1xx_it.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../Src/stm32l1xx_it.c\206</Expression>
+          <Expression>\\udp_sender_l152\../../Src/stm32l1xx_hal_msp.c\152</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -262,6 +246,11 @@
           <count>2</count>
           <WinNumber>1</WinNumber>
           <ItemText>IDR</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>adcValue</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -866,7 +855,7 @@
 
   <Group>
     <GroupName>Example/MDK-ARM</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

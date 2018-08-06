@@ -73,6 +73,8 @@ receiver(struct simple_udp_connection *c,
 {
   printf("Data received on port %d from port %d with length %d\n",
          receiver_port, sender_port, datalen);
+
+
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -102,7 +104,8 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   static struct etimer periodic_timer;
   static struct etimer send_timer;
   uip_ipaddr_t *addr;
-  char buf[20];
+  char buf[1];
+  char msg[20];
  
   
   PROCESS_BEGIN();
@@ -115,14 +118,18 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   simple_udp_register(&unicast_connection, UDP_PORT,
                       NULL, UDP_PORT, receiver);
 
-  etimer_set(&periodic_timer, SEND_INTERVAL);
+ // etimer_set(&periodic_timer, SEND_INTERVAL);
   while(1) {
 
     PROCESS_WAIT_EVENT();
     addr = servreg_hack_lookup(SERVICE_ID);
     
     if(addr != NULL) {
-    simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
+      buf[0]=(char)data; 
+      //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
+      simple_udp_sendto(&unicast_connection, buf, 1,addr);
+      printf("door state: %d\n", buf[0]);
+      
     }
     
     

@@ -111,3 +111,4 @@
 .\stm32l152re_nucleo\main.o: ..\..\..\..\..\..\..\Middlewares\ST\Contiki_STM32_Library\Inc\spirit1-const.h
 .\stm32l152re_nucleo\main.o: ..\..\..\..\..\..\..\Drivers\BSP\X-NUCLEO-IDS01Ax\Inc\radio_shield_config.h
 .\stm32l152re_nucleo\main.o: ..\..\..\..\..\..\..\Drivers\BSP\Components\spirit1\SPIRIT1_Util\Inc\SPIRIT1_Util.h
+.\stm32l152re_nucleo\main.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.h

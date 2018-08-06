@@ -39,4 +39,5 @@ extern const struct sensors_sensor button_sensor2;
 
 #define BUTTON_SENSOR "Button"
 
+
 #endif /* BUTTON_SENSOR_H_ */

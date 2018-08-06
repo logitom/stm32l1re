@@ -79,7 +79,8 @@ typedef enum
 typedef enum 
 {  
   BUTTON_MODE_GPIO = 0,
-  BUTTON_MODE_EXTI = 1
+  BUTTON_MODE_EXTI = 1,
+  BUTTON_MODE_ADC = 2
 } ButtonMode_TypeDef; 
 
 typedef enum 
