@@ -104,7 +104,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   static struct etimer periodic_timer;
   static struct etimer send_timer;
   uip_ipaddr_t *addr;
-  char buf[1];
+  char buf[2];
   char msg[20];
  
   
@@ -125,10 +125,11 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     addr = servreg_hack_lookup(SERVICE_ID);
     
     if(addr != NULL) {
-      buf[0]=(char)data; 
+      buf[0]=0x10;
+      buf[1]=(char)data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
-      simple_udp_sendto(&unicast_connection, buf, 1,addr);
-      printf("door state: %d\n", buf[0]);
+      simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+      printf("door state: %d\n", buf[1]);
       
     }
     

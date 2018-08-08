@@ -132,11 +132,11 @@ PROCESS_THREAD(sensors_process, ev, data)
      //read sensor pin
      if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)==GPIO_PIN_SET)
      {
-         sensor_pin=1;      
+         sensor_pin=1; //door open     
      }
      else
      {
-         sensor_pin=0; 
+         sensor_pin=99; //door close
      }       
 #endif     
      
