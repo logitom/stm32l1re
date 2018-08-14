@@ -201,34 +201,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>136</LineNumber>
+          <LineNumber>123</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221802</Address>
+          <Address>134259120</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\Src\main.c</Filename>
+          <Filename>..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\lib\sensors.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../Src/main.c\136</Expression>
+          <Expression>\\udp_sender_l152\../../../../../../../Middlewares/Third_Party/Contiki/core/lib/sensors.c\123</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>152</LineNumber>
+          <LineNumber>476</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134222248</Address>
+          <Address>134221806</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\Src\stm32l1xx_hal_msp.c</Filename>
+          <Filename>..\..\Src\stm32l1xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\udp_sender_l152\../../Src/stm32l1xx_hal_msp.c\152</Expression>
+          <Expression>\\udp_sender_l152\../../Src/stm32l1xx_it.c\476</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -299,7 +299,7 @@
 
   <Group>
     <GroupName>Drivers/BSP/SPIRIT1</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -607,7 +607,7 @@
 
   <Group>
     <GroupName>Drivers/STM32L1xx_HAL_Driver</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

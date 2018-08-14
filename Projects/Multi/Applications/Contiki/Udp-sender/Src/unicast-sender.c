@@ -58,6 +58,9 @@
 
 static struct simple_udp_connection unicast_connection;
 process_event_t sender_event;
+
+//extern variable --------------------------------------
+extern  volatile uint8_t ADC_Flag;
 /*---------------------------------------------------------------------------*/
 PROCESS(unicast_sender_process, "Unicast sender example process");
 AUTOSTART_PROCESSES(&unicast_sender_process);
@@ -120,16 +123,19 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
 
  // etimer_set(&periodic_timer, SEND_INTERVAL);
   while(1) {
-
-    PROCESS_WAIT_EVENT();
+    
+    //PROCESS_WAIT_EVENT();
+    //PROCESS_WAIT_EVENT_UNTIL(ADC_Flag);
+    PROCESS_PAUSE();
+    //HAL_Delay(1000);
     addr = servreg_hack_lookup(SERVICE_ID);
     
     if(addr != NULL) {
-      buf[0]=0x10;
-      buf[1]=(char)data; 
+      buf[0]=0x20;
+      buf[1]=(char)ADC_Flag; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
-      printf("door state: %d\n", buf[1]);
+      printf("smoke sensor state: %d\n", buf[1]);
       
     }
     
@@ -138,7 +144,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
     etimer_reset(&periodic_timer);
     etimer_set(&send_timer, SEND_TIME);
-
+   
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&send_timer));
     addr = servreg_hack_lookup(SERVICE_ID);
     if(addr != NULL) {

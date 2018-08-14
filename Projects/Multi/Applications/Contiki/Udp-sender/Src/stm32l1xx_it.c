@@ -56,6 +56,9 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 
+volatile uint8_t ADC_Flag=0;
+extern uint32_t adcValue;
+extern process_event_t sender_event;
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
@@ -68,6 +71,7 @@ extern volatile clock_time_t ticks;
 extern volatile uint32_t rtimer_clock;
 extern DMA_HandleTypeDef hdma_adc;
 
+extern ADC_HandleTypeDef hadc;
 /******************************************************************************/
 /*            Cortex-M3 Processor Exceptions Handlers                         */
 /******************************************************************************/
@@ -416,6 +420,7 @@ void Contiki_SysTick_Handler(void)
 }
 
 
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 #if defined(MCU_STOP_MODE)/*if MCU is in stop mode*/
@@ -442,14 +447,37 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
         ;
      }/* Prevent unused argument(s) compilation warning */
    }
- #endif    
+    
   //if (GPIO_Pin == USER_BUTTON_PIN)
   if (GPIO_Pin == GPIO_PIN_2)
   {
     sensors_changed(&button_sensor);
   }
-
+  #endif 
 }
+
+
+/* USER CODE BEGIN 4 */
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+  volatile int i;
+  
+  
+ 
+  //HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
+  if(adcValue<=500)
+  {
+      i=0;
+      ADC_Flag=0;  
+  }
+  else
+  {
+      i=1;
+      ADC_Flag=1; 
+      //sensors_changed(&button_sensor);
+     //process_post(unicast_sender_process, sender_event, (void *)1);
+  }    
+}  
 
 /**
 * @}
