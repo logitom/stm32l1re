@@ -46,6 +46,11 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef USE_STM32L1XX_NUCLEO
+#include "stm32l1xx_hal.h"
+#include "stm32l1xx_nucleo.h"
+#endif
+
 /** @addtogroup Udp_sender
   * @{
   */
@@ -58,6 +63,13 @@
 
 static struct simple_udp_connection unicast_connection;
 process_event_t sender_event;
+
+/* ADC sensor value---------------------------------------------------------*/
+volatile uint8_t ADC_data;
+/* ADC sensor value---------------------------------------------------------*/
+
+extern ADC_HandleTypeDef hadc;
+extern uint32_t adcValue;
 /*---------------------------------------------------------------------------*/
 PROCESS(unicast_sender_process, "Unicast sender example process");
 AUTOSTART_PROCESSES(&unicast_sender_process);
@@ -102,11 +114,11 @@ set_global_address(void)
 PROCESS_THREAD(unicast_sender_process, ev, data)
 {
   static struct etimer periodic_timer;
-  static struct etimer send_timer;
+  //static struct etimer send_timer;
   uip_ipaddr_t *addr;
   char buf[2];
   char msg[20];
- 
+  
   
   PROCESS_BEGIN();
 
@@ -118,18 +130,23 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   simple_udp_register(&unicast_connection, UDP_PORT,
                       NULL, UDP_PORT, receiver);
 
- // etimer_set(&periodic_timer, SEND_INTERVAL);
+  etimer_set(&periodic_timer, SEND_INTERVAL);
+  HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
   while(1) {
 
-    PROCESS_WAIT_EVENT();
+    //PROCESS_WAIT_EVENT();
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
+    etimer_reset(&periodic_timer);
     addr = servreg_hack_lookup(SERVICE_ID);
-    
+       
     if(addr != NULL) {
-      buf[0]=0x10;
-      buf[1]=(char)data; 
+       
+      HAL_Delay(1000);
+      buf[0]=0x20;
+      buf[1]=(char)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
-      printf("door state: %d\n", buf[1]);
+      printf("ADC state: %d\n", buf[1]);
       
     }
     

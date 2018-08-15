@@ -67,6 +67,7 @@ uint32_t adcValue;
 
 /* extern variable prototypes -----------------------------------------------*/
 extern const struct sensors_sensor button_sensor;
+extern volatile uint8_t ADC_data;
 
 /**
   * @brief  main()
@@ -82,11 +83,11 @@ int main()
     HAL_EnableDBGStopMode();
     
     MX_GPIO_Init();
-    //MX_DMA_Init();
-    //MX_ADC_Init();
+    MX_DMA_Init();
+    MX_ADC_Init();
  
    /* USER CODE BEGIN 2 */
-  // HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
+   //HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
    /* USER CODE END 2 */  
   
   
@@ -135,16 +136,15 @@ int main()
 /* USER CODE BEGIN 4 */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-  volatile int i;
-  HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
+  //volatile int i;
+  //HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
   if(adcValue<=500)
   {
-      i=0;
+      ADC_data=0;
   }
   else
   {
-      i=1;
-     // sensors_changed(&button_sensor);
+      ADC_data=1;
   }    
 }  
 /* USER CODE END 4 */
