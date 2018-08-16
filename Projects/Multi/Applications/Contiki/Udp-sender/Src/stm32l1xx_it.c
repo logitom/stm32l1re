@@ -447,13 +447,13 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
         ;
      }/* Prevent unused argument(s) compilation warning */
    }
-    
+   #endif    
   //if (GPIO_Pin == USER_BUTTON_PIN)
   if (GPIO_Pin == GPIO_PIN_2)
   {
     sensors_changed(&button_sensor);
   }
-  #endif 
+
 }
 
 

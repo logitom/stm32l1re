@@ -127,8 +127,8 @@ PROCESS_THREAD(sensors_process, ev, data)
       for(i = 0; i < num_sensors; ++i) {
    if(sensors_flags[i] & FLAG_CHANGED) {
           
-	 //  HAL_Delay(1000);
-#if 0     
+	 HAL_Delay(1000);
+#if 1     
      //read sensor pin
      if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)==GPIO_PIN_SET)
      {

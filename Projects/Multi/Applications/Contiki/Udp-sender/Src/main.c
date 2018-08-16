@@ -81,8 +81,8 @@ int main()
     HAL_EnableDBGStopMode();
     
     MX_GPIO_Init();
-    MX_DMA_Init();
-    MX_ADC_Init();
+   // MX_DMA_Init();
+   // MX_ADC_Init();
  
   
   
@@ -120,7 +120,7 @@ int main()
     Stack_6LoWPAN_Init();
   
   /* USER CODE BEGIN 2 */
-    HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
+   // HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
    /* USER CODE END 2 */  
 
     while(1) {
