@@ -208,7 +208,7 @@ void MX_GPIO_Init(void)
    /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOD_CLK_ENABLE();
   
-  /*Configure GPIO pin : PD2 */
+  /*Configure GPIO pin : PC3 */
   GPIO_InitStruct.Pin = GPIO_PIN_3;
   GPIO_InitStruct.Mode =GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

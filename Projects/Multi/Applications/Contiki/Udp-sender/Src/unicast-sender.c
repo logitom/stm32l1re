@@ -142,11 +142,11 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     if(addr != NULL) {
        
       HAL_Delay(1000);
-      buf[0]=0x20;
+      buf[0]=0x30;
       buf[1]=(char)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
-      printf("ADC state: %d\n", buf[1]);
+      printf("window state: %d\n", buf[1]);
       
     }
     
