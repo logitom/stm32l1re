@@ -58,7 +58,7 @@
 #define UDP_PORT 1234
 #define SERVICE_ID 190
 
-#define SEND_INTERVAL		(5 * CLOCK_SECOND)
+#define SEND_INTERVAL		(15 * CLOCK_SECOND)
 #define SEND_TIME		(random_rand() % (SEND_INTERVAL))
 
 static struct simple_udp_connection unicast_connection;
@@ -116,8 +116,8 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   static struct etimer periodic_timer;
   //static struct etimer send_timer;
   uip_ipaddr_t *addr;
-  char buf[2];
-  char msg[20];
+  char buf[5];
+  //char msg[20];
   
   
   PROCESS_BEGIN();
@@ -142,11 +142,14 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     if(addr != NULL) {
        
       HAL_Delay(1000);
-      buf[0]=0x20;
-      buf[1]=(char)ADC_data; 
+      buf[0]=0x01; // report type: 0,periodic 1,alarm
+      buf[1]=0x05; // device ID:0x05 smoke detector
+      buf[2]=0x03; // device status
+      buf[3]=0x50; // battery
+      buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
-      printf("ADC state: %d\n", buf[1]);
+      printf("ADC state: %d\n", buf[4]);
       
     }
     
