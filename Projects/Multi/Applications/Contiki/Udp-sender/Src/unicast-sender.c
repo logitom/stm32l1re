@@ -58,7 +58,7 @@
 #define UDP_PORT 1234
 #define SERVICE_ID 190
 
-#define SEND_INTERVAL		(15 * CLOCK_SECOND)
+#define SEND_INTERVAL		(1 * CLOCK_SECOND)
 #define SEND_TIME		(random_rand() % (SEND_INTERVAL))
 
 static struct simple_udp_connection unicast_connection;
@@ -148,7 +148,8 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[3]=0x50; // battery
       buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
-      simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+      if(buf[4]>0)
+      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);}
       printf("ADC state: %d\n", buf[4]);
       
     }
@@ -172,6 +173,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
 //Use next line instead to match the simpler CSV "sender,msg" code of the receiver
 //      sprintf(buf, "%lu", message_number);
       message_number++;
+      
       simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
     } else {
       printf("Service %d not found\n", SERVICE_ID);

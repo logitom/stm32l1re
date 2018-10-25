@@ -5990,7 +5990,7 @@ Image Symbol Table
     i.process_thread_tcpip_process           0x0800a448   Section        0  tcpip.o(i.process_thread_tcpip_process)
     process_thread_tcpip_process             0x0800a449   Thumb Code   100  tcpip.o(i.process_thread_tcpip_process)
     i.process_thread_unicast_sender_process  0x0800a4b8   Section        0  unicast-sender.o(i.process_thread_unicast_sender_process)
-    process_thread_unicast_sender_process    0x0800a4b9   Thumb Code   182  unicast-sender.o(i.process_thread_unicast_sender_process)
+    process_thread_unicast_sender_process    0x0800a4b9   Thumb Code   184  unicast-sender.o(i.process_thread_unicast_sender_process)
     i.purge_registrations                    0x0800a594   Section        0  servreg-hack.o(i.purge_registrations)
     purge_registrations                      0x0800a595   Thumb Code   104  servreg-hack.o(i.purge_registrations)
     i.queuebuf_attr                          0x0800a604   Section        0  queuebuf.o(i.queuebuf_attr)
@@ -8216,11 +8216,11 @@ Image component sizes
        548         26          0         28          0       3859   uip-nd6.o
        118         14          0          0          0       2525   uip-udp-packet.o
       3804        108          0         48       1892      29384   uip6.o
-       428        130         39         18         52      33056   unicast-sender.o
+       428        128         39         18         52      33064   unicast-sender.o
          6          0          0          0          0       1641   watchdog.o
 
     ----------------------------------------------------------------------
-     55978       4394       1402        944      15032    1285484   Object Totals
+     55978       4392       1402        944      15032    1285492   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         90          0         23         10          9          0   (incl. Padding)
 
@@ -8297,9 +8297,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     59882       4490       1402        952      15032    1257428   Grand Totals
-     59882       4490       1402        372      15032    1257428   ELF Image Totals (compressed)
-     59882       4490       1402        372          0          0   ROM Totals
+     59882       4488       1402        952      15032    1257436   Grand Totals
+     59882       4488       1402        372      15032    1257436   ELF Image Totals (compressed)
+     59882       4488       1402        372          0          0   ROM Totals
 
 ==============================================================================
 
