@@ -148,7 +148,8 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[3]=0x40; // battery
       buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
-      simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+      if(buf[4]>0)
+      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);}
       printf("window state: %d\n", buf[4]);
       
     }
