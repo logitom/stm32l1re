@@ -58,7 +58,7 @@
 #define UDP_PORT 1234
 #define SERVICE_ID 190
 
-#define SEND_INTERVAL		(1 * CLOCK_SECOND)
+#define SEND_INTERVAL		(0.1 * CLOCK_SECOND)
 #define SEND_TIME		(random_rand() % (SEND_INTERVAL))
 
 static struct simple_udp_connection unicast_connection;
@@ -138,7 +138,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
     etimer_reset(&periodic_timer);
     addr = servreg_hack_lookup(SERVICE_ID);
-       
+    // printf("window adc: %d\n",adcValue );   
     if(addr != NULL) {
        
       HAL_Delay(1000);
@@ -149,8 +149,10 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       if(buf[4]>0)
-      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);}
-      printf("window state: %d\n", buf[4]);
+      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+       ADC_data=0;
+      }
+     // printf("window state: %d\n", buf[4]);
       
     }
     

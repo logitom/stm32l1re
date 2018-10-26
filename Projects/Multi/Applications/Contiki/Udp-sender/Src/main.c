@@ -138,13 +138,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
   //volatile int i;
   //HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
-  if(adcValue<=0x850)
+  if(adcValue>0xa8c)
   {
-      ADC_data=0;
-  }
-  else
-  {
-      ADC_data=1;
+      ADC_data++;
   }    
 }  
 /* USER CODE END 4 */
