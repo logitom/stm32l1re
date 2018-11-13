@@ -142,6 +142,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     if(addr != NULL) {
        
       HAL_Delay(1000);
+      BSP_LED_Toggle(LED_GREEN);
       buf[0]=0x01; // report type: 0,periodic 1,alarm
       buf[1]=0x05; // device ID:0x05 smoke detector
       buf[2]=0x03; // device status
