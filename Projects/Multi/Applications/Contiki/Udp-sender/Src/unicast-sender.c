@@ -37,7 +37,7 @@
 #include "net/ip/uip.h"
 #include "net/ipv6/uip-ds6.h"
 #include "net/ip/uip-debug.h"
-
+#include <stm32l1xx_nucleo.h>
 #include "sys/node-id.h"
 
 #include "simple-udp.h"
@@ -131,6 +131,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     addr = servreg_hack_lookup(SERVICE_ID);
     
     if(addr != NULL) {
+      BSP_LED_Toggle(LED_GREEN);
       buf[0]=0x01; // report type: 0,periodic 1,alarm
       buf[1]=0x04; // device ID:0x04 door detector
       buf[2]=0x03; // device status

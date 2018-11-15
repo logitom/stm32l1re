@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM32L152RE_Nucleo\udp-sender_l152.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM32L152RE_Nucleo\udp-sender_l152.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu Oct 25 10:34:04 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Nov 14 14:51:58 2018
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -767,7 +767,8 @@ Global Symbols
 <P><STRONG><a name="[b0]"></a>BSP_LED_Toggle</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l1xx_nucleo.o(i.BSP_LED_Toggle))
 <BR><BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_unicast_sender_process
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 
 <P><STRONG><a name="[b2]"></a>BSP_PB_GetState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l1xx_nucleo.o(i.BSP_PB_GetState))
@@ -4719,10 +4720,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[0]"></a>process_thread_unicast_sender_process</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, unicast-sender.o(i.process_thread_unicast_sender_process))
+<P><STRONG><a name="[0]"></a>process_thread_unicast_sender_process</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, unicast-sender.o(i.process_thread_unicast_sender_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = process_thread_unicast_sender_process &rArr; simple_udp_sendto &rArr; uip_udp_packet_sendto &rArr; uip_udp_packet_send &rArr; tcpip_ipv6_output &rArr; rpl_update_header &rArr; insert_hbh_header &rArr; update_hbh_header &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_sendto
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Toggle
+<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_sendto
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_register
 <LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servreg_hack_lookup
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servreg_hack_init
@@ -5758,8 +5760,8 @@ Local Symbols
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;new_dio_interval
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dio_output
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> rpl-timers.o(i.handle_dio_timer)
-<LI> rpl-timers.o(i.new_dio_interval)
+<BR>[Address Reference Count : 2]<UL><LI> rpl-timers.o(i.new_dio_interval)
+<LI> rpl-timers.o(i.handle_dio_timer)
 </UL>
 <P><STRONG><a name="[61]"></a>handle_periodic_timer</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, rpl-timers.o(i.handle_periodic_timer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 252<LI>Call Chain = handle_periodic_timer &rArr; rpl_recalculate_ranks &rArr; rpl_process_parent_event &rArr; rpl_local_repair &rArr; rpl_nullify_parent &rArr; dao_output &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
