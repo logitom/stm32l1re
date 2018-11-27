@@ -58,7 +58,7 @@
 #define UDP_PORT 1234
 #define SERVICE_ID 190
 
-#define SEND_INTERVAL		(0.1 * CLOCK_SECOND)
+#define SEND_INTERVAL		(1 * CLOCK_SECOND)
 #define SEND_TIME		(random_rand() % (SEND_INTERVAL))
 
 static struct simple_udp_connection unicast_connection;
@@ -83,9 +83,20 @@ receiver(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-  printf("Data received on port %d from port %d with length %d\n",
-         receiver_port, sender_port, datalen);
+  printf("Data received %d %d with length %d\n",
+         data[0], data[1], datalen);
 
+  uint8_t buf[2];
+  buf[0]=51;
+  buf[1]=1; //ack to host  
+  
+  
+  if(data[0]==51 && data[1]==0)
+  {
+     printf("send data \r\n"); 
+     simple_udp_sendto(&unicast_connection, buf, 2,sender_addr);
+  }
+  
 
 }
 /*---------------------------------------------------------------------------*/
@@ -140,7 +151,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     addr = servreg_hack_lookup(SERVICE_ID);
     // printf("window adc: %d\n",adcValue );   
     if(addr != NULL) {
-       
+      BSP_LED_Toggle(LED_GREEN);  
       HAL_Delay(1000);
       buf[0]=0x01; // report type: 0,periodic 1,alarm
       buf[1]=0x03; // device ID:0x03 window detector
@@ -149,10 +160,12 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       if(buf[4]>0)
-      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
-       ADC_data=0;
+      {
+       
+        simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+        ADC_data=0;
       }
-     // printf("window state: %d\n", buf[4]);
+      printf("window state: %d\n", buf[4]);
       
     }
     

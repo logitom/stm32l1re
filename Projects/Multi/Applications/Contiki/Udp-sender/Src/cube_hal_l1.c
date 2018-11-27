@@ -200,7 +200,7 @@ void MX_GPIO_Init(void)
   __GPIOC_CLK_ENABLE();
   __GPIOD_CLK_ENABLE();
   
-   /* PB8 for door sensor */
+   
   GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
@@ -208,7 +208,7 @@ void MX_GPIO_Init(void)
    /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOD_CLK_ENABLE();
   
-  /*Configure GPIO pin : PC3 */
+  /*Configure GPIO pin : PC3 WINDOW ADC */
   GPIO_InitStruct.Pin = GPIO_PIN_3;
   GPIO_InitStruct.Mode =GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
