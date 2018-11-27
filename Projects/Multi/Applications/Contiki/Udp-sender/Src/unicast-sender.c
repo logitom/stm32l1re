@@ -87,6 +87,18 @@ receiver(struct simple_udp_connection *c,
          receiver_port, sender_port, datalen);
 
 
+		 
+  uint8_t buf[2];
+  buf[0]=51;
+  buf[1]=1; //ack to host  
+  
+  
+  if(data[0]==51 && data[1]==0)
+  {
+     printf("send data \r\n"); 
+     simple_udp_sendto(&unicast_connection, buf, 2,sender_addr);
+  }  
+  
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -130,7 +142,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   simple_udp_register(&unicast_connection, UDP_PORT,
                       NULL, UDP_PORT, receiver);
 
-  etimer_set(&periodic_timer, SEND_INTERVAL);
+  etimer_set(&periodic_timer, 2*SEND_INTERVAL);
   HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
   while(1) {
 
