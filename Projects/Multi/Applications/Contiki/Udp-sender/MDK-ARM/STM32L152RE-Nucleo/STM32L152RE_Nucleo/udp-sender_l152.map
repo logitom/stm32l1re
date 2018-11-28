@@ -1601,7 +1601,9 @@ Section Cross References
     unicast-sender.o(i.process_thread_unicast_sender_process) refers to unicast-sender.o(i.receiver) for receiver
     unicast-sender.o(i.process_thread_unicast_sender_process) refers to unicast-sender.o(.bss) for .bss
     unicast-sender.o(i.receiver) refers to printf8.o(i.__0printf$8) for __2printf
+    unicast-sender.o(i.receiver) refers to strlen.o(.text) for strlen
     unicast-sender.o(i.receiver) refers to simple-udp.o(i.simple_udp_sendto) for simple_udp_sendto
+    unicast-sender.o(i.receiver) refers to unicast-sender.o(.data) for .data
     unicast-sender.o(i.receiver) refers to unicast-sender.o(.bss) for .bss
     unicast-sender.o(i.set_global_address) refers to uip-ds6.o(i.uip_ds6_set_addr_iid) for uip_ds6_set_addr_iid
     unicast-sender.o(i.set_global_address) refers to uip-ds6.o(i.uip_ds6_addr_add) for uip_ds6_addr_add
@@ -5196,40 +5198,40 @@ Image Symbol Table
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
     ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
     ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmoveb.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmoveb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmovea.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strcasecmp.c     0x00000000   Number         0  strcasecmp.o ABSOLUTE
@@ -6002,290 +6004,290 @@ Image Symbol Table
     i.rank_via_parent                        0x08009ffe   Section        0  rpl-mrhof.o(i.rank_via_parent)
     rank_via_parent                          0x08009fff   Thumb Code    66  rpl-mrhof.o(i.rank_via_parent)
     i.receiver                               0x0800a040   Section        0  unicast-sender.o(i.receiver)
-    receiver                                 0x0800a041   Thumb Code    60  unicast-sender.o(i.receiver)
-    i.remove_ext_hdr                         0x0800a0c8   Section        0  uip6.o(i.remove_ext_hdr)
-    i.remove_key                             0x0800a110   Section        0  nbr-table.o(i.remove_key)
-    remove_key                               0x0800a111   Thumb Code    92  nbr-table.o(i.remove_key)
-    i.remove_parents                         0x0800a174   Section        0  rpl-dag.o(i.remove_parents)
-    remove_parents                           0x0800a175   Thumb Code    52  rpl-dag.o(i.remove_parents)
-    i.reset                                  0x0800a1ac   Section        0  rpl-mrhof.o(i.reset)
-    reset                                    0x0800a1ad   Thumb Code     2  rpl-mrhof.o(i.reset)
-    i.rexmit                                 0x0800a1ae   Section        0  csma.o(i.rexmit)
-    rexmit                                   0x0800a1af   Thumb Code    20  csma.o(i.rexmit)
-    i.rm_routelist                           0x0800a1c4   Section        0  uip-ds6-route.o(i.rm_routelist)
-    rm_routelist                             0x0800a1c5   Thumb Code    44  uip-ds6-route.o(i.rm_routelist)
-    i.rm_routelist_callback                  0x0800a1f4   Section        0  uip-ds6-route.o(i.rm_routelist_callback)
-    rm_routelist_callback                    0x0800a1f5   Thumb Code     4  uip-ds6-route.o(i.rm_routelist_callback)
-    i.round                                  0x0800a1f8   Section        0  round.o(i.round)
-    i.rpl_add_dag                            0x0800a28c   Section        0  rpl-dag.o(i.rpl_add_dag)
-    i.rpl_add_parent                         0x0800a390   Section        0  rpl-dag.o(i.rpl_add_parent)
-    i.rpl_add_route                          0x0800a3c4   Section        0  rpl.o(i.rpl_add_route)
-    i.rpl_alloc_dag                          0x0800a400   Section        0  rpl-dag.o(i.rpl_alloc_dag)
-    i.rpl_alloc_instance                     0x0800a448   Section        0  rpl-dag.o(i.rpl_alloc_instance)
-    i.rpl_dag_init                           0x0800a490   Section        0  rpl-dag.o(i.rpl_dag_init)
-    i.rpl_find_of                            0x0800a4a4   Section        0  rpl-dag.o(i.rpl_find_of)
-    i.rpl_find_parent                        0x0800a4bc   Section        0  rpl-dag.o(i.rpl_find_parent)
-    i.rpl_find_parent_any_dag                0x0800a4d2   Section        0  rpl-dag.o(i.rpl_find_parent_any_dag)
-    i.rpl_free_dag                           0x0800a4ec   Section        0  rpl-dag.o(i.rpl_free_dag)
-    i.rpl_get_any_dag                        0x0800a528   Section        0  rpl-dag.o(i.rpl_get_any_dag)
-    i.rpl_get_dag                            0x0800a540   Section        0  rpl-dag.o(i.rpl_get_dag)
-    i.rpl_get_instance                       0x0800a58c   Section        0  rpl-dag.o(i.rpl_get_instance)
-    i.rpl_get_mode                           0x0800a5a8   Section        0  rpl.o(i.rpl_get_mode)
-    i.rpl_get_parent                         0x0800a5b4   Section        0  rpl-dag.o(i.rpl_get_parent)
-    i.rpl_get_parent_ipaddr                  0x0800a5c4   Section        0  rpl-dag.o(i.rpl_get_parent_ipaddr)
-    i.rpl_get_parent_link_stats              0x0800a5d2   Section        0  rpl-dag.o(i.rpl_get_parent_link_stats)
-    i.rpl_get_parent_lladdr                  0x0800a5e0   Section        0  rpl-dag.o(i.rpl_get_parent_lladdr)
-    i.rpl_icmp6_register_handlers            0x0800a5f0   Section        0  rpl-icmp6.o(i.rpl_icmp6_register_handlers)
-    i.rpl_icmp6_update_nbr_table             0x0800a618   Section        0  rpl-icmp6.o(i.rpl_icmp6_update_nbr_table)
-    i.rpl_init                               0x0800a640   Section        0  rpl.o(i.rpl_init)
-    i.rpl_ipv6_neighbor_callback             0x0800a688   Section        0  rpl.o(i.rpl_ipv6_neighbor_callback)
-    i.rpl_join_instance                      0x0800a6c8   Section        0  rpl-dag.o(i.rpl_join_instance)
-    i.rpl_link_neighbor_callback             0x0800a7e8   Section        0  rpl.o(i.rpl_link_neighbor_callback)
-    i.rpl_local_repair                       0x0800a848   Section        0  rpl-dag.o(i.rpl_local_repair)
-    i.rpl_move_parent                        0x0800a8d4   Section        0  rpl-dag.o(i.rpl_move_parent)
-    i.rpl_nbr_policy_find_removable          0x0800a92c   Section        0  rpl-nbr-policy.o(i.rpl_nbr_policy_find_removable)
-    i.rpl_nullify_parent                     0x0800a954   Section        0  rpl-dag.o(i.rpl_nullify_parent)
-    i.rpl_parent_is_fresh                    0x0800a9ac   Section        0  rpl-dag.o(i.rpl_parent_is_fresh)
-    i.rpl_parent_is_reachable                0x0800a9ba   Section        0  rpl-dag.o(i.rpl_parent_is_reachable)
-    i.rpl_process_dio                        0x0800a9ec   Section        0  rpl-dag.o(i.rpl_process_dio)
-    i.rpl_process_parent_event               0x0800ac1a   Section        0  rpl-dag.o(i.rpl_process_parent_event)
-    i.rpl_purge_dags                         0x0800ac94   Section        0  rpl.o(i.rpl_purge_dags)
-    i.rpl_purge_routes                       0x0800ace0   Section        0  rpl.o(i.rpl_purge_routes)
-    i.rpl_rank_via_parent                    0x0800ad44   Section        0  rpl-dag.o(i.rpl_rank_via_parent)
-    i.rpl_recalculate_ranks                  0x0800ad60   Section        0  rpl-dag.o(i.rpl_recalculate_ranks)
-    i.rpl_remove_header                      0x0800ad9c   Section        0  rpl-ext-header.o(i.rpl_remove_header)
-    i.rpl_remove_parent                      0x0800ae28   Section        0  rpl-dag.o(i.rpl_remove_parent)
-    i.rpl_remove_routes                      0x0800ae44   Section        0  rpl.o(i.rpl_remove_routes)
-    i.rpl_remove_routes_by_nexthop           0x0800ae64   Section        0  rpl.o(i.rpl_remove_routes_by_nexthop)
-    i.rpl_repair_root                        0x0800ae9e   Section        0  rpl-dag.o(i.rpl_repair_root)
-    i.rpl_reset_dio_timer                    0x0800aee2   Section        0  rpl-timers.o(i.rpl_reset_dio_timer)
-    i.rpl_reset_periodic_timer               0x0800af00   Section        0  rpl-timers.o(i.rpl_reset_periodic_timer)
-    i.rpl_schedule_dao                       0x0800af38   Section        0  rpl-timers.o(i.rpl_schedule_dao)
-    i.rpl_schedule_probing                   0x0800af40   Section        0  rpl-timers.o(i.rpl_schedule_probing)
-    i.rpl_schedule_unicast_dio_immediately   0x0800af60   Section        0  rpl-timers.o(i.rpl_schedule_unicast_dio_immediately)
-    i.rpl_select_dag                         0x0800af74   Section        0  rpl-dag.o(i.rpl_select_dag)
-    i.rpl_select_parent                      0x0800b0b4   Section        0  rpl-dag.o(i.rpl_select_parent)
-    i.rpl_set_default_route                  0x0800b102   Section        0  rpl-dag.o(i.rpl_set_default_route)
-    i.rpl_set_preferred_parent               0x0800b130   Section        0  rpl-dag.o(i.rpl_set_preferred_parent)
-    rpl_set_preferred_parent                 0x0800b131   Thumb Code    34  rpl-dag.o(i.rpl_set_preferred_parent)
-    i.rpl_set_prefix                         0x0800b158   Section        0  rpl-dag.o(i.rpl_set_prefix)
-    i.rpl_update_header                      0x0800b1b4   Section        0  rpl-ext-header.o(i.rpl_update_header)
-    i.rpl_verify_hbh_header                  0x0800b224   Section        0  rpl-ext-header.o(i.rpl_verify_hbh_header)
-    i.rtimer_arch_init                       0x0800b318   Section        0  rtimer-arch.o(i.rtimer_arch_init)
-    i.rtimer_arch_now                        0x0800b3ac   Section        0  rtimer-arch.o(i.rtimer_arch_now)
-    i.rtimer_init                            0x0800b3b8   Section        0  rtimer.o(i.rtimer_init)
-    i.schedule_dao                           0x0800b3bc   Section        0  rpl-timers.o(i.schedule_dao)
-    schedule_dao                             0x0800b3bd   Thumb Code    80  rpl-timers.o(i.schedule_dao)
-    i.schedule_transmission                  0x0800b410   Section        0  csma.o(i.schedule_transmission)
-    schedule_transmission                    0x0800b411   Thumb Code    66  csma.o(i.schedule_transmission)
-    i.send                                   0x0800b45c   Section        0  nullsec.o(i.send)
-    send                                     0x0800b45d   Thumb Code    28  nullsec.o(i.send)
-    i.send_list                              0x0800b47c   Section        0  nullrdc.o(i.send_list)
-    send_list                                0x0800b47d   Thumb Code    36  nullrdc.o(i.send_list)
-    i.send_one_packet                        0x0800b4a0   Section        0  nullrdc.o(i.send_one_packet)
-    send_one_packet                          0x0800b4a1   Thumb Code    92  nullrdc.o(i.send_one_packet)
-    i.send_packet                            0x0800b508   Section        0  sicslowpan.o(i.send_packet)
-    send_packet                              0x0800b509   Thumb Code    28  sicslowpan.o(i.send_packet)
-    i.send_packet                            0x0800b52c   Section        0  csma.o(i.send_packet)
-    send_packet                              0x0800b52d   Thumb Code   298  csma.o(i.send_packet)
-    i.send_packet                            0x0800b65c   Section        0  nullrdc.o(i.send_packet)
-    send_packet                              0x0800b65d   Thumb Code     4  nullrdc.o(i.send_packet)
-    i.send_udp_packet                        0x0800b660   Section        0  servreg-hack.o(i.send_udp_packet)
-    send_udp_packet                          0x0800b661   Thumb Code   174  servreg-hack.o(i.send_udp_packet)
-    i.sensors_changed                        0x0800b714   Section        0  sensors.o(i.sensors_changed)
-    i.servreg_hack_init                      0x0800b738   Section        0  servreg-hack.o(i.servreg_hack_init)
-    i.servreg_hack_list_head                 0x0800b76c   Section        0  servreg-hack.o(i.servreg_hack_list_head)
-    i.servreg_hack_lookup                    0x0800b784   Section        0  servreg-hack.o(i.servreg_hack_lookup)
-    i.set16                                  0x0800b7aa   Section        0  rpl-icmp6.o(i.set16)
-    set16                                    0x0800b7ab   Thumb Code    10  rpl-icmp6.o(i.set16)
-    i.set32                                  0x0800b7b4   Section        0  rpl-icmp6.o(i.set32)
-    set32                                    0x0800b7b5   Thumb Code    22  rpl-icmp6.o(i.set32)
-    i.set_dao_lifetime_timer                 0x0800b7cc   Section        0  rpl-timers.o(i.set_dao_lifetime_timer)
-    set_dao_lifetime_timer                   0x0800b7cd   Thumb Code    68  rpl-timers.o(i.set_dao_lifetime_timer)
-    i.set_global_address                     0x0800b814   Section        0  unicast-sender.o(i.set_global_address)
-    set_global_address                       0x0800b815   Thumb Code   106  unicast-sender.o(i.set_global_address)
-    i.set_ip_from_prefix                     0x0800b8a0   Section        0  rpl-dag.o(i.set_ip_from_prefix)
-    set_ip_from_prefix                       0x0800b8a1   Thumb Code    38  rpl-dag.o(i.set_ip_from_prefix)
-    i.set_packet_attrs                       0x0800b8cc   Section        0  sicslowpan.o(i.set_packet_attrs)
-    set_packet_attrs                         0x0800b8cd   Thumb Code    58  sicslowpan.o(i.set_packet_attrs)
-    i.sicslowpan_init                        0x0800b90c   Section        0  sicslowpan.o(i.sicslowpan_init)
-    i.simple_udp_register                    0x0800b930   Section        0  simple-udp.o(i.simple_udp_register)
-    i.simple_udp_sendto                      0x0800b9b0   Section        0  simple-udp.o(i.simple_udp_sendto)
-    i.spirit1_arch_refresh_status            0x0800b9cc   Section        0  spirit1-arch.o(i.spirit1_arch_refresh_status)
-    i.spirit1_interrupt_callback             0x0800ba74   Section        0  spirit1.o(i.spirit1_interrupt_callback)
-    i.spirit_radio_channel_clear             0x0800bb38   Section        0  spirit1.o(i.spirit_radio_channel_clear)
-    spirit_radio_channel_clear               0x0800bb39   Thumb Code   196  spirit1.o(i.spirit_radio_channel_clear)
-    i.spirit_radio_init                      0x0800bc0c   Section        0  spirit1.o(i.spirit_radio_init)
-    spirit_radio_init                        0x0800bc0d   Thumb Code   278  spirit1.o(i.spirit_radio_init)
-    i.spirit_radio_off                       0x0800bd3c   Section        0  spirit1.o(i.spirit_radio_off)
-    spirit_radio_off                         0x0800bd3d   Thumb Code   152  spirit1.o(i.spirit_radio_off)
-    i.spirit_radio_on                        0x0800bddc   Section        0  spirit1.o(i.spirit_radio_on)
-    spirit_radio_on                          0x0800bddd   Thumb Code   176  spirit1.o(i.spirit_radio_on)
-    i.spirit_radio_pending_packet            0x0800be90   Section        0  spirit1.o(i.spirit_radio_pending_packet)
-    spirit_radio_pending_packet              0x0800be91   Thumb Code    12  spirit1.o(i.spirit_radio_pending_packet)
-    i.spirit_radio_prepare                   0x0800bea0   Section        0  spirit1.o(i.spirit_radio_prepare)
-    spirit_radio_prepare                     0x0800bea1   Thumb Code    72  spirit1.o(i.spirit_radio_prepare)
-    i.spirit_radio_read                      0x0800beec   Section        0  spirit1.o(i.spirit_radio_read)
-    spirit_radio_read                        0x0800beed   Thumb Code   182  spirit1.o(i.spirit_radio_read)
-    i.spirit_radio_receiving_packet          0x0800bfac   Section        0  spirit1.o(i.spirit_radio_receiving_packet)
-    spirit_radio_receiving_packet            0x0800bfad   Thumb Code     6  spirit1.o(i.spirit_radio_receiving_packet)
-    i.spirit_radio_send                      0x0800bfb8   Section        0  spirit1.o(i.spirit_radio_send)
-    spirit_radio_send                        0x0800bfb9   Thumb Code    24  spirit1.o(i.spirit_radio_send)
-    i.spirit_radio_transmit                  0x0800bfd0   Section        0  spirit1.o(i.spirit_radio_transmit)
-    spirit_radio_transmit                    0x0800bfd1   Thumb Code   272  spirit1.o(i.spirit_radio_transmit)
-    i.spirit_set_ready_state                 0x0800c0ec   Section        0  spirit1.o(i.spirit_set_ready_state)
-    i.start_periodic_tcp_timer               0x0800c13c   Section        0  tcpip.o(i.start_periodic_tcp_timer)
-    start_periodic_tcp_timer                 0x0800c13d   Thumb Code    24  tcpip.o(i.start_periodic_tcp_timer)
-    i.status                                 0x0800c158   Section        0  button-sensor.o(i.status)
-    status                                   0x0800c159   Thumb Code    14  button-sensor.o(i.status)
-    i.status                                 0x0800c16c   Section        0  radio-sensor.o(i.status)
-    status                                   0x0800c16d   Thumb Code    14  radio-sensor.o(i.status)
-    i.stimer_expired                         0x0800c180   Section        0  stimer.o(i.stimer_expired)
-    i.stimer_set                             0x0800c1a0   Section        0  stimer.o(i.stimer_set)
-    i.store_fragment                         0x0800c1b0   Section        0  sicslowpan.o(i.store_fragment)
-    store_fragment                           0x0800c1b1   Thumb Code    90  sicslowpan.o(i.store_fragment)
-    i.tcpip_input                            0x0800c214   Section        0  tcpip.o(i.tcpip_input)
-    i.tcpip_ipv6_output                      0x0800c238   Section        0  tcpip.o(i.tcpip_ipv6_output)
-    i.tcpip_output                           0x0800c2e4   Section        0  tcpip.o(i.tcpip_output)
-    i.tcpip_set_outputfunc                   0x0800c2fc   Section        0  tcpip.o(i.tcpip_set_outputfunc)
-    i.tcpip_uipcall                          0x0800c308   Section        0  tcpip.o(i.tcpip_uipcall)
-    i.timer_expired                          0x0800c374   Section        0  timer.o(i.timer_expired)
-    i.timer_reset                            0x0800c390   Section        0  timer.o(i.timer_reset)
-    i.timer_restart                          0x0800c39a   Section        0  timer.o(i.timer_restart)
-    i.timer_set                              0x0800c3a6   Section        0  timer.o(i.timer_set)
-    i.transmit_packet_list                   0x0800c3b4   Section        0  csma.o(i.transmit_packet_list)
-    transmit_packet_list                     0x0800c3b5   Thumb Code    32  csma.o(i.transmit_packet_list)
-    i.tx_done                                0x0800c3dc   Section        0  csma.o(i.tx_done)
-    tx_done                                  0x0800c3dd   Thumb Code    42  csma.o(i.tx_done)
-    i.uart_send_char                         0x0800c408   Section        0  console.o(i.uart_send_char)
-    i.udp_broadcast_new                      0x0800c420   Section        0  tcpip.o(i.udp_broadcast_new)
-    i.udp_new                                0x0800c464   Section        0  tcpip.o(i.udp_new)
-    i.uip_add32                              0x0800c484   Section        0  uip6.o(i.uip_add32)
-    i.uip_add_rcv_nxt                        0x0800c4e0   Section        0  uip6.o(i.uip_add_rcv_nxt)
-    uip_add_rcv_nxt                          0x0800c4e1   Thumb Code    38  uip6.o(i.uip_add_rcv_nxt)
-    i.uip_debug_ipaddr_print                 0x0800c50c   Section        0  uip-debug.o(i.uip_debug_ipaddr_print)
-    i.uip_ds6_addr_add                       0x0800c5cc   Section        0  uip-ds6.o(i.uip_ds6_addr_add)
-    i.uip_ds6_addr_lookup                    0x0800c65c   Section        0  uip-ds6.o(i.uip_ds6_addr_lookup)
-    i.uip_ds6_addr_rm                        0x0800c688   Section        0  uip-ds6.o(i.uip_ds6_addr_rm)
-    i.uip_ds6_compute_reachable_time         0x0800c6d0   Section        0  uip-ds6.o(i.uip_ds6_compute_reachable_time)
-    i.uip_ds6_defrt_add                      0x0800c704   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_add)
-    i.uip_ds6_defrt_choose                   0x0800c75c   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_choose)
-    i.uip_ds6_defrt_lookup                   0x0800c790   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_lookup)
-    i.uip_ds6_defrt_periodic                 0x0800c7bc   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_periodic)
-    i.uip_ds6_defrt_rm                       0x0800c7f0   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_rm)
-    i.uip_ds6_get_link_local                 0x0800c830   Section        0  uip-ds6.o(i.uip_ds6_get_link_local)
-    i.uip_ds6_init                           0x0800c870   Section        0  uip-ds6.o(i.uip_ds6_init)
-    i.uip_ds6_is_addr_onlink                 0x0800c940   Section        0  uip-ds6.o(i.uip_ds6_is_addr_onlink)
-    i.uip_ds6_link_neighbor_callback         0x0800c97c   Section        0  uip-ds6-nbr.o(i.uip_ds6_link_neighbor_callback)
-    i.uip_ds6_list_loop                      0x0800c9b4   Section        0  uip-ds6.o(i.uip_ds6_list_loop)
-    i.uip_ds6_maddr_add                      0x0800c9fc   Section        0  uip-ds6.o(i.uip_ds6_maddr_add)
-    i.uip_ds6_maddr_lookup                   0x0800ca3c   Section        0  uip-ds6.o(i.uip_ds6_maddr_lookup)
-    i.uip_ds6_maddr_rm                       0x0800ca68   Section        0  uip-ds6.o(i.uip_ds6_maddr_rm)
-    i.uip_ds6_nbr_add                        0x0800ca74   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_add)
-    i.uip_ds6_nbr_get_ll                     0x0800caa8   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_get_ll)
-    i.uip_ds6_nbr_ipaddr_from_lladdr         0x0800cab8   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_ipaddr_from_lladdr)
-    i.uip_ds6_nbr_ll_lookup                  0x0800cabc   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_ll_lookup)
-    i.uip_ds6_nbr_lladdr_from_ipaddr         0x0800cacc   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_lladdr_from_ipaddr)
-    i.uip_ds6_nbr_lookup                     0x0800cae0   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_lookup)
-    i.uip_ds6_nbr_rm                         0x0800cb18   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_rm)
-    i.uip_ds6_neighbors_init                 0x0800cb38   Section        0  uip-ds6-nbr.o(i.uip_ds6_neighbors_init)
-    i.uip_ds6_periodic                       0x0800cb54   Section        0  uip-ds6.o(i.uip_ds6_periodic)
-    i.uip_ds6_prefix_add                     0x0800cb9c   Section        0  uip-ds6.o(i.uip_ds6_prefix_add)
-    i.uip_ds6_route_add                      0x0800cbf4   Section        0  uip-ds6-route.o(i.uip_ds6_route_add)
-    i.uip_ds6_route_head                     0x0800ccd4   Section        0  uip-ds6-route.o(i.uip_ds6_route_head)
-    i.uip_ds6_route_init                     0x0800cce0   Section        0  uip-ds6-route.o(i.uip_ds6_route_init)
-    i.uip_ds6_route_is_nexthop               0x0800cd1c   Section        0  uip-ds6-route.o(i.uip_ds6_route_is_nexthop)
-    i.uip_ds6_route_lookup                   0x0800cd40   Section        0  uip-ds6-route.o(i.uip_ds6_route_lookup)
-    i.uip_ds6_route_next                     0x0800cda4   Section        0  uip-ds6-route.o(i.uip_ds6_route_next)
-    i.uip_ds6_route_nexthop                  0x0800cdb0   Section        0  uip-ds6-route.o(i.uip_ds6_route_nexthop)
-    i.uip_ds6_route_rm                       0x0800cdd0   Section        0  uip-ds6-route.o(i.uip_ds6_route_rm)
-    i.uip_ds6_select_src                     0x0800ce64   Section        0  uip-ds6.o(i.uip_ds6_select_src)
-    i.uip_ds6_set_addr_iid                   0x0800cf00   Section        0  uip-ds6.o(i.uip_ds6_set_addr_iid)
-    i.uip_htonl                              0x0800cf12   Section        0  uip6.o(i.uip_htonl)
-    i.uip_icmp6_error_output                 0x0800cf18   Section        0  uip-icmp6.o(i.uip_icmp6_error_output)
-    i.uip_icmp6_init                         0x0800d034   Section        0  uip-icmp6.o(i.uip_icmp6_init)
-    i.uip_icmp6_input                        0x0800d04c   Section        0  uip-icmp6.o(i.uip_icmp6_input)
-    i.uip_icmp6_register_input_handler       0x0800d08c   Section        0  uip-icmp6.o(i.uip_icmp6_register_input_handler)
-    i.uip_icmp6_send                         0x0800d09c   Section        0  uip-icmp6.o(i.uip_icmp6_send)
-    i.uip_icmp6chksum                        0x0800d11c   Section        0  uip6.o(i.uip_icmp6chksum)
-    i.uip_init                               0x0800d124   Section        0  uip6.o(i.uip_init)
-    i.uip_nd6_init                           0x0800d180   Section        0  uip-nd6.o(i.uip_nd6_init)
-    i.uip_process                            0x0800d18c   Section        0  uip6.o(i.uip_process)
-    i.uip_tcpchksum                          0x0800dd48   Section        0  uip6.o(i.uip_tcpchksum)
-    i.uip_udp_new                            0x0800dd50   Section        0  uip6.o(i.uip_udp_new)
-    i.uip_udp_packet_send                    0x0800ddec   Section        0  uip-udp-packet.o(i.uip_udp_packet_send)
-    i.uip_udp_packet_sendto                  0x0800de24   Section        0  uip-udp-packet.o(i.uip_udp_packet_sendto)
-    i.uip_udpchksum                          0x0800de62   Section        0  uip6.o(i.uip_udpchksum)
-    i.uip_unlisten                           0x0800de68   Section        0  uip6.o(i.uip_unlisten)
-    i.uncompress_addr                        0x0800de88   Section        0  sicslowpan.o(i.uncompress_addr)
-    uncompress_addr                          0x0800de89   Thumb Code   110  sicslowpan.o(i.uncompress_addr)
-    i.uncompress_hdr_iphc                    0x0800defc   Section        0  sicslowpan.o(i.uncompress_hdr_iphc)
-    uncompress_hdr_iphc                      0x0800defd   Thumb Code   720  sicslowpan.o(i.uncompress_hdr_iphc)
-    i.update_hbh_header                      0x0800e1d8   Section        0  rpl-ext-header.o(i.update_hbh_header)
-    update_hbh_header                        0x0800e1d9   Thumb Code   204  rpl-ext-header.o(i.update_hbh_header)
-    i.update_metric_container                0x0800e2ac   Section        0  rpl-mrhof.o(i.update_metric_container)
-    update_metric_container                  0x0800e2ad   Thumb Code     6  rpl-mrhof.o(i.update_metric_container)
-    i.update_nbr                             0x0800e2b4   Section        0  rpl-nbr-policy.o(i.update_nbr)
-    update_nbr                               0x0800e2b5   Thumb Code   194  rpl-nbr-policy.o(i.update_nbr)
-    i.update_time                            0x0800e388   Section        0  etimer.o(i.update_time)
-    update_time                              0x0800e389   Thumb Code    50  etimer.o(i.update_time)
-    i.upper_layer_chksum                     0x0800e3c0   Section        0  uip6.o(i.upper_layer_chksum)
-    upper_layer_chksum                       0x0800e3c1   Thumb Code    72  uip6.o(i.upper_layer_chksum)
-    i.value                                  0x0800e410   Section        0  button-sensor.o(i.value)
-    value                                    0x0800e411   Thumb Code     6  button-sensor.o(i.value)
-    i.value                                  0x0800e418   Section        0  radio-sensor.o(i.value)
-    value                                    0x0800e419   Thumb Code    56  radio-sensor.o(i.value)
-    i.watchdog_init                          0x0800e458   Section        0  watchdog.o(i.watchdog_init)
-    i.watchdog_periodic                      0x0800e45a   Section        0  watchdog.o(i.watchdog_periodic)
-    i.watchdog_start                         0x0800e45c   Section        0  watchdog.o(i.watchdog_start)
-    .constdata                               0x0800e45e   Section        8  spirit_management.o(.constdata)
-    s_vectcBandRegValue                      0x0800e45e   Data           4  spirit_management.o(.constdata)
-    s_vectcBHalfFactor                       0x0800e462   Data           4  spirit_management.o(.constdata)
-    .constdata                               0x0800e468   Section      340  spirit_radio.o(.constdata)
-    s_vectcBHalfFactor                       0x0800e468   Data           4  spirit_radio.o(.constdata)
-    s_vectcBandRegValue                      0x0800e46c   Data           4  spirit_radio.o(.constdata)
-    s_vectnBandwidth26M                      0x0800e470   Data         180  spirit_radio.o(.constdata)
-    s_vectnVCOFreq                           0x0800e524   Data          32  spirit_radio.o(.constdata)
-    fPowerFactors                            0x0800e544   Data         120  spirit_radio.o(.constdata)
-    .constdata                               0x0800e5bc   Section        6  stm32l1xx_nucleo.o(.constdata)
-    .constdata                               0x0800e5c4   Section       72  radio_gpio.o(.constdata)
-    aRADIO_GPIO_IRQn                         0x0800e5c4   Data           4  radio_gpio.o(.constdata)
-    aRADIO_GPIO_PIN                          0x0800e5c8   Data          10  radio_gpio.o(.constdata)
-    aRADIO_GPIO_SPEED                        0x0800e5d4   Data          20  radio_gpio.o(.constdata)
-    aRADIO_GPIO_PUPD                         0x0800e5e8   Data          20  radio_gpio.o(.constdata)
-    aRADIO_GPIO_EXTI_MODE                    0x0800e5fc   Data          16  radio_gpio.o(.constdata)
-    .constdata                               0x0800e60c   Section        2  radio_shield_config.o(.constdata)
-    .constdata                               0x0800e60e   Section       25  system_stm32l1xx.o(.constdata)
-    .constdata                               0x0800e627   Section        8  system_stm32l1xx.o(.constdata)
-    .constdata                               0x0800e630   Section        8  unicast-sender.o(.constdata)
-    .constdata                               0x0800e638   Section        8  linkaddr.o(.constdata)
-    .constdata                               0x0800e640   Section       18  sicslowpan.o(.constdata)
-    ttl_values                               0x0800e64e   Data           4  sicslowpan.o(.constdata)
-    .constdata                               0x0800e654   Section       12  sicslowpan.o(.constdata)
-    .constdata                               0x0800e660   Section       16  nullsec.o(.constdata)
-    .constdata                               0x0800e670   Section       28  csma.o(.constdata)
-    .constdata                               0x0800e68c   Section       12  framer-802154.o(.constdata)
-    .constdata                               0x0800e698   Section       32  nullrdc.o(.constdata)
-    .constdata                               0x0800e6b8   Section        4  rpl-dag.o(.constdata)
-    objective_functions                      0x0800e6b8   Data           4  rpl-dag.o(.constdata)
-    .constdata                               0x0800e6bc   Section       16  button-sensor.o(.constdata)
-    .constdata                               0x0800e6cc   Section       16  radio-sensor.o(.constdata)
-    .constdata                               0x0800e6dc   Section       56  spirit1.o(.constdata)
-    .constdata                               0x0800e714   Section       48  spirit1.o(.constdata)
-    .conststring                             0x0800e744   Section       31  unicast-sender.o(.conststring)
-    .conststring                             0x0800e764   Section      157  servreg-hack.o(.conststring)
-    .conststring                             0x0800e804   Section        8  sensors.o(.conststring)
-    .conststring                             0x0800e80c   Section       19  simple-udp.o(.conststring)
-    .conststring                             0x0800e820   Section       13  tcpip.o(.conststring)
-    .conststring                             0x0800e830   Section       11  sicslowpan.o(.conststring)
-    .conststring                             0x0800e83c   Section        8  nullsec.o(.conststring)
-    .conststring                             0x0800e844   Section        5  csma.o(.conststring)
-    .conststring                             0x0800e84c   Section        8  nullrdc.o(.conststring)
-    .conststring                             0x0800e854   Section       15  ctimer.o(.conststring)
-    .conststring                             0x0800e864   Section       12  etimer.o(.conststring)
-    .conststring                             0x0800e870   Section        7  button-sensor.o(.conststring)
-    .conststring                             0x0800e878   Section        6  radio-sensor.o(.conststring)
-    .conststring                             0x0800e880   Section       20  spirit1.o(.conststring)
+    receiver                                 0x0800a041   Thumb Code    66  unicast-sender.o(i.receiver)
+    i.remove_ext_hdr                         0x0800a0b8   Section        0  uip6.o(i.remove_ext_hdr)
+    i.remove_key                             0x0800a100   Section        0  nbr-table.o(i.remove_key)
+    remove_key                               0x0800a101   Thumb Code    92  nbr-table.o(i.remove_key)
+    i.remove_parents                         0x0800a164   Section        0  rpl-dag.o(i.remove_parents)
+    remove_parents                           0x0800a165   Thumb Code    52  rpl-dag.o(i.remove_parents)
+    i.reset                                  0x0800a19c   Section        0  rpl-mrhof.o(i.reset)
+    reset                                    0x0800a19d   Thumb Code     2  rpl-mrhof.o(i.reset)
+    i.rexmit                                 0x0800a19e   Section        0  csma.o(i.rexmit)
+    rexmit                                   0x0800a19f   Thumb Code    20  csma.o(i.rexmit)
+    i.rm_routelist                           0x0800a1b4   Section        0  uip-ds6-route.o(i.rm_routelist)
+    rm_routelist                             0x0800a1b5   Thumb Code    44  uip-ds6-route.o(i.rm_routelist)
+    i.rm_routelist_callback                  0x0800a1e4   Section        0  uip-ds6-route.o(i.rm_routelist_callback)
+    rm_routelist_callback                    0x0800a1e5   Thumb Code     4  uip-ds6-route.o(i.rm_routelist_callback)
+    i.round                                  0x0800a1e8   Section        0  round.o(i.round)
+    i.rpl_add_dag                            0x0800a27c   Section        0  rpl-dag.o(i.rpl_add_dag)
+    i.rpl_add_parent                         0x0800a380   Section        0  rpl-dag.o(i.rpl_add_parent)
+    i.rpl_add_route                          0x0800a3b4   Section        0  rpl.o(i.rpl_add_route)
+    i.rpl_alloc_dag                          0x0800a3f0   Section        0  rpl-dag.o(i.rpl_alloc_dag)
+    i.rpl_alloc_instance                     0x0800a438   Section        0  rpl-dag.o(i.rpl_alloc_instance)
+    i.rpl_dag_init                           0x0800a480   Section        0  rpl-dag.o(i.rpl_dag_init)
+    i.rpl_find_of                            0x0800a494   Section        0  rpl-dag.o(i.rpl_find_of)
+    i.rpl_find_parent                        0x0800a4ac   Section        0  rpl-dag.o(i.rpl_find_parent)
+    i.rpl_find_parent_any_dag                0x0800a4c2   Section        0  rpl-dag.o(i.rpl_find_parent_any_dag)
+    i.rpl_free_dag                           0x0800a4dc   Section        0  rpl-dag.o(i.rpl_free_dag)
+    i.rpl_get_any_dag                        0x0800a518   Section        0  rpl-dag.o(i.rpl_get_any_dag)
+    i.rpl_get_dag                            0x0800a530   Section        0  rpl-dag.o(i.rpl_get_dag)
+    i.rpl_get_instance                       0x0800a57c   Section        0  rpl-dag.o(i.rpl_get_instance)
+    i.rpl_get_mode                           0x0800a598   Section        0  rpl.o(i.rpl_get_mode)
+    i.rpl_get_parent                         0x0800a5a4   Section        0  rpl-dag.o(i.rpl_get_parent)
+    i.rpl_get_parent_ipaddr                  0x0800a5b4   Section        0  rpl-dag.o(i.rpl_get_parent_ipaddr)
+    i.rpl_get_parent_link_stats              0x0800a5c2   Section        0  rpl-dag.o(i.rpl_get_parent_link_stats)
+    i.rpl_get_parent_lladdr                  0x0800a5d0   Section        0  rpl-dag.o(i.rpl_get_parent_lladdr)
+    i.rpl_icmp6_register_handlers            0x0800a5e0   Section        0  rpl-icmp6.o(i.rpl_icmp6_register_handlers)
+    i.rpl_icmp6_update_nbr_table             0x0800a608   Section        0  rpl-icmp6.o(i.rpl_icmp6_update_nbr_table)
+    i.rpl_init                               0x0800a630   Section        0  rpl.o(i.rpl_init)
+    i.rpl_ipv6_neighbor_callback             0x0800a678   Section        0  rpl.o(i.rpl_ipv6_neighbor_callback)
+    i.rpl_join_instance                      0x0800a6b8   Section        0  rpl-dag.o(i.rpl_join_instance)
+    i.rpl_link_neighbor_callback             0x0800a7d8   Section        0  rpl.o(i.rpl_link_neighbor_callback)
+    i.rpl_local_repair                       0x0800a838   Section        0  rpl-dag.o(i.rpl_local_repair)
+    i.rpl_move_parent                        0x0800a8c4   Section        0  rpl-dag.o(i.rpl_move_parent)
+    i.rpl_nbr_policy_find_removable          0x0800a91c   Section        0  rpl-nbr-policy.o(i.rpl_nbr_policy_find_removable)
+    i.rpl_nullify_parent                     0x0800a944   Section        0  rpl-dag.o(i.rpl_nullify_parent)
+    i.rpl_parent_is_fresh                    0x0800a99c   Section        0  rpl-dag.o(i.rpl_parent_is_fresh)
+    i.rpl_parent_is_reachable                0x0800a9aa   Section        0  rpl-dag.o(i.rpl_parent_is_reachable)
+    i.rpl_process_dio                        0x0800a9dc   Section        0  rpl-dag.o(i.rpl_process_dio)
+    i.rpl_process_parent_event               0x0800ac0a   Section        0  rpl-dag.o(i.rpl_process_parent_event)
+    i.rpl_purge_dags                         0x0800ac84   Section        0  rpl.o(i.rpl_purge_dags)
+    i.rpl_purge_routes                       0x0800acd0   Section        0  rpl.o(i.rpl_purge_routes)
+    i.rpl_rank_via_parent                    0x0800ad34   Section        0  rpl-dag.o(i.rpl_rank_via_parent)
+    i.rpl_recalculate_ranks                  0x0800ad50   Section        0  rpl-dag.o(i.rpl_recalculate_ranks)
+    i.rpl_remove_header                      0x0800ad8c   Section        0  rpl-ext-header.o(i.rpl_remove_header)
+    i.rpl_remove_parent                      0x0800ae18   Section        0  rpl-dag.o(i.rpl_remove_parent)
+    i.rpl_remove_routes                      0x0800ae34   Section        0  rpl.o(i.rpl_remove_routes)
+    i.rpl_remove_routes_by_nexthop           0x0800ae54   Section        0  rpl.o(i.rpl_remove_routes_by_nexthop)
+    i.rpl_repair_root                        0x0800ae8e   Section        0  rpl-dag.o(i.rpl_repair_root)
+    i.rpl_reset_dio_timer                    0x0800aed2   Section        0  rpl-timers.o(i.rpl_reset_dio_timer)
+    i.rpl_reset_periodic_timer               0x0800aef0   Section        0  rpl-timers.o(i.rpl_reset_periodic_timer)
+    i.rpl_schedule_dao                       0x0800af28   Section        0  rpl-timers.o(i.rpl_schedule_dao)
+    i.rpl_schedule_probing                   0x0800af30   Section        0  rpl-timers.o(i.rpl_schedule_probing)
+    i.rpl_schedule_unicast_dio_immediately   0x0800af50   Section        0  rpl-timers.o(i.rpl_schedule_unicast_dio_immediately)
+    i.rpl_select_dag                         0x0800af64   Section        0  rpl-dag.o(i.rpl_select_dag)
+    i.rpl_select_parent                      0x0800b0a4   Section        0  rpl-dag.o(i.rpl_select_parent)
+    i.rpl_set_default_route                  0x0800b0f2   Section        0  rpl-dag.o(i.rpl_set_default_route)
+    i.rpl_set_preferred_parent               0x0800b120   Section        0  rpl-dag.o(i.rpl_set_preferred_parent)
+    rpl_set_preferred_parent                 0x0800b121   Thumb Code    34  rpl-dag.o(i.rpl_set_preferred_parent)
+    i.rpl_set_prefix                         0x0800b148   Section        0  rpl-dag.o(i.rpl_set_prefix)
+    i.rpl_update_header                      0x0800b1a4   Section        0  rpl-ext-header.o(i.rpl_update_header)
+    i.rpl_verify_hbh_header                  0x0800b214   Section        0  rpl-ext-header.o(i.rpl_verify_hbh_header)
+    i.rtimer_arch_init                       0x0800b308   Section        0  rtimer-arch.o(i.rtimer_arch_init)
+    i.rtimer_arch_now                        0x0800b39c   Section        0  rtimer-arch.o(i.rtimer_arch_now)
+    i.rtimer_init                            0x0800b3a8   Section        0  rtimer.o(i.rtimer_init)
+    i.schedule_dao                           0x0800b3ac   Section        0  rpl-timers.o(i.schedule_dao)
+    schedule_dao                             0x0800b3ad   Thumb Code    80  rpl-timers.o(i.schedule_dao)
+    i.schedule_transmission                  0x0800b400   Section        0  csma.o(i.schedule_transmission)
+    schedule_transmission                    0x0800b401   Thumb Code    66  csma.o(i.schedule_transmission)
+    i.send                                   0x0800b44c   Section        0  nullsec.o(i.send)
+    send                                     0x0800b44d   Thumb Code    28  nullsec.o(i.send)
+    i.send_list                              0x0800b46c   Section        0  nullrdc.o(i.send_list)
+    send_list                                0x0800b46d   Thumb Code    36  nullrdc.o(i.send_list)
+    i.send_one_packet                        0x0800b490   Section        0  nullrdc.o(i.send_one_packet)
+    send_one_packet                          0x0800b491   Thumb Code    92  nullrdc.o(i.send_one_packet)
+    i.send_packet                            0x0800b4f8   Section        0  sicslowpan.o(i.send_packet)
+    send_packet                              0x0800b4f9   Thumb Code    28  sicslowpan.o(i.send_packet)
+    i.send_packet                            0x0800b51c   Section        0  csma.o(i.send_packet)
+    send_packet                              0x0800b51d   Thumb Code   298  csma.o(i.send_packet)
+    i.send_packet                            0x0800b64c   Section        0  nullrdc.o(i.send_packet)
+    send_packet                              0x0800b64d   Thumb Code     4  nullrdc.o(i.send_packet)
+    i.send_udp_packet                        0x0800b650   Section        0  servreg-hack.o(i.send_udp_packet)
+    send_udp_packet                          0x0800b651   Thumb Code   174  servreg-hack.o(i.send_udp_packet)
+    i.sensors_changed                        0x0800b704   Section        0  sensors.o(i.sensors_changed)
+    i.servreg_hack_init                      0x0800b728   Section        0  servreg-hack.o(i.servreg_hack_init)
+    i.servreg_hack_list_head                 0x0800b75c   Section        0  servreg-hack.o(i.servreg_hack_list_head)
+    i.servreg_hack_lookup                    0x0800b774   Section        0  servreg-hack.o(i.servreg_hack_lookup)
+    i.set16                                  0x0800b79a   Section        0  rpl-icmp6.o(i.set16)
+    set16                                    0x0800b79b   Thumb Code    10  rpl-icmp6.o(i.set16)
+    i.set32                                  0x0800b7a4   Section        0  rpl-icmp6.o(i.set32)
+    set32                                    0x0800b7a5   Thumb Code    22  rpl-icmp6.o(i.set32)
+    i.set_dao_lifetime_timer                 0x0800b7bc   Section        0  rpl-timers.o(i.set_dao_lifetime_timer)
+    set_dao_lifetime_timer                   0x0800b7bd   Thumb Code    68  rpl-timers.o(i.set_dao_lifetime_timer)
+    i.set_global_address                     0x0800b804   Section        0  unicast-sender.o(i.set_global_address)
+    set_global_address                       0x0800b805   Thumb Code   106  unicast-sender.o(i.set_global_address)
+    i.set_ip_from_prefix                     0x0800b890   Section        0  rpl-dag.o(i.set_ip_from_prefix)
+    set_ip_from_prefix                       0x0800b891   Thumb Code    38  rpl-dag.o(i.set_ip_from_prefix)
+    i.set_packet_attrs                       0x0800b8bc   Section        0  sicslowpan.o(i.set_packet_attrs)
+    set_packet_attrs                         0x0800b8bd   Thumb Code    58  sicslowpan.o(i.set_packet_attrs)
+    i.sicslowpan_init                        0x0800b8fc   Section        0  sicslowpan.o(i.sicslowpan_init)
+    i.simple_udp_register                    0x0800b920   Section        0  simple-udp.o(i.simple_udp_register)
+    i.simple_udp_sendto                      0x0800b9a0   Section        0  simple-udp.o(i.simple_udp_sendto)
+    i.spirit1_arch_refresh_status            0x0800b9bc   Section        0  spirit1-arch.o(i.spirit1_arch_refresh_status)
+    i.spirit1_interrupt_callback             0x0800ba64   Section        0  spirit1.o(i.spirit1_interrupt_callback)
+    i.spirit_radio_channel_clear             0x0800bb28   Section        0  spirit1.o(i.spirit_radio_channel_clear)
+    spirit_radio_channel_clear               0x0800bb29   Thumb Code   196  spirit1.o(i.spirit_radio_channel_clear)
+    i.spirit_radio_init                      0x0800bbfc   Section        0  spirit1.o(i.spirit_radio_init)
+    spirit_radio_init                        0x0800bbfd   Thumb Code   278  spirit1.o(i.spirit_radio_init)
+    i.spirit_radio_off                       0x0800bd2c   Section        0  spirit1.o(i.spirit_radio_off)
+    spirit_radio_off                         0x0800bd2d   Thumb Code   152  spirit1.o(i.spirit_radio_off)
+    i.spirit_radio_on                        0x0800bdcc   Section        0  spirit1.o(i.spirit_radio_on)
+    spirit_radio_on                          0x0800bdcd   Thumb Code   176  spirit1.o(i.spirit_radio_on)
+    i.spirit_radio_pending_packet            0x0800be80   Section        0  spirit1.o(i.spirit_radio_pending_packet)
+    spirit_radio_pending_packet              0x0800be81   Thumb Code    12  spirit1.o(i.spirit_radio_pending_packet)
+    i.spirit_radio_prepare                   0x0800be90   Section        0  spirit1.o(i.spirit_radio_prepare)
+    spirit_radio_prepare                     0x0800be91   Thumb Code    72  spirit1.o(i.spirit_radio_prepare)
+    i.spirit_radio_read                      0x0800bedc   Section        0  spirit1.o(i.spirit_radio_read)
+    spirit_radio_read                        0x0800bedd   Thumb Code   182  spirit1.o(i.spirit_radio_read)
+    i.spirit_radio_receiving_packet          0x0800bf9c   Section        0  spirit1.o(i.spirit_radio_receiving_packet)
+    spirit_radio_receiving_packet            0x0800bf9d   Thumb Code     6  spirit1.o(i.spirit_radio_receiving_packet)
+    i.spirit_radio_send                      0x0800bfa8   Section        0  spirit1.o(i.spirit_radio_send)
+    spirit_radio_send                        0x0800bfa9   Thumb Code    24  spirit1.o(i.spirit_radio_send)
+    i.spirit_radio_transmit                  0x0800bfc0   Section        0  spirit1.o(i.spirit_radio_transmit)
+    spirit_radio_transmit                    0x0800bfc1   Thumb Code   272  spirit1.o(i.spirit_radio_transmit)
+    i.spirit_set_ready_state                 0x0800c0dc   Section        0  spirit1.o(i.spirit_set_ready_state)
+    i.start_periodic_tcp_timer               0x0800c12c   Section        0  tcpip.o(i.start_periodic_tcp_timer)
+    start_periodic_tcp_timer                 0x0800c12d   Thumb Code    24  tcpip.o(i.start_periodic_tcp_timer)
+    i.status                                 0x0800c148   Section        0  button-sensor.o(i.status)
+    status                                   0x0800c149   Thumb Code    14  button-sensor.o(i.status)
+    i.status                                 0x0800c15c   Section        0  radio-sensor.o(i.status)
+    status                                   0x0800c15d   Thumb Code    14  radio-sensor.o(i.status)
+    i.stimer_expired                         0x0800c170   Section        0  stimer.o(i.stimer_expired)
+    i.stimer_set                             0x0800c190   Section        0  stimer.o(i.stimer_set)
+    i.store_fragment                         0x0800c1a0   Section        0  sicslowpan.o(i.store_fragment)
+    store_fragment                           0x0800c1a1   Thumb Code    90  sicslowpan.o(i.store_fragment)
+    i.tcpip_input                            0x0800c204   Section        0  tcpip.o(i.tcpip_input)
+    i.tcpip_ipv6_output                      0x0800c228   Section        0  tcpip.o(i.tcpip_ipv6_output)
+    i.tcpip_output                           0x0800c2d4   Section        0  tcpip.o(i.tcpip_output)
+    i.tcpip_set_outputfunc                   0x0800c2ec   Section        0  tcpip.o(i.tcpip_set_outputfunc)
+    i.tcpip_uipcall                          0x0800c2f8   Section        0  tcpip.o(i.tcpip_uipcall)
+    i.timer_expired                          0x0800c364   Section        0  timer.o(i.timer_expired)
+    i.timer_reset                            0x0800c380   Section        0  timer.o(i.timer_reset)
+    i.timer_restart                          0x0800c38a   Section        0  timer.o(i.timer_restart)
+    i.timer_set                              0x0800c396   Section        0  timer.o(i.timer_set)
+    i.transmit_packet_list                   0x0800c3a4   Section        0  csma.o(i.transmit_packet_list)
+    transmit_packet_list                     0x0800c3a5   Thumb Code    32  csma.o(i.transmit_packet_list)
+    i.tx_done                                0x0800c3cc   Section        0  csma.o(i.tx_done)
+    tx_done                                  0x0800c3cd   Thumb Code    42  csma.o(i.tx_done)
+    i.uart_send_char                         0x0800c3f8   Section        0  console.o(i.uart_send_char)
+    i.udp_broadcast_new                      0x0800c410   Section        0  tcpip.o(i.udp_broadcast_new)
+    i.udp_new                                0x0800c454   Section        0  tcpip.o(i.udp_new)
+    i.uip_add32                              0x0800c474   Section        0  uip6.o(i.uip_add32)
+    i.uip_add_rcv_nxt                        0x0800c4d0   Section        0  uip6.o(i.uip_add_rcv_nxt)
+    uip_add_rcv_nxt                          0x0800c4d1   Thumb Code    38  uip6.o(i.uip_add_rcv_nxt)
+    i.uip_debug_ipaddr_print                 0x0800c4fc   Section        0  uip-debug.o(i.uip_debug_ipaddr_print)
+    i.uip_ds6_addr_add                       0x0800c5bc   Section        0  uip-ds6.o(i.uip_ds6_addr_add)
+    i.uip_ds6_addr_lookup                    0x0800c64c   Section        0  uip-ds6.o(i.uip_ds6_addr_lookup)
+    i.uip_ds6_addr_rm                        0x0800c678   Section        0  uip-ds6.o(i.uip_ds6_addr_rm)
+    i.uip_ds6_compute_reachable_time         0x0800c6c0   Section        0  uip-ds6.o(i.uip_ds6_compute_reachable_time)
+    i.uip_ds6_defrt_add                      0x0800c6f4   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_add)
+    i.uip_ds6_defrt_choose                   0x0800c74c   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_choose)
+    i.uip_ds6_defrt_lookup                   0x0800c780   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_lookup)
+    i.uip_ds6_defrt_periodic                 0x0800c7ac   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_periodic)
+    i.uip_ds6_defrt_rm                       0x0800c7e0   Section        0  uip-ds6-route.o(i.uip_ds6_defrt_rm)
+    i.uip_ds6_get_link_local                 0x0800c820   Section        0  uip-ds6.o(i.uip_ds6_get_link_local)
+    i.uip_ds6_init                           0x0800c860   Section        0  uip-ds6.o(i.uip_ds6_init)
+    i.uip_ds6_is_addr_onlink                 0x0800c930   Section        0  uip-ds6.o(i.uip_ds6_is_addr_onlink)
+    i.uip_ds6_link_neighbor_callback         0x0800c96c   Section        0  uip-ds6-nbr.o(i.uip_ds6_link_neighbor_callback)
+    i.uip_ds6_list_loop                      0x0800c9a4   Section        0  uip-ds6.o(i.uip_ds6_list_loop)
+    i.uip_ds6_maddr_add                      0x0800c9ec   Section        0  uip-ds6.o(i.uip_ds6_maddr_add)
+    i.uip_ds6_maddr_lookup                   0x0800ca2c   Section        0  uip-ds6.o(i.uip_ds6_maddr_lookup)
+    i.uip_ds6_maddr_rm                       0x0800ca58   Section        0  uip-ds6.o(i.uip_ds6_maddr_rm)
+    i.uip_ds6_nbr_add                        0x0800ca64   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_add)
+    i.uip_ds6_nbr_get_ll                     0x0800ca98   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_get_ll)
+    i.uip_ds6_nbr_ipaddr_from_lladdr         0x0800caa8   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_ipaddr_from_lladdr)
+    i.uip_ds6_nbr_ll_lookup                  0x0800caac   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_ll_lookup)
+    i.uip_ds6_nbr_lladdr_from_ipaddr         0x0800cabc   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_lladdr_from_ipaddr)
+    i.uip_ds6_nbr_lookup                     0x0800cad0   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_lookup)
+    i.uip_ds6_nbr_rm                         0x0800cb08   Section        0  uip-ds6-nbr.o(i.uip_ds6_nbr_rm)
+    i.uip_ds6_neighbors_init                 0x0800cb28   Section        0  uip-ds6-nbr.o(i.uip_ds6_neighbors_init)
+    i.uip_ds6_periodic                       0x0800cb44   Section        0  uip-ds6.o(i.uip_ds6_periodic)
+    i.uip_ds6_prefix_add                     0x0800cb8c   Section        0  uip-ds6.o(i.uip_ds6_prefix_add)
+    i.uip_ds6_route_add                      0x0800cbe4   Section        0  uip-ds6-route.o(i.uip_ds6_route_add)
+    i.uip_ds6_route_head                     0x0800ccc4   Section        0  uip-ds6-route.o(i.uip_ds6_route_head)
+    i.uip_ds6_route_init                     0x0800ccd0   Section        0  uip-ds6-route.o(i.uip_ds6_route_init)
+    i.uip_ds6_route_is_nexthop               0x0800cd0c   Section        0  uip-ds6-route.o(i.uip_ds6_route_is_nexthop)
+    i.uip_ds6_route_lookup                   0x0800cd30   Section        0  uip-ds6-route.o(i.uip_ds6_route_lookup)
+    i.uip_ds6_route_next                     0x0800cd94   Section        0  uip-ds6-route.o(i.uip_ds6_route_next)
+    i.uip_ds6_route_nexthop                  0x0800cda0   Section        0  uip-ds6-route.o(i.uip_ds6_route_nexthop)
+    i.uip_ds6_route_rm                       0x0800cdc0   Section        0  uip-ds6-route.o(i.uip_ds6_route_rm)
+    i.uip_ds6_select_src                     0x0800ce54   Section        0  uip-ds6.o(i.uip_ds6_select_src)
+    i.uip_ds6_set_addr_iid                   0x0800cef0   Section        0  uip-ds6.o(i.uip_ds6_set_addr_iid)
+    i.uip_htonl                              0x0800cf02   Section        0  uip6.o(i.uip_htonl)
+    i.uip_icmp6_error_output                 0x0800cf08   Section        0  uip-icmp6.o(i.uip_icmp6_error_output)
+    i.uip_icmp6_init                         0x0800d024   Section        0  uip-icmp6.o(i.uip_icmp6_init)
+    i.uip_icmp6_input                        0x0800d03c   Section        0  uip-icmp6.o(i.uip_icmp6_input)
+    i.uip_icmp6_register_input_handler       0x0800d07c   Section        0  uip-icmp6.o(i.uip_icmp6_register_input_handler)
+    i.uip_icmp6_send                         0x0800d08c   Section        0  uip-icmp6.o(i.uip_icmp6_send)
+    i.uip_icmp6chksum                        0x0800d10c   Section        0  uip6.o(i.uip_icmp6chksum)
+    i.uip_init                               0x0800d114   Section        0  uip6.o(i.uip_init)
+    i.uip_nd6_init                           0x0800d170   Section        0  uip-nd6.o(i.uip_nd6_init)
+    i.uip_process                            0x0800d17c   Section        0  uip6.o(i.uip_process)
+    i.uip_tcpchksum                          0x0800dd38   Section        0  uip6.o(i.uip_tcpchksum)
+    i.uip_udp_new                            0x0800dd40   Section        0  uip6.o(i.uip_udp_new)
+    i.uip_udp_packet_send                    0x0800dddc   Section        0  uip-udp-packet.o(i.uip_udp_packet_send)
+    i.uip_udp_packet_sendto                  0x0800de14   Section        0  uip-udp-packet.o(i.uip_udp_packet_sendto)
+    i.uip_udpchksum                          0x0800de52   Section        0  uip6.o(i.uip_udpchksum)
+    i.uip_unlisten                           0x0800de58   Section        0  uip6.o(i.uip_unlisten)
+    i.uncompress_addr                        0x0800de78   Section        0  sicslowpan.o(i.uncompress_addr)
+    uncompress_addr                          0x0800de79   Thumb Code   110  sicslowpan.o(i.uncompress_addr)
+    i.uncompress_hdr_iphc                    0x0800deec   Section        0  sicslowpan.o(i.uncompress_hdr_iphc)
+    uncompress_hdr_iphc                      0x0800deed   Thumb Code   720  sicslowpan.o(i.uncompress_hdr_iphc)
+    i.update_hbh_header                      0x0800e1c8   Section        0  rpl-ext-header.o(i.update_hbh_header)
+    update_hbh_header                        0x0800e1c9   Thumb Code   204  rpl-ext-header.o(i.update_hbh_header)
+    i.update_metric_container                0x0800e29c   Section        0  rpl-mrhof.o(i.update_metric_container)
+    update_metric_container                  0x0800e29d   Thumb Code     6  rpl-mrhof.o(i.update_metric_container)
+    i.update_nbr                             0x0800e2a4   Section        0  rpl-nbr-policy.o(i.update_nbr)
+    update_nbr                               0x0800e2a5   Thumb Code   194  rpl-nbr-policy.o(i.update_nbr)
+    i.update_time                            0x0800e378   Section        0  etimer.o(i.update_time)
+    update_time                              0x0800e379   Thumb Code    50  etimer.o(i.update_time)
+    i.upper_layer_chksum                     0x0800e3b0   Section        0  uip6.o(i.upper_layer_chksum)
+    upper_layer_chksum                       0x0800e3b1   Thumb Code    72  uip6.o(i.upper_layer_chksum)
+    i.value                                  0x0800e400   Section        0  button-sensor.o(i.value)
+    value                                    0x0800e401   Thumb Code     6  button-sensor.o(i.value)
+    i.value                                  0x0800e408   Section        0  radio-sensor.o(i.value)
+    value                                    0x0800e409   Thumb Code    56  radio-sensor.o(i.value)
+    i.watchdog_init                          0x0800e448   Section        0  watchdog.o(i.watchdog_init)
+    i.watchdog_periodic                      0x0800e44a   Section        0  watchdog.o(i.watchdog_periodic)
+    i.watchdog_start                         0x0800e44c   Section        0  watchdog.o(i.watchdog_start)
+    .constdata                               0x0800e44e   Section        8  spirit_management.o(.constdata)
+    s_vectcBandRegValue                      0x0800e44e   Data           4  spirit_management.o(.constdata)
+    s_vectcBHalfFactor                       0x0800e452   Data           4  spirit_management.o(.constdata)
+    .constdata                               0x0800e458   Section      340  spirit_radio.o(.constdata)
+    s_vectcBHalfFactor                       0x0800e458   Data           4  spirit_radio.o(.constdata)
+    s_vectcBandRegValue                      0x0800e45c   Data           4  spirit_radio.o(.constdata)
+    s_vectnBandwidth26M                      0x0800e460   Data         180  spirit_radio.o(.constdata)
+    s_vectnVCOFreq                           0x0800e514   Data          32  spirit_radio.o(.constdata)
+    fPowerFactors                            0x0800e534   Data         120  spirit_radio.o(.constdata)
+    .constdata                               0x0800e5ac   Section        6  stm32l1xx_nucleo.o(.constdata)
+    .constdata                               0x0800e5b4   Section       72  radio_gpio.o(.constdata)
+    aRADIO_GPIO_IRQn                         0x0800e5b4   Data           4  radio_gpio.o(.constdata)
+    aRADIO_GPIO_PIN                          0x0800e5b8   Data          10  radio_gpio.o(.constdata)
+    aRADIO_GPIO_SPEED                        0x0800e5c4   Data          20  radio_gpio.o(.constdata)
+    aRADIO_GPIO_PUPD                         0x0800e5d8   Data          20  radio_gpio.o(.constdata)
+    aRADIO_GPIO_EXTI_MODE                    0x0800e5ec   Data          16  radio_gpio.o(.constdata)
+    .constdata                               0x0800e5fc   Section        2  radio_shield_config.o(.constdata)
+    .constdata                               0x0800e5fe   Section       25  system_stm32l1xx.o(.constdata)
+    .constdata                               0x0800e617   Section        8  system_stm32l1xx.o(.constdata)
+    .constdata                               0x0800e620   Section        8  unicast-sender.o(.constdata)
+    .constdata                               0x0800e628   Section        8  linkaddr.o(.constdata)
+    .constdata                               0x0800e630   Section       18  sicslowpan.o(.constdata)
+    ttl_values                               0x0800e63e   Data           4  sicslowpan.o(.constdata)
+    .constdata                               0x0800e644   Section       12  sicslowpan.o(.constdata)
+    .constdata                               0x0800e650   Section       16  nullsec.o(.constdata)
+    .constdata                               0x0800e660   Section       28  csma.o(.constdata)
+    .constdata                               0x0800e67c   Section       12  framer-802154.o(.constdata)
+    .constdata                               0x0800e688   Section       32  nullrdc.o(.constdata)
+    .constdata                               0x0800e6a8   Section        4  rpl-dag.o(.constdata)
+    objective_functions                      0x0800e6a8   Data           4  rpl-dag.o(.constdata)
+    .constdata                               0x0800e6ac   Section       16  button-sensor.o(.constdata)
+    .constdata                               0x0800e6bc   Section       16  radio-sensor.o(.constdata)
+    .constdata                               0x0800e6cc   Section       56  spirit1.o(.constdata)
+    .constdata                               0x0800e704   Section       48  spirit1.o(.constdata)
+    .conststring                             0x0800e734   Section       31  unicast-sender.o(.conststring)
+    .conststring                             0x0800e754   Section      157  servreg-hack.o(.conststring)
+    .conststring                             0x0800e7f4   Section        8  sensors.o(.conststring)
+    .conststring                             0x0800e7fc   Section       19  simple-udp.o(.conststring)
+    .conststring                             0x0800e810   Section       13  tcpip.o(.conststring)
+    .conststring                             0x0800e820   Section       11  sicslowpan.o(.conststring)
+    .conststring                             0x0800e82c   Section        8  nullsec.o(.conststring)
+    .conststring                             0x0800e834   Section        5  csma.o(.conststring)
+    .conststring                             0x0800e83c   Section        8  nullrdc.o(.conststring)
+    .conststring                             0x0800e844   Section       15  ctimer.o(.conststring)
+    .conststring                             0x0800e854   Section       12  etimer.o(.conststring)
+    .conststring                             0x0800e860   Section        7  button-sensor.o(.conststring)
+    .conststring                             0x0800e868   Section        6  radio-sensor.o(.conststring)
+    .conststring                             0x0800e870   Section       20  spirit1.o(.conststring)
     .data                                    0x20000000   Section        8  spirit_management.o(.data)
     s_cCommunicationState                    0x20000000   Data           1  spirit_management.o(.data)
     s_nDesiredFrequency                      0x20000004   Data           4  spirit_management.o(.data)
@@ -6301,7 +6303,8 @@ Image Symbol Table
     .data                                    0x20000040   Section        4  stm32l1xx_hal.o(.data)
     .data                                    0x20000044   Section        4  stm32l1xx_hal_msp.o(.data)
     .data                                    0x20000048   Section       16  unicast-sender.o(.data)
-    .data                                    0x20000058   Section        1  unicast-sender.o(.data)
+    .data                                    0x20000058   Section        3  unicast-sender.o(.data)
+    buf                                      0x20000059   Data           2  unicast-sender.o(.data)
     .data                                    0x2000005c   Section        4  servreg-hack.o(.data)
     others_services_list                     0x2000005c   Data           4  servreg-hack.o(.data)
     .data                                    0x20000060   Section       48  servreg-hack.o(.data)
@@ -6991,168 +6994,168 @@ Image Symbol Table
     queuebuf_update_attr_from_packetbuf      0x08009fe5   Thumb Code    12  queuebuf.o(i.queuebuf_update_attr_from_packetbuf)
     random_init                              0x08009ff1   Thumb Code     4  random.o(i.random_init)
     random_rand                              0x08009ff5   Thumb Code    10  random.o(i.random_rand)
-    remove_ext_hdr                           0x0800a0c9   Thumb Code    64  uip6.o(i.remove_ext_hdr)
-    round                                    0x0800a1f9   Thumb Code   136  round.o(i.round)
-    rpl_add_dag                              0x0800a28d   Thumb Code   258  rpl-dag.o(i.rpl_add_dag)
-    rpl_add_parent                           0x0800a391   Thumb Code    48  rpl-dag.o(i.rpl_add_parent)
-    rpl_add_route                            0x0800a3c5   Thumb Code    60  rpl.o(i.rpl_add_route)
-    rpl_alloc_dag                            0x0800a401   Thumb Code    72  rpl-dag.o(i.rpl_alloc_dag)
-    rpl_alloc_instance                       0x0800a449   Thumb Code    66  rpl-dag.o(i.rpl_alloc_instance)
-    rpl_dag_init                             0x0800a491   Thumb Code    10  rpl-dag.o(i.rpl_dag_init)
-    rpl_find_of                              0x0800a4a5   Thumb Code    18  rpl-dag.o(i.rpl_find_of)
-    rpl_find_parent                          0x0800a4bd   Thumb Code    22  rpl-dag.o(i.rpl_find_parent)
-    rpl_find_parent_any_dag                  0x0800a4d3   Thumb Code    26  rpl-dag.o(i.rpl_find_parent_any_dag)
-    rpl_free_dag                             0x0800a4ed   Thumb Code    60  rpl-dag.o(i.rpl_free_dag)
-    rpl_get_any_dag                          0x0800a529   Thumb Code    20  rpl-dag.o(i.rpl_get_any_dag)
-    rpl_get_dag                              0x0800a541   Thumb Code    72  rpl-dag.o(i.rpl_get_dag)
-    rpl_get_instance                         0x0800a58d   Thumb Code    24  rpl-dag.o(i.rpl_get_instance)
-    rpl_get_mode                             0x0800a5a9   Thumb Code     6  rpl.o(i.rpl_get_mode)
-    rpl_get_parent                           0x0800a5b5   Thumb Code    10  rpl-dag.o(i.rpl_get_parent)
-    rpl_get_parent_ipaddr                    0x0800a5c5   Thumb Code    14  rpl-dag.o(i.rpl_get_parent_ipaddr)
-    rpl_get_parent_link_stats                0x0800a5d3   Thumb Code    14  rpl-dag.o(i.rpl_get_parent_link_stats)
-    rpl_get_parent_lladdr                    0x0800a5e1   Thumb Code    10  rpl-dag.o(i.rpl_get_parent_lladdr)
-    rpl_icmp6_register_handlers              0x0800a5f1   Thumb Code    36  rpl-icmp6.o(i.rpl_icmp6_register_handlers)
-    rpl_icmp6_update_nbr_table               0x0800a619   Thumb Code    40  rpl-icmp6.o(i.rpl_icmp6_update_nbr_table)
-    rpl_init                                 0x0800a641   Thumb Code    68  rpl.o(i.rpl_init)
-    rpl_ipv6_neighbor_callback               0x0800a689   Thumb Code    60  rpl.o(i.rpl_ipv6_neighbor_callback)
-    rpl_join_instance                        0x0800a6c9   Thumb Code   284  rpl-dag.o(i.rpl_join_instance)
-    rpl_link_neighbor_callback               0x0800a7e9   Thumb Code    92  rpl.o(i.rpl_link_neighbor_callback)
-    rpl_local_repair                         0x0800a849   Thumb Code   136  rpl-dag.o(i.rpl_local_repair)
-    rpl_move_parent                          0x0800a8d5   Thumb Code    86  rpl-dag.o(i.rpl_move_parent)
-    rpl_nbr_policy_find_removable            0x0800a92d   Thumb Code    36  rpl-nbr-policy.o(i.rpl_nbr_policy_find_removable)
-    rpl_nullify_parent                       0x0800a955   Thumb Code    88  rpl-dag.o(i.rpl_nullify_parent)
-    rpl_parent_is_fresh                      0x0800a9ad   Thumb Code    14  rpl-dag.o(i.rpl_parent_is_fresh)
-    rpl_parent_is_reachable                  0x0800a9bb   Thumb Code    50  rpl-dag.o(i.rpl_parent_is_reachable)
-    rpl_process_dio                          0x0800a9ed   Thumb Code   558  rpl-dag.o(i.rpl_process_dio)
-    rpl_process_parent_event                 0x0800ac1b   Thumb Code   122  rpl-dag.o(i.rpl_process_parent_event)
-    rpl_purge_dags                           0x0800ac95   Thumb Code    70  rpl.o(i.rpl_purge_dags)
-    rpl_purge_routes                         0x0800ace1   Thumb Code    94  rpl.o(i.rpl_purge_routes)
-    rpl_rank_via_parent                      0x0800ad45   Thumb Code    26  rpl-dag.o(i.rpl_rank_via_parent)
-    rpl_recalculate_ranks                    0x0800ad61   Thumb Code    54  rpl-dag.o(i.rpl_recalculate_ranks)
-    rpl_remove_header                        0x0800ad9d   Thumb Code   126  rpl-ext-header.o(i.rpl_remove_header)
-    rpl_remove_parent                        0x0800ae29   Thumb Code    22  rpl-dag.o(i.rpl_remove_parent)
-    rpl_remove_routes                        0x0800ae45   Thumb Code    32  rpl.o(i.rpl_remove_routes)
-    rpl_remove_routes_by_nexthop             0x0800ae65   Thumb Code    58  rpl.o(i.rpl_remove_routes_by_nexthop)
-    rpl_repair_root                          0x0800ae9f   Thumb Code    68  rpl-dag.o(i.rpl_repair_root)
-    rpl_reset_dio_timer                      0x0800aee3   Thumb Code    28  rpl-timers.o(i.rpl_reset_dio_timer)
-    rpl_reset_periodic_timer                 0x0800af01   Thumb Code    44  rpl-timers.o(i.rpl_reset_periodic_timer)
-    rpl_schedule_dao                         0x0800af39   Thumb Code     8  rpl-timers.o(i.rpl_schedule_dao)
-    rpl_schedule_probing                     0x0800af41   Thumb Code    28  rpl-timers.o(i.rpl_schedule_probing)
-    rpl_schedule_unicast_dio_immediately     0x0800af61   Thumb Code    14  rpl-timers.o(i.rpl_schedule_unicast_dio_immediately)
-    rpl_select_dag                           0x0800af75   Thumb Code   320  rpl-dag.o(i.rpl_select_dag)
-    rpl_select_parent                        0x0800b0b5   Thumb Code    78  rpl-dag.o(i.rpl_select_parent)
-    rpl_set_default_route                    0x0800b103   Thumb Code    44  rpl-dag.o(i.rpl_set_default_route)
-    rpl_set_prefix                           0x0800b159   Thumb Code    92  rpl-dag.o(i.rpl_set_prefix)
-    rpl_update_header                        0x0800b1b5   Thumb Code    98  rpl-ext-header.o(i.rpl_update_header)
-    rpl_verify_hbh_header                    0x0800b225   Thumb Code   232  rpl-ext-header.o(i.rpl_verify_hbh_header)
-    rtimer_arch_init                         0x0800b319   Thumb Code   138  rtimer-arch.o(i.rtimer_arch_init)
-    rtimer_arch_now                          0x0800b3ad   Thumb Code     8  rtimer-arch.o(i.rtimer_arch_now)
-    rtimer_init                              0x0800b3b9   Thumb Code     4  rtimer.o(i.rtimer_init)
-    sensors_changed                          0x0800b715   Thumb Code    28  sensors.o(i.sensors_changed)
-    servreg_hack_init                        0x0800b739   Thumb Code    46  servreg-hack.o(i.servreg_hack_init)
-    servreg_hack_list_head                   0x0800b76d   Thumb Code    18  servreg-hack.o(i.servreg_hack_list_head)
-    servreg_hack_lookup                      0x0800b785   Thumb Code    38  servreg-hack.o(i.servreg_hack_lookup)
-    sicslowpan_init                          0x0800b90d   Thumb Code    28  sicslowpan.o(i.sicslowpan_init)
-    simple_udp_register                      0x0800b931   Thumb Code   120  simple-udp.o(i.simple_udp_register)
-    simple_udp_sendto                        0x0800b9b1   Thumb Code    28  simple-udp.o(i.simple_udp_sendto)
-    spirit1_arch_refresh_status              0x0800b9cd   Thumb Code   158  spirit1-arch.o(i.spirit1_arch_refresh_status)
-    spirit1_interrupt_callback               0x0800ba75   Thumb Code   184  spirit1.o(i.spirit1_interrupt_callback)
-    spirit_set_ready_state                   0x0800c0ed   Thumb Code    78  spirit1.o(i.spirit_set_ready_state)
-    stimer_expired                           0x0800c181   Thumb Code    32  stimer.o(i.stimer_expired)
-    stimer_set                               0x0800c1a1   Thumb Code    14  stimer.o(i.stimer_set)
-    tcpip_input                              0x0800c215   Thumb Code    24  tcpip.o(i.tcpip_input)
-    tcpip_ipv6_output                        0x0800c239   Thumb Code   160  tcpip.o(i.tcpip_ipv6_output)
-    tcpip_output                             0x0800c2e5   Thumb Code    18  tcpip.o(i.tcpip_output)
-    tcpip_set_outputfunc                     0x0800c2fd   Thumb Code     6  tcpip.o(i.tcpip_set_outputfunc)
-    tcpip_uipcall                            0x0800c309   Thumb Code    88  tcpip.o(i.tcpip_uipcall)
-    timer_expired                            0x0800c375   Thumb Code    28  timer.o(i.timer_expired)
-    timer_reset                              0x0800c391   Thumb Code    10  timer.o(i.timer_reset)
-    timer_restart                            0x0800c39b   Thumb Code    12  timer.o(i.timer_restart)
-    timer_set                                0x0800c3a7   Thumb Code    14  timer.o(i.timer_set)
-    uart_send_char                           0x0800c409   Thumb Code    20  console.o(i.uart_send_char)
-    udp_broadcast_new                        0x0800c421   Thumb Code    66  tcpip.o(i.udp_broadcast_new)
-    udp_new                                  0x0800c465   Thumb Code    26  tcpip.o(i.udp_new)
-    uip_add32                                0x0800c485   Thumb Code    86  uip6.o(i.uip_add32)
-    uip_debug_ipaddr_print                   0x0800c50d   Thumb Code   144  uip-debug.o(i.uip_debug_ipaddr_print)
-    uip_ds6_addr_add                         0x0800c5cd   Thumb Code   130  uip-ds6.o(i.uip_ds6_addr_add)
-    uip_ds6_addr_lookup                      0x0800c65d   Thumb Code    36  uip-ds6.o(i.uip_ds6_addr_lookup)
-    uip_ds6_addr_rm                          0x0800c689   Thumb Code    62  uip-ds6.o(i.uip_ds6_addr_rm)
-    uip_ds6_compute_reachable_time           0x0800c6d1   Thumb Code    46  uip-ds6.o(i.uip_ds6_compute_reachable_time)
-    uip_ds6_defrt_add                        0x0800c705   Thumb Code    84  uip-ds6-route.o(i.uip_ds6_defrt_add)
-    uip_ds6_defrt_choose                     0x0800c75d   Thumb Code    46  uip-ds6-route.o(i.uip_ds6_defrt_choose)
-    uip_ds6_defrt_lookup                     0x0800c791   Thumb Code    40  uip-ds6-route.o(i.uip_ds6_defrt_lookup)
-    uip_ds6_defrt_periodic                   0x0800c7bd   Thumb Code    46  uip-ds6-route.o(i.uip_ds6_defrt_periodic)
-    uip_ds6_defrt_rm                         0x0800c7f1   Thumb Code    60  uip-ds6-route.o(i.uip_ds6_defrt_rm)
-    uip_ds6_get_link_local                   0x0800c831   Thumb Code    56  uip-ds6.o(i.uip_ds6_get_link_local)
-    uip_ds6_init                             0x0800c871   Thumb Code   192  uip-ds6.o(i.uip_ds6_init)
-    uip_ds6_is_addr_onlink                   0x0800c941   Thumb Code    52  uip-ds6.o(i.uip_ds6_is_addr_onlink)
-    uip_ds6_link_neighbor_callback           0x0800c97d   Thumb Code    50  uip-ds6-nbr.o(i.uip_ds6_link_neighbor_callback)
-    uip_ds6_list_loop                        0x0800c9b5   Thumb Code    72  uip-ds6.o(i.uip_ds6_list_loop)
-    uip_ds6_maddr_add                        0x0800c9fd   Thumb Code    56  uip-ds6.o(i.uip_ds6_maddr_add)
-    uip_ds6_maddr_lookup                     0x0800ca3d   Thumb Code    36  uip-ds6.o(i.uip_ds6_maddr_lookup)
-    uip_ds6_maddr_rm                         0x0800ca69   Thumb Code    10  uip-ds6.o(i.uip_ds6_maddr_rm)
-    uip_ds6_nbr_add                          0x0800ca75   Thumb Code    46  uip-ds6-nbr.o(i.uip_ds6_nbr_add)
-    uip_ds6_nbr_get_ll                       0x0800caa9   Thumb Code    10  uip-ds6-nbr.o(i.uip_ds6_nbr_get_ll)
-    uip_ds6_nbr_ipaddr_from_lladdr           0x0800cab9   Thumb Code     4  uip-ds6-nbr.o(i.uip_ds6_nbr_ipaddr_from_lladdr)
-    uip_ds6_nbr_ll_lookup                    0x0800cabd   Thumb Code    10  uip-ds6-nbr.o(i.uip_ds6_nbr_ll_lookup)
-    uip_ds6_nbr_lladdr_from_ipaddr           0x0800cacd   Thumb Code    20  uip-ds6-nbr.o(i.uip_ds6_nbr_lladdr_from_ipaddr)
-    uip_ds6_nbr_lookup                       0x0800cae1   Thumb Code    50  uip-ds6-nbr.o(i.uip_ds6_nbr_lookup)
-    uip_ds6_nbr_rm                           0x0800cb19   Thumb Code    28  uip-ds6-nbr.o(i.uip_ds6_nbr_rm)
-    uip_ds6_neighbors_init                   0x0800cb39   Thumb Code    20  uip-ds6-nbr.o(i.uip_ds6_neighbors_init)
-    uip_ds6_periodic                         0x0800cb55   Thumb Code    62  uip-ds6.o(i.uip_ds6_periodic)
-    uip_ds6_prefix_add                       0x0800cb9d   Thumb Code    78  uip-ds6.o(i.uip_ds6_prefix_add)
-    uip_ds6_route_add                        0x0800cbf5   Thumb Code   220  uip-ds6-route.o(i.uip_ds6_route_add)
-    uip_ds6_route_head                       0x0800ccd5   Thumb Code     8  uip-ds6-route.o(i.uip_ds6_route_head)
-    uip_ds6_route_init                       0x0800cce1   Thumb Code    50  uip-ds6-route.o(i.uip_ds6_route_init)
-    uip_ds6_route_is_nexthop                 0x0800cd1d   Thumb Code    30  uip-ds6-route.o(i.uip_ds6_route_is_nexthop)
-    uip_ds6_route_lookup                     0x0800cd41   Thumb Code    94  uip-ds6-route.o(i.uip_ds6_route_lookup)
-    uip_ds6_route_next                       0x0800cda5   Thumb Code    10  uip-ds6-route.o(i.uip_ds6_route_next)
-    uip_ds6_route_nexthop                    0x0800cdb1   Thumb Code    26  uip-ds6-route.o(i.uip_ds6_route_nexthop)
-    uip_ds6_route_rm                         0x0800cdd1   Thumb Code   144  uip-ds6-route.o(i.uip_ds6_route_rm)
-    uip_ds6_select_src                       0x0800ce65   Thumb Code   146  uip-ds6.o(i.uip_ds6_select_src)
-    uip_ds6_set_addr_iid                     0x0800cf01   Thumb Code    18  uip-ds6.o(i.uip_ds6_set_addr_iid)
-    uip_htonl                                0x0800cf13   Thumb Code     4  uip6.o(i.uip_htonl)
-    uip_icmp6_error_output                   0x0800cf19   Thumb Code   264  uip-icmp6.o(i.uip_icmp6_error_output)
-    uip_icmp6_init                           0x0800d035   Thumb Code    20  uip-icmp6.o(i.uip_icmp6_init)
-    uip_icmp6_input                          0x0800d04d   Thumb Code    58  uip-icmp6.o(i.uip_icmp6_input)
-    uip_icmp6_register_input_handler         0x0800d08d   Thumb Code    10  uip-icmp6.o(i.uip_icmp6_register_input_handler)
-    uip_icmp6_send                           0x0800d09d   Thumb Code   112  uip-icmp6.o(i.uip_icmp6_send)
-    uip_icmp6chksum                          0x0800d11d   Thumb Code     6  uip6.o(i.uip_icmp6chksum)
-    uip_init                                 0x0800d125   Thumb Code    82  uip6.o(i.uip_init)
-    uip_nd6_init                             0x0800d181   Thumb Code     6  uip-nd6.o(i.uip_nd6_init)
-    uip_process                              0x0800d18d   Thumb Code  3000  uip6.o(i.uip_process)
-    uip_tcpchksum                            0x0800dd49   Thumb Code     6  uip6.o(i.uip_tcpchksum)
-    uip_udp_new                              0x0800dd51   Thumb Code   142  uip6.o(i.uip_udp_new)
-    uip_udp_packet_send                      0x0800dded   Thumb Code    42  uip-udp-packet.o(i.uip_udp_packet_send)
-    uip_udp_packet_sendto                    0x0800de25   Thumb Code    62  uip-udp-packet.o(i.uip_udp_packet_sendto)
-    uip_udpchksum                            0x0800de63   Thumb Code     6  uip6.o(i.uip_udpchksum)
-    uip_unlisten                             0x0800de69   Thumb Code    28  uip6.o(i.uip_unlisten)
-    watchdog_init                            0x0800e459   Thumb Code     2  watchdog.o(i.watchdog_init)
-    watchdog_periodic                        0x0800e45b   Thumb Code     2  watchdog.o(i.watchdog_periodic)
-    watchdog_start                           0x0800e45d   Thumb Code     2  watchdog.o(i.watchdog_start)
-    BUTTON_IRQn                              0x0800e5bc   Data           1  stm32l1xx_nucleo.o(.constdata)
-    LED_PIN                                  0x0800e5be   Data           2  stm32l1xx_nucleo.o(.constdata)
-    BUTTON_PIN                               0x0800e5c0   Data           2  stm32l1xx_nucleo.o(.constdata)
-    aLED_GPIO_PIN                            0x0800e60c   Data           2  radio_shield_config.o(.constdata)
-    PLLMulTable                              0x0800e60e   Data           9  system_stm32l1xx.o(.constdata)
-    AHBPrescTable                            0x0800e617   Data          16  system_stm32l1xx.o(.constdata)
-    APBPrescTable                            0x0800e627   Data           8  system_stm32l1xx.o(.constdata)
-    autostart_processes                      0x0800e630   Data           8  unicast-sender.o(.constdata)
-    linkaddr_null                            0x0800e638   Data           8  linkaddr.o(.constdata)
-    llprefix                                 0x0800e640   Data           2  sicslowpan.o(.constdata)
-    unc_llconf                               0x0800e642   Data           4  sicslowpan.o(.constdata)
-    unc_ctxconf                              0x0800e646   Data           4  sicslowpan.o(.constdata)
-    unc_mxconf                               0x0800e64a   Data           4  sicslowpan.o(.constdata)
-    sicslowpan_driver                        0x0800e654   Data          12  sicslowpan.o(.constdata)
-    nullsec_driver                           0x0800e660   Data          16  nullsec.o(.constdata)
-    csma_driver                              0x0800e670   Data          28  csma.o(.constdata)
-    framer_802154                            0x0800e68c   Data          12  framer-802154.o(.constdata)
-    nullrdc_driver                           0x0800e698   Data          32  nullrdc.o(.constdata)
-    button_sensor                            0x0800e6bc   Data          16  button-sensor.o(.constdata)
-    radio_sensor                             0x0800e6cc   Data          16  radio-sensor.o(.constdata)
-    spirit_radio_driver                      0x0800e6dc   Data          56  spirit1.o(.constdata)
-    Region$$Table$$Base                      0x0800e894   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800e8b4   Number         0  anon$$obj.o(Region$$Table)
+    remove_ext_hdr                           0x0800a0b9   Thumb Code    64  uip6.o(i.remove_ext_hdr)
+    round                                    0x0800a1e9   Thumb Code   136  round.o(i.round)
+    rpl_add_dag                              0x0800a27d   Thumb Code   258  rpl-dag.o(i.rpl_add_dag)
+    rpl_add_parent                           0x0800a381   Thumb Code    48  rpl-dag.o(i.rpl_add_parent)
+    rpl_add_route                            0x0800a3b5   Thumb Code    60  rpl.o(i.rpl_add_route)
+    rpl_alloc_dag                            0x0800a3f1   Thumb Code    72  rpl-dag.o(i.rpl_alloc_dag)
+    rpl_alloc_instance                       0x0800a439   Thumb Code    66  rpl-dag.o(i.rpl_alloc_instance)
+    rpl_dag_init                             0x0800a481   Thumb Code    10  rpl-dag.o(i.rpl_dag_init)
+    rpl_find_of                              0x0800a495   Thumb Code    18  rpl-dag.o(i.rpl_find_of)
+    rpl_find_parent                          0x0800a4ad   Thumb Code    22  rpl-dag.o(i.rpl_find_parent)
+    rpl_find_parent_any_dag                  0x0800a4c3   Thumb Code    26  rpl-dag.o(i.rpl_find_parent_any_dag)
+    rpl_free_dag                             0x0800a4dd   Thumb Code    60  rpl-dag.o(i.rpl_free_dag)
+    rpl_get_any_dag                          0x0800a519   Thumb Code    20  rpl-dag.o(i.rpl_get_any_dag)
+    rpl_get_dag                              0x0800a531   Thumb Code    72  rpl-dag.o(i.rpl_get_dag)
+    rpl_get_instance                         0x0800a57d   Thumb Code    24  rpl-dag.o(i.rpl_get_instance)
+    rpl_get_mode                             0x0800a599   Thumb Code     6  rpl.o(i.rpl_get_mode)
+    rpl_get_parent                           0x0800a5a5   Thumb Code    10  rpl-dag.o(i.rpl_get_parent)
+    rpl_get_parent_ipaddr                    0x0800a5b5   Thumb Code    14  rpl-dag.o(i.rpl_get_parent_ipaddr)
+    rpl_get_parent_link_stats                0x0800a5c3   Thumb Code    14  rpl-dag.o(i.rpl_get_parent_link_stats)
+    rpl_get_parent_lladdr                    0x0800a5d1   Thumb Code    10  rpl-dag.o(i.rpl_get_parent_lladdr)
+    rpl_icmp6_register_handlers              0x0800a5e1   Thumb Code    36  rpl-icmp6.o(i.rpl_icmp6_register_handlers)
+    rpl_icmp6_update_nbr_table               0x0800a609   Thumb Code    40  rpl-icmp6.o(i.rpl_icmp6_update_nbr_table)
+    rpl_init                                 0x0800a631   Thumb Code    68  rpl.o(i.rpl_init)
+    rpl_ipv6_neighbor_callback               0x0800a679   Thumb Code    60  rpl.o(i.rpl_ipv6_neighbor_callback)
+    rpl_join_instance                        0x0800a6b9   Thumb Code   284  rpl-dag.o(i.rpl_join_instance)
+    rpl_link_neighbor_callback               0x0800a7d9   Thumb Code    92  rpl.o(i.rpl_link_neighbor_callback)
+    rpl_local_repair                         0x0800a839   Thumb Code   136  rpl-dag.o(i.rpl_local_repair)
+    rpl_move_parent                          0x0800a8c5   Thumb Code    86  rpl-dag.o(i.rpl_move_parent)
+    rpl_nbr_policy_find_removable            0x0800a91d   Thumb Code    36  rpl-nbr-policy.o(i.rpl_nbr_policy_find_removable)
+    rpl_nullify_parent                       0x0800a945   Thumb Code    88  rpl-dag.o(i.rpl_nullify_parent)
+    rpl_parent_is_fresh                      0x0800a99d   Thumb Code    14  rpl-dag.o(i.rpl_parent_is_fresh)
+    rpl_parent_is_reachable                  0x0800a9ab   Thumb Code    50  rpl-dag.o(i.rpl_parent_is_reachable)
+    rpl_process_dio                          0x0800a9dd   Thumb Code   558  rpl-dag.o(i.rpl_process_dio)
+    rpl_process_parent_event                 0x0800ac0b   Thumb Code   122  rpl-dag.o(i.rpl_process_parent_event)
+    rpl_purge_dags                           0x0800ac85   Thumb Code    70  rpl.o(i.rpl_purge_dags)
+    rpl_purge_routes                         0x0800acd1   Thumb Code    94  rpl.o(i.rpl_purge_routes)
+    rpl_rank_via_parent                      0x0800ad35   Thumb Code    26  rpl-dag.o(i.rpl_rank_via_parent)
+    rpl_recalculate_ranks                    0x0800ad51   Thumb Code    54  rpl-dag.o(i.rpl_recalculate_ranks)
+    rpl_remove_header                        0x0800ad8d   Thumb Code   126  rpl-ext-header.o(i.rpl_remove_header)
+    rpl_remove_parent                        0x0800ae19   Thumb Code    22  rpl-dag.o(i.rpl_remove_parent)
+    rpl_remove_routes                        0x0800ae35   Thumb Code    32  rpl.o(i.rpl_remove_routes)
+    rpl_remove_routes_by_nexthop             0x0800ae55   Thumb Code    58  rpl.o(i.rpl_remove_routes_by_nexthop)
+    rpl_repair_root                          0x0800ae8f   Thumb Code    68  rpl-dag.o(i.rpl_repair_root)
+    rpl_reset_dio_timer                      0x0800aed3   Thumb Code    28  rpl-timers.o(i.rpl_reset_dio_timer)
+    rpl_reset_periodic_timer                 0x0800aef1   Thumb Code    44  rpl-timers.o(i.rpl_reset_periodic_timer)
+    rpl_schedule_dao                         0x0800af29   Thumb Code     8  rpl-timers.o(i.rpl_schedule_dao)
+    rpl_schedule_probing                     0x0800af31   Thumb Code    28  rpl-timers.o(i.rpl_schedule_probing)
+    rpl_schedule_unicast_dio_immediately     0x0800af51   Thumb Code    14  rpl-timers.o(i.rpl_schedule_unicast_dio_immediately)
+    rpl_select_dag                           0x0800af65   Thumb Code   320  rpl-dag.o(i.rpl_select_dag)
+    rpl_select_parent                        0x0800b0a5   Thumb Code    78  rpl-dag.o(i.rpl_select_parent)
+    rpl_set_default_route                    0x0800b0f3   Thumb Code    44  rpl-dag.o(i.rpl_set_default_route)
+    rpl_set_prefix                           0x0800b149   Thumb Code    92  rpl-dag.o(i.rpl_set_prefix)
+    rpl_update_header                        0x0800b1a5   Thumb Code    98  rpl-ext-header.o(i.rpl_update_header)
+    rpl_verify_hbh_header                    0x0800b215   Thumb Code   232  rpl-ext-header.o(i.rpl_verify_hbh_header)
+    rtimer_arch_init                         0x0800b309   Thumb Code   138  rtimer-arch.o(i.rtimer_arch_init)
+    rtimer_arch_now                          0x0800b39d   Thumb Code     8  rtimer-arch.o(i.rtimer_arch_now)
+    rtimer_init                              0x0800b3a9   Thumb Code     4  rtimer.o(i.rtimer_init)
+    sensors_changed                          0x0800b705   Thumb Code    28  sensors.o(i.sensors_changed)
+    servreg_hack_init                        0x0800b729   Thumb Code    46  servreg-hack.o(i.servreg_hack_init)
+    servreg_hack_list_head                   0x0800b75d   Thumb Code    18  servreg-hack.o(i.servreg_hack_list_head)
+    servreg_hack_lookup                      0x0800b775   Thumb Code    38  servreg-hack.o(i.servreg_hack_lookup)
+    sicslowpan_init                          0x0800b8fd   Thumb Code    28  sicslowpan.o(i.sicslowpan_init)
+    simple_udp_register                      0x0800b921   Thumb Code   120  simple-udp.o(i.simple_udp_register)
+    simple_udp_sendto                        0x0800b9a1   Thumb Code    28  simple-udp.o(i.simple_udp_sendto)
+    spirit1_arch_refresh_status              0x0800b9bd   Thumb Code   158  spirit1-arch.o(i.spirit1_arch_refresh_status)
+    spirit1_interrupt_callback               0x0800ba65   Thumb Code   184  spirit1.o(i.spirit1_interrupt_callback)
+    spirit_set_ready_state                   0x0800c0dd   Thumb Code    78  spirit1.o(i.spirit_set_ready_state)
+    stimer_expired                           0x0800c171   Thumb Code    32  stimer.o(i.stimer_expired)
+    stimer_set                               0x0800c191   Thumb Code    14  stimer.o(i.stimer_set)
+    tcpip_input                              0x0800c205   Thumb Code    24  tcpip.o(i.tcpip_input)
+    tcpip_ipv6_output                        0x0800c229   Thumb Code   160  tcpip.o(i.tcpip_ipv6_output)
+    tcpip_output                             0x0800c2d5   Thumb Code    18  tcpip.o(i.tcpip_output)
+    tcpip_set_outputfunc                     0x0800c2ed   Thumb Code     6  tcpip.o(i.tcpip_set_outputfunc)
+    tcpip_uipcall                            0x0800c2f9   Thumb Code    88  tcpip.o(i.tcpip_uipcall)
+    timer_expired                            0x0800c365   Thumb Code    28  timer.o(i.timer_expired)
+    timer_reset                              0x0800c381   Thumb Code    10  timer.o(i.timer_reset)
+    timer_restart                            0x0800c38b   Thumb Code    12  timer.o(i.timer_restart)
+    timer_set                                0x0800c397   Thumb Code    14  timer.o(i.timer_set)
+    uart_send_char                           0x0800c3f9   Thumb Code    20  console.o(i.uart_send_char)
+    udp_broadcast_new                        0x0800c411   Thumb Code    66  tcpip.o(i.udp_broadcast_new)
+    udp_new                                  0x0800c455   Thumb Code    26  tcpip.o(i.udp_new)
+    uip_add32                                0x0800c475   Thumb Code    86  uip6.o(i.uip_add32)
+    uip_debug_ipaddr_print                   0x0800c4fd   Thumb Code   144  uip-debug.o(i.uip_debug_ipaddr_print)
+    uip_ds6_addr_add                         0x0800c5bd   Thumb Code   130  uip-ds6.o(i.uip_ds6_addr_add)
+    uip_ds6_addr_lookup                      0x0800c64d   Thumb Code    36  uip-ds6.o(i.uip_ds6_addr_lookup)
+    uip_ds6_addr_rm                          0x0800c679   Thumb Code    62  uip-ds6.o(i.uip_ds6_addr_rm)
+    uip_ds6_compute_reachable_time           0x0800c6c1   Thumb Code    46  uip-ds6.o(i.uip_ds6_compute_reachable_time)
+    uip_ds6_defrt_add                        0x0800c6f5   Thumb Code    84  uip-ds6-route.o(i.uip_ds6_defrt_add)
+    uip_ds6_defrt_choose                     0x0800c74d   Thumb Code    46  uip-ds6-route.o(i.uip_ds6_defrt_choose)
+    uip_ds6_defrt_lookup                     0x0800c781   Thumb Code    40  uip-ds6-route.o(i.uip_ds6_defrt_lookup)
+    uip_ds6_defrt_periodic                   0x0800c7ad   Thumb Code    46  uip-ds6-route.o(i.uip_ds6_defrt_periodic)
+    uip_ds6_defrt_rm                         0x0800c7e1   Thumb Code    60  uip-ds6-route.o(i.uip_ds6_defrt_rm)
+    uip_ds6_get_link_local                   0x0800c821   Thumb Code    56  uip-ds6.o(i.uip_ds6_get_link_local)
+    uip_ds6_init                             0x0800c861   Thumb Code   192  uip-ds6.o(i.uip_ds6_init)
+    uip_ds6_is_addr_onlink                   0x0800c931   Thumb Code    52  uip-ds6.o(i.uip_ds6_is_addr_onlink)
+    uip_ds6_link_neighbor_callback           0x0800c96d   Thumb Code    50  uip-ds6-nbr.o(i.uip_ds6_link_neighbor_callback)
+    uip_ds6_list_loop                        0x0800c9a5   Thumb Code    72  uip-ds6.o(i.uip_ds6_list_loop)
+    uip_ds6_maddr_add                        0x0800c9ed   Thumb Code    56  uip-ds6.o(i.uip_ds6_maddr_add)
+    uip_ds6_maddr_lookup                     0x0800ca2d   Thumb Code    36  uip-ds6.o(i.uip_ds6_maddr_lookup)
+    uip_ds6_maddr_rm                         0x0800ca59   Thumb Code    10  uip-ds6.o(i.uip_ds6_maddr_rm)
+    uip_ds6_nbr_add                          0x0800ca65   Thumb Code    46  uip-ds6-nbr.o(i.uip_ds6_nbr_add)
+    uip_ds6_nbr_get_ll                       0x0800ca99   Thumb Code    10  uip-ds6-nbr.o(i.uip_ds6_nbr_get_ll)
+    uip_ds6_nbr_ipaddr_from_lladdr           0x0800caa9   Thumb Code     4  uip-ds6-nbr.o(i.uip_ds6_nbr_ipaddr_from_lladdr)
+    uip_ds6_nbr_ll_lookup                    0x0800caad   Thumb Code    10  uip-ds6-nbr.o(i.uip_ds6_nbr_ll_lookup)
+    uip_ds6_nbr_lladdr_from_ipaddr           0x0800cabd   Thumb Code    20  uip-ds6-nbr.o(i.uip_ds6_nbr_lladdr_from_ipaddr)
+    uip_ds6_nbr_lookup                       0x0800cad1   Thumb Code    50  uip-ds6-nbr.o(i.uip_ds6_nbr_lookup)
+    uip_ds6_nbr_rm                           0x0800cb09   Thumb Code    28  uip-ds6-nbr.o(i.uip_ds6_nbr_rm)
+    uip_ds6_neighbors_init                   0x0800cb29   Thumb Code    20  uip-ds6-nbr.o(i.uip_ds6_neighbors_init)
+    uip_ds6_periodic                         0x0800cb45   Thumb Code    62  uip-ds6.o(i.uip_ds6_periodic)
+    uip_ds6_prefix_add                       0x0800cb8d   Thumb Code    78  uip-ds6.o(i.uip_ds6_prefix_add)
+    uip_ds6_route_add                        0x0800cbe5   Thumb Code   220  uip-ds6-route.o(i.uip_ds6_route_add)
+    uip_ds6_route_head                       0x0800ccc5   Thumb Code     8  uip-ds6-route.o(i.uip_ds6_route_head)
+    uip_ds6_route_init                       0x0800ccd1   Thumb Code    50  uip-ds6-route.o(i.uip_ds6_route_init)
+    uip_ds6_route_is_nexthop                 0x0800cd0d   Thumb Code    30  uip-ds6-route.o(i.uip_ds6_route_is_nexthop)
+    uip_ds6_route_lookup                     0x0800cd31   Thumb Code    94  uip-ds6-route.o(i.uip_ds6_route_lookup)
+    uip_ds6_route_next                       0x0800cd95   Thumb Code    10  uip-ds6-route.o(i.uip_ds6_route_next)
+    uip_ds6_route_nexthop                    0x0800cda1   Thumb Code    26  uip-ds6-route.o(i.uip_ds6_route_nexthop)
+    uip_ds6_route_rm                         0x0800cdc1   Thumb Code   144  uip-ds6-route.o(i.uip_ds6_route_rm)
+    uip_ds6_select_src                       0x0800ce55   Thumb Code   146  uip-ds6.o(i.uip_ds6_select_src)
+    uip_ds6_set_addr_iid                     0x0800cef1   Thumb Code    18  uip-ds6.o(i.uip_ds6_set_addr_iid)
+    uip_htonl                                0x0800cf03   Thumb Code     4  uip6.o(i.uip_htonl)
+    uip_icmp6_error_output                   0x0800cf09   Thumb Code   264  uip-icmp6.o(i.uip_icmp6_error_output)
+    uip_icmp6_init                           0x0800d025   Thumb Code    20  uip-icmp6.o(i.uip_icmp6_init)
+    uip_icmp6_input                          0x0800d03d   Thumb Code    58  uip-icmp6.o(i.uip_icmp6_input)
+    uip_icmp6_register_input_handler         0x0800d07d   Thumb Code    10  uip-icmp6.o(i.uip_icmp6_register_input_handler)
+    uip_icmp6_send                           0x0800d08d   Thumb Code   112  uip-icmp6.o(i.uip_icmp6_send)
+    uip_icmp6chksum                          0x0800d10d   Thumb Code     6  uip6.o(i.uip_icmp6chksum)
+    uip_init                                 0x0800d115   Thumb Code    82  uip6.o(i.uip_init)
+    uip_nd6_init                             0x0800d171   Thumb Code     6  uip-nd6.o(i.uip_nd6_init)
+    uip_process                              0x0800d17d   Thumb Code  3000  uip6.o(i.uip_process)
+    uip_tcpchksum                            0x0800dd39   Thumb Code     6  uip6.o(i.uip_tcpchksum)
+    uip_udp_new                              0x0800dd41   Thumb Code   142  uip6.o(i.uip_udp_new)
+    uip_udp_packet_send                      0x0800dddd   Thumb Code    42  uip-udp-packet.o(i.uip_udp_packet_send)
+    uip_udp_packet_sendto                    0x0800de15   Thumb Code    62  uip-udp-packet.o(i.uip_udp_packet_sendto)
+    uip_udpchksum                            0x0800de53   Thumb Code     6  uip6.o(i.uip_udpchksum)
+    uip_unlisten                             0x0800de59   Thumb Code    28  uip6.o(i.uip_unlisten)
+    watchdog_init                            0x0800e449   Thumb Code     2  watchdog.o(i.watchdog_init)
+    watchdog_periodic                        0x0800e44b   Thumb Code     2  watchdog.o(i.watchdog_periodic)
+    watchdog_start                           0x0800e44d   Thumb Code     2  watchdog.o(i.watchdog_start)
+    BUTTON_IRQn                              0x0800e5ac   Data           1  stm32l1xx_nucleo.o(.constdata)
+    LED_PIN                                  0x0800e5ae   Data           2  stm32l1xx_nucleo.o(.constdata)
+    BUTTON_PIN                               0x0800e5b0   Data           2  stm32l1xx_nucleo.o(.constdata)
+    aLED_GPIO_PIN                            0x0800e5fc   Data           2  radio_shield_config.o(.constdata)
+    PLLMulTable                              0x0800e5fe   Data           9  system_stm32l1xx.o(.constdata)
+    AHBPrescTable                            0x0800e607   Data          16  system_stm32l1xx.o(.constdata)
+    APBPrescTable                            0x0800e617   Data           8  system_stm32l1xx.o(.constdata)
+    autostart_processes                      0x0800e620   Data           8  unicast-sender.o(.constdata)
+    linkaddr_null                            0x0800e628   Data           8  linkaddr.o(.constdata)
+    llprefix                                 0x0800e630   Data           2  sicslowpan.o(.constdata)
+    unc_llconf                               0x0800e632   Data           4  sicslowpan.o(.constdata)
+    unc_ctxconf                              0x0800e636   Data           4  sicslowpan.o(.constdata)
+    unc_mxconf                               0x0800e63a   Data           4  sicslowpan.o(.constdata)
+    sicslowpan_driver                        0x0800e644   Data          12  sicslowpan.o(.constdata)
+    nullsec_driver                           0x0800e650   Data          16  nullsec.o(.constdata)
+    csma_driver                              0x0800e660   Data          28  csma.o(.constdata)
+    framer_802154                            0x0800e67c   Data          12  framer-802154.o(.constdata)
+    nullrdc_driver                           0x0800e688   Data          32  nullrdc.o(.constdata)
+    button_sensor                            0x0800e6ac   Data          16  button-sensor.o(.constdata)
+    radio_sensor                             0x0800e6bc   Data          16  radio-sensor.o(.constdata)
+    spirit_radio_driver                      0x0800e6cc   Data          56  spirit1.o(.constdata)
+    Region$$Table$$Base                      0x0800e884   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800e8a4   Number         0  anon$$obj.o(Region$$Table)
     g_xStatus                                0x20000010   Data           2  spirit_types.o(.data)
     LED_PORT                                 0x20000014   Data           4  stm32l1xx_nucleo.o(.data)
     BUTTON_PORT                              0x20000018   Data           4  stm32l1xx_nucleo.o(.data)
@@ -7235,9 +7238,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000125
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000ec68, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x0000ea28])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000ec58, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x0000ea18])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000e8b4, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000e8a4, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -7699,260 +7702,260 @@ Memory Map of the image
     0x08009ff0   0x00000004   Code   RO         6843    i.random_init       random.o
     0x08009ff4   0x0000000a   Code   RO         6844    i.random_rand       random.o
     0x08009ffe   0x00000042   Code   RO        10661    i.rank_via_parent   rpl-mrhof.o
-    0x0800a040   0x00000088   Code   RO         6367    i.receiver          unicast-sender.o
-    0x0800a0c8   0x00000048   Code   RO         8606    i.remove_ext_hdr    uip6.o
-    0x0800a110   0x00000064   Code   RO         6979    i.remove_key        nbr-table.o
-    0x0800a174   0x00000038   Code   RO        10091    i.remove_parents    rpl-dag.o
-    0x0800a1ac   0x00000002   Code   RO        10662    i.reset             rpl-mrhof.o
-    0x0800a1ae   0x00000014   Code   RO         9394    i.rexmit            csma.o
-    0x0800a1c2   0x00000002   PAD
-    0x0800a1c4   0x00000030   Code   RO         9089    i.rm_routelist      uip-ds6-route.o
-    0x0800a1f4   0x00000004   Code   RO         9090    i.rm_routelist_callback  uip-ds6-route.o
-    0x0800a1f8   0x00000094   Code   RO        12183    i.round             m_ws.l(round.o)
-    0x0800a28c   0x00000102   Code   RO        10092    i.rpl_add_dag       rpl-dag.o
-    0x0800a38e   0x00000002   PAD
-    0x0800a390   0x00000034   Code   RO        10093    i.rpl_add_parent    rpl-dag.o
-    0x0800a3c4   0x0000003c   Code   RO         9992    i.rpl_add_route     rpl.o
-    0x0800a400   0x00000048   Code   RO        10094    i.rpl_alloc_dag     rpl-dag.o
-    0x0800a448   0x00000048   Code   RO        10095    i.rpl_alloc_instance  rpl-dag.o
-    0x0800a490   0x00000014   Code   RO        10096    i.rpl_dag_init      rpl-dag.o
-    0x0800a4a4   0x00000018   Code   RO        10097    i.rpl_find_of       rpl-dag.o
-    0x0800a4bc   0x00000016   Code   RO        10098    i.rpl_find_parent   rpl-dag.o
-    0x0800a4d2   0x0000001a   Code   RO        10099    i.rpl_find_parent_any_dag  rpl-dag.o
-    0x0800a4ec   0x0000003c   Code   RO        10100    i.rpl_free_dag      rpl-dag.o
-    0x0800a528   0x00000018   Code   RO        10102    i.rpl_get_any_dag   rpl-dag.o
-    0x0800a540   0x0000004c   Code   RO        10103    i.rpl_get_dag       rpl-dag.o
-    0x0800a58c   0x0000001c   Code   RO        10105    i.rpl_get_instance  rpl-dag.o
-    0x0800a5a8   0x0000000c   Code   RO         9993    i.rpl_get_mode      rpl.o
-    0x0800a5b4   0x00000010   Code   RO        10107    i.rpl_get_parent    rpl-dag.o
-    0x0800a5c4   0x0000000e   Code   RO        10108    i.rpl_get_parent_ipaddr  rpl-dag.o
-    0x0800a5d2   0x0000000e   Code   RO        10110    i.rpl_get_parent_link_stats  rpl-dag.o
-    0x0800a5e0   0x00000010   Code   RO        10111    i.rpl_get_parent_lladdr  rpl-dag.o
-    0x0800a5f0   0x00000028   Code   RO        10559    i.rpl_icmp6_register_handlers  rpl-icmp6.o
-    0x0800a618   0x00000028   Code   RO        10560    i.rpl_icmp6_update_nbr_table  rpl-icmp6.o
-    0x0800a640   0x00000048   Code   RO         9994    i.rpl_init          rpl.o
-    0x0800a688   0x00000040   Code   RO         9995    i.rpl_ipv6_neighbor_callback  rpl.o
-    0x0800a6c8   0x00000120   Code   RO        10114    i.rpl_join_instance  rpl-dag.o
-    0x0800a7e8   0x00000060   Code   RO         9996    i.rpl_link_neighbor_callback  rpl.o
-    0x0800a848   0x0000008c   Code   RO        10115    i.rpl_local_repair  rpl-dag.o
-    0x0800a8d4   0x00000056   Code   RO        10116    i.rpl_move_parent   rpl-dag.o
-    0x0800a92a   0x00000002   PAD
-    0x0800a92c   0x00000028   Code   RO        10926    i.rpl_nbr_policy_find_removable  rpl-nbr-policy.o
-    0x0800a954   0x00000058   Code   RO        10117    i.rpl_nullify_parent  rpl-dag.o
-    0x0800a9ac   0x0000000e   Code   RO        10118    i.rpl_parent_is_fresh  rpl-dag.o
-    0x0800a9ba   0x00000032   Code   RO        10119    i.rpl_parent_is_reachable  rpl-dag.o
-    0x0800a9ec   0x0000022e   Code   RO        10121    i.rpl_process_dio   rpl-dag.o
-    0x0800ac1a   0x0000007a   Code   RO        10122    i.rpl_process_parent_event  rpl-dag.o
-    0x0800ac94   0x0000004c   Code   RO         9997    i.rpl_purge_dags    rpl.o
-    0x0800ace0   0x00000064   Code   RO         9998    i.rpl_purge_routes  rpl.o
-    0x0800ad44   0x0000001a   Code   RO        10123    i.rpl_rank_via_parent  rpl-dag.o
-    0x0800ad5e   0x00000002   PAD
-    0x0800ad60   0x0000003c   Code   RO        10124    i.rpl_recalculate_ranks  rpl-dag.o
-    0x0800ad9c   0x0000008c   Code   RO        10508    i.rpl_remove_header  rpl-ext-header.o
-    0x0800ae28   0x0000001c   Code   RO        10125    i.rpl_remove_parent  rpl-dag.o
-    0x0800ae44   0x00000020   Code   RO         9999    i.rpl_remove_routes  rpl.o
-    0x0800ae64   0x0000003a   Code   RO        10000    i.rpl_remove_routes_by_nexthop  rpl.o
-    0x0800ae9e   0x00000044   Code   RO        10126    i.rpl_repair_root   rpl-dag.o
-    0x0800aee2   0x0000001c   Code   RO        10817    i.rpl_reset_dio_timer  rpl-timers.o
-    0x0800aefe   0x00000002   PAD
-    0x0800af00   0x00000038   Code   RO        10818    i.rpl_reset_periodic_timer  rpl-timers.o
-    0x0800af38   0x00000008   Code   RO        10819    i.rpl_schedule_dao  rpl-timers.o
-    0x0800af40   0x00000020   Code   RO        10821    i.rpl_schedule_probing  rpl-timers.o
-    0x0800af60   0x00000014   Code   RO        10822    i.rpl_schedule_unicast_dio_immediately  rpl-timers.o
-    0x0800af74   0x00000140   Code   RO        10127    i.rpl_select_dag    rpl-dag.o
-    0x0800b0b4   0x0000004e   Code   RO        10128    i.rpl_select_parent  rpl-dag.o
-    0x0800b102   0x0000002c   Code   RO        10130    i.rpl_set_default_route  rpl-dag.o
-    0x0800b12e   0x00000002   PAD
-    0x0800b130   0x00000028   Code   RO        10131    i.rpl_set_preferred_parent  rpl-dag.o
-    0x0800b158   0x0000005c   Code   RO        10132    i.rpl_set_prefix    rpl-dag.o
-    0x0800b1b4   0x00000070   Code   RO        10509    i.rpl_update_header  rpl-ext-header.o
-    0x0800b224   0x000000f4   Code   RO        10510    i.rpl_verify_hbh_header  rpl-ext-header.o
-    0x0800b318   0x00000094   Code   RO        11872    i.rtimer_arch_init  rtimer-arch.o
-    0x0800b3ac   0x0000000c   Code   RO        11873    i.rtimer_arch_now   rtimer-arch.o
-    0x0800b3b8   0x00000004   Code   RO        11364    i.rtimer_init       rtimer.o
-    0x0800b3bc   0x00000054   Code   RO        10823    i.schedule_dao      rpl-timers.o
-    0x0800b410   0x0000004c   Code   RO         9395    i.schedule_transmission  csma.o
-    0x0800b45c   0x00000020   Code   RO         9357    i.send              nullsec.o
-    0x0800b47c   0x00000024   Code   RO         9854    i.send_list         nullrdc.o
-    0x0800b4a0   0x00000068   Code   RO         9855    i.send_one_packet   nullrdc.o
-    0x0800b508   0x00000024   Code   RO         8330    i.send_packet       sicslowpan.o
-    0x0800b52c   0x00000130   Code   RO         9396    i.send_packet       csma.o
-    0x0800b65c   0x00000004   Code   RO         9856    i.send_packet       nullrdc.o
-    0x0800b660   0x000000b4   Code   RO         6496    i.send_udp_packet   servreg-hack.o
-    0x0800b714   0x00000024   Code   RO         6869    i.sensors_changed   sensors.o
-    0x0800b738   0x00000034   Code   RO         6497    i.servreg_hack_init  servreg-hack.o
-    0x0800b76c   0x00000018   Code   RO         6500    i.servreg_hack_list_head  servreg-hack.o
-    0x0800b784   0x00000026   Code   RO         6501    i.servreg_hack_lookup  servreg-hack.o
-    0x0800b7aa   0x0000000a   Code   RO        10561    i.set16             rpl-icmp6.o
-    0x0800b7b4   0x00000016   Code   RO        10562    i.set32             rpl-icmp6.o
-    0x0800b7ca   0x00000002   PAD
-    0x0800b7cc   0x00000048   Code   RO        10824    i.set_dao_lifetime_timer  rpl-timers.o
-    0x0800b814   0x0000008c   Code   RO         6368    i.set_global_address  unicast-sender.o
-    0x0800b8a0   0x0000002c   Code   RO        10134    i.set_ip_from_prefix  rpl-dag.o
-    0x0800b8cc   0x00000040   Code   RO         8331    i.set_packet_attrs  sicslowpan.o
-    0x0800b90c   0x00000024   Code   RO         8333    i.sicslowpan_init   sicslowpan.o
-    0x0800b930   0x00000080   Code   RO         7744    i.simple_udp_register  simple-udp.o
-    0x0800b9b0   0x0000001c   Code   RO         7746    i.simple_udp_sendto  simple-udp.o
-    0x0800b9cc   0x000000a8   Code   RO        12038    i.spirit1_arch_refresh_status  spirit1-arch.o
-    0x0800ba74   0x000000c4   Code   RO        11917    i.spirit1_interrupt_callback  spirit1.o
-    0x0800bb38   0x000000d4   Code   RO        11919    i.spirit_radio_channel_clear  spirit1.o
-    0x0800bc0c   0x00000130   Code   RO        11920    i.spirit_radio_init  spirit1.o
-    0x0800bd3c   0x000000a0   Code   RO        11921    i.spirit_radio_off  spirit1.o
-    0x0800bddc   0x000000b4   Code   RO        11922    i.spirit_radio_on   spirit1.o
-    0x0800be90   0x00000010   Code   RO        11923    i.spirit_radio_pending_packet  spirit1.o
-    0x0800bea0   0x0000004c   Code   RO        11924    i.spirit_radio_prepare  spirit1.o
-    0x0800beec   0x000000c0   Code   RO        11925    i.spirit_radio_read  spirit1.o
-    0x0800bfac   0x0000000c   Code   RO        11926    i.spirit_radio_receiving_packet  spirit1.o
-    0x0800bfb8   0x00000018   Code   RO        11927    i.spirit_radio_send  spirit1.o
-    0x0800bfd0   0x0000011c   Code   RO        11928    i.spirit_radio_transmit  spirit1.o
-    0x0800c0ec   0x0000004e   Code   RO        11929    i.spirit_set_ready_state  spirit1.o
-    0x0800c13a   0x00000002   PAD
-    0x0800c13c   0x0000001c   Code   RO         7785    i.start_periodic_tcp_timer  tcpip.o
-    0x0800c158   0x00000014   Code   RO        11472    i.status            button-sensor.o
-    0x0800c16c   0x00000014   Code   RO        11566    i.status            radio-sensor.o
-    0x0800c180   0x00000020   Code   RO        11391    i.stimer_expired    stimer.o
-    0x0800c1a0   0x0000000e   Code   RO        11395    i.stimer_set        stimer.o
-    0x0800c1ae   0x00000002   PAD
-    0x0800c1b0   0x00000064   Code   RO         8334    i.store_fragment    sicslowpan.o
-    0x0800c214   0x00000024   Code   RO         7790    i.tcpip_input       tcpip.o
-    0x0800c238   0x000000ac   Code   RO         7791    i.tcpip_ipv6_output  tcpip.o
-    0x0800c2e4   0x00000018   Code   RO         7792    i.tcpip_output      tcpip.o
-    0x0800c2fc   0x0000000c   Code   RO         7795    i.tcpip_set_outputfunc  tcpip.o
-    0x0800c308   0x0000006c   Code   RO         7796    i.tcpip_uipcall     tcpip.o
-    0x0800c374   0x0000001c   Code   RO        11432    i.timer_expired     timer.o
-    0x0800c390   0x0000000a   Code   RO        11434    i.timer_reset       timer.o
-    0x0800c39a   0x0000000c   Code   RO        11435    i.timer_restart     timer.o
-    0x0800c3a6   0x0000000e   Code   RO        11436    i.timer_set         timer.o
-    0x0800c3b4   0x00000028   Code   RO         9397    i.transmit_packet_list  csma.o
-    0x0800c3dc   0x0000002a   Code   RO         9398    i.tx_done           csma.o
-    0x0800c406   0x00000002   PAD
-    0x0800c408   0x00000018   Code   RO        11719    i.uart_send_char    console.o
-    0x0800c420   0x00000042   Code   RO         7798    i.udp_broadcast_new  tcpip.o
-    0x0800c462   0x00000002   PAD
-    0x0800c464   0x00000020   Code   RO         7799    i.udp_new           tcpip.o
-    0x0800c484   0x0000005c   Code   RO         8607    i.uip_add32         uip6.o
-    0x0800c4e0   0x0000002c   Code   RO         8608    i.uip_add_rcv_nxt   uip6.o
-    0x0800c50c   0x000000c0   Code   RO         8143    i.uip_debug_ipaddr_print  uip-debug.o
-    0x0800c5cc   0x00000090   Code   RO         8769    i.uip_ds6_addr_add  uip-ds6.o
-    0x0800c65c   0x0000002c   Code   RO         8770    i.uip_ds6_addr_lookup  uip-ds6.o
-    0x0800c688   0x00000048   Code   RO         8771    i.uip_ds6_addr_rm   uip-ds6.o
-    0x0800c6d0   0x00000034   Code   RO         8772    i.uip_ds6_compute_reachable_time  uip-ds6.o
-    0x0800c704   0x00000058   Code   RO         9091    i.uip_ds6_defrt_add  uip-ds6-route.o
-    0x0800c75c   0x00000034   Code   RO         9092    i.uip_ds6_defrt_choose  uip-ds6-route.o
-    0x0800c790   0x0000002c   Code   RO         9094    i.uip_ds6_defrt_lookup  uip-ds6-route.o
-    0x0800c7bc   0x00000034   Code   RO         9095    i.uip_ds6_defrt_periodic  uip-ds6-route.o
-    0x0800c7f0   0x00000040   Code   RO         9096    i.uip_ds6_defrt_rm  uip-ds6-route.o
-    0x0800c830   0x00000040   Code   RO         8774    i.uip_ds6_get_link_local  uip-ds6.o
-    0x0800c870   0x000000d0   Code   RO         8775    i.uip_ds6_init      uip-ds6.o
-    0x0800c940   0x0000003c   Code   RO         8776    i.uip_ds6_is_addr_onlink  uip-ds6.o
-    0x0800c97c   0x00000038   Code   RO         8919    i.uip_ds6_link_neighbor_callback  uip-ds6-nbr.o
-    0x0800c9b4   0x00000048   Code   RO         8777    i.uip_ds6_list_loop  uip-ds6.o
-    0x0800c9fc   0x00000040   Code   RO         8778    i.uip_ds6_maddr_add  uip-ds6.o
-    0x0800ca3c   0x0000002c   Code   RO         8779    i.uip_ds6_maddr_lookup  uip-ds6.o
-    0x0800ca68   0x0000000a   Code   RO         8780    i.uip_ds6_maddr_rm  uip-ds6.o
-    0x0800ca72   0x00000002   PAD
-    0x0800ca74   0x00000034   Code   RO         8920    i.uip_ds6_nbr_add   uip-ds6-nbr.o
-    0x0800caa8   0x00000010   Code   RO         8922    i.uip_ds6_nbr_get_ll  uip-ds6-nbr.o
-    0x0800cab8   0x00000004   Code   RO         8923    i.uip_ds6_nbr_ipaddr_from_lladdr  uip-ds6-nbr.o
-    0x0800cabc   0x00000010   Code   RO         8924    i.uip_ds6_nbr_ll_lookup  uip-ds6-nbr.o
-    0x0800cacc   0x00000014   Code   RO         8925    i.uip_ds6_nbr_lladdr_from_ipaddr  uip-ds6-nbr.o
-    0x0800cae0   0x00000038   Code   RO         8926    i.uip_ds6_nbr_lookup  uip-ds6-nbr.o
-    0x0800cb18   0x00000020   Code   RO         8928    i.uip_ds6_nbr_rm    uip-ds6-nbr.o
-    0x0800cb38   0x0000001c   Code   RO         8929    i.uip_ds6_neighbors_init  uip-ds6-nbr.o
-    0x0800cb54   0x00000048   Code   RO         8781    i.uip_ds6_periodic  uip-ds6.o
-    0x0800cb9c   0x00000058   Code   RO         8782    i.uip_ds6_prefix_add  uip-ds6.o
-    0x0800cbf4   0x000000e0   Code   RO         9099    i.uip_ds6_route_add  uip-ds6-route.o
-    0x0800ccd4   0x0000000c   Code   RO         9100    i.uip_ds6_route_head  uip-ds6-route.o
-    0x0800cce0   0x0000003c   Code   RO         9101    i.uip_ds6_route_init  uip-ds6-route.o
-    0x0800cd1c   0x00000024   Code   RO         9102    i.uip_ds6_route_is_nexthop  uip-ds6-route.o
-    0x0800cd40   0x00000064   Code   RO         9103    i.uip_ds6_route_lookup  uip-ds6-route.o
-    0x0800cda4   0x0000000a   Code   RO         9104    i.uip_ds6_route_next  uip-ds6-route.o
-    0x0800cdae   0x00000002   PAD
-    0x0800cdb0   0x00000020   Code   RO         9105    i.uip_ds6_route_nexthop  uip-ds6-route.o
-    0x0800cdd0   0x00000094   Code   RO         9107    i.uip_ds6_route_rm  uip-ds6-route.o
-    0x0800ce64   0x0000009c   Code   RO         8785    i.uip_ds6_select_src  uip-ds6.o
-    0x0800cf00   0x00000012   Code   RO         8786    i.uip_ds6_set_addr_iid  uip-ds6.o
-    0x0800cf12   0x00000004   Code   RO         8611    i.uip_htonl         uip6.o
-    0x0800cf16   0x00000002   PAD
-    0x0800cf18   0x0000011c   Code   RO         9240    i.uip_icmp6_error_output  uip-icmp6.o
-    0x0800d034   0x00000018   Code   RO         9241    i.uip_icmp6_init    uip-icmp6.o
-    0x0800d04c   0x00000040   Code   RO         9242    i.uip_icmp6_input   uip-icmp6.o
-    0x0800d08c   0x00000010   Code   RO         9243    i.uip_icmp6_register_input_handler  uip-icmp6.o
-    0x0800d09c   0x00000080   Code   RO         9244    i.uip_icmp6_send    uip-icmp6.o
-    0x0800d11c   0x00000006   Code   RO         8613    i.uip_icmp6chksum   uip6.o
-    0x0800d122   0x00000002   PAD
-    0x0800d124   0x0000005c   Code   RO         8614    i.uip_init          uip6.o
-    0x0800d180   0x0000000c   Code   RO         9311    i.uip_nd6_init      uip-nd6.o
-    0x0800d18c   0x00000bbc   Code   RO         8616    i.uip_process       uip6.o
-    0x0800dd48   0x00000006   Code   RO         8618    i.uip_tcpchksum     uip6.o
-    0x0800dd4e   0x00000002   PAD
-    0x0800dd50   0x0000009c   Code   RO         8619    i.uip_udp_new       uip6.o
-    0x0800ddec   0x00000038   Code   RO         8296    i.uip_udp_packet_send  uip-udp-packet.o
-    0x0800de24   0x0000003e   Code   RO         8297    i.uip_udp_packet_sendto  uip-udp-packet.o
-    0x0800de62   0x00000006   Code   RO         8620    i.uip_udpchksum     uip6.o
-    0x0800de68   0x00000020   Code   RO         8621    i.uip_unlisten      uip6.o
-    0x0800de88   0x00000074   Code   RO         8335    i.uncompress_addr   sicslowpan.o
-    0x0800defc   0x000002dc   Code   RO         8336    i.uncompress_hdr_iphc  sicslowpan.o
-    0x0800e1d8   0x000000d4   Code   RO        10511    i.update_hbh_header  rpl-ext-header.o
-    0x0800e2ac   0x00000006   Code   RO        10663    i.update_metric_container  rpl-mrhof.o
-    0x0800e2b2   0x00000002   PAD
-    0x0800e2b4   0x000000d4   Code   RO        10927    i.update_nbr        rpl-nbr-policy.o
-    0x0800e388   0x00000038   Code   RO        11168    i.update_time       etimer.o
-    0x0800e3c0   0x00000050   Code   RO         8622    i.upper_layer_chksum  uip6.o
-    0x0800e410   0x00000006   Code   RO        11473    i.value             button-sensor.o
-    0x0800e416   0x00000002   PAD
-    0x0800e418   0x00000040   Code   RO        11567    i.value             radio-sensor.o
-    0x0800e458   0x00000002   Code   RO        12074    i.watchdog_init     watchdog.o
-    0x0800e45a   0x00000002   Code   RO        12075    i.watchdog_periodic  watchdog.o
-    0x0800e45c   0x00000002   Code   RO        12077    i.watchdog_start    watchdog.o
-    0x0800e45e   0x00000008   Data   RO          643    .constdata          spirit_management.o
-    0x0800e466   0x00000002   PAD
-    0x0800e468   0x00000154   Data   RO         1532    .constdata          spirit_radio.o
-    0x0800e5bc   0x00000006   Data   RO         2209    .constdata          stm32l1xx_nucleo.o
-    0x0800e5c2   0x00000002   PAD
-    0x0800e5c4   0x00000048   Data   RO         2528    .constdata          radio_gpio.o
-    0x0800e60c   0x00000002   Data   RO         2698    .constdata          radio_shield_config.o
-    0x0800e60e   0x00000019   Data   RO         2836    .constdata          system_stm32l1xx.o
-    0x0800e627   0x00000008   Data   RO         2837    .constdata          system_stm32l1xx.o
-    0x0800e62f   0x00000001   PAD
-    0x0800e630   0x00000008   Data   RO         6370    .constdata          unicast-sender.o
-    0x0800e638   0x00000008   Data   RO         6931    .constdata          linkaddr.o
-    0x0800e640   0x00000012   Data   RO         8338    .constdata          sicslowpan.o
-    0x0800e652   0x00000002   PAD
-    0x0800e654   0x0000000c   Data   RO         8339    .constdata          sicslowpan.o
-    0x0800e660   0x00000010   Data   RO         9358    .constdata          nullsec.o
-    0x0800e670   0x0000001c   Data   RO         9404    .constdata          csma.o
-    0x0800e68c   0x0000000c   Data   RO         9670    .constdata          framer-802154.o
-    0x0800e698   0x00000020   Data   RO         9857    .constdata          nullrdc.o
-    0x0800e6b8   0x00000004   Data   RO        10137    .constdata          rpl-dag.o
-    0x0800e6bc   0x00000010   Data   RO        11474    .constdata          button-sensor.o
-    0x0800e6cc   0x00000010   Data   RO        11568    .constdata          radio-sensor.o
-    0x0800e6dc   0x00000038   Data   RO        11931    .constdata          spirit1.o
-    0x0800e714   0x00000030   Data   RO        11932    .constdata          spirit1.o
-    0x0800e744   0x0000001f   Data   RO         6371    .conststring        unicast-sender.o
-    0x0800e763   0x00000001   PAD
-    0x0800e764   0x0000009d   Data   RO         6506    .conststring        servreg-hack.o
-    0x0800e801   0x00000003   PAD
-    0x0800e804   0x00000008   Data   RO         6873    .conststring        sensors.o
-    0x0800e80c   0x00000013   Data   RO         7749    .conststring        simple-udp.o
-    0x0800e81f   0x00000001   PAD
-    0x0800e820   0x0000000d   Data   RO         7801    .conststring        tcpip.o
-    0x0800e82d   0x00000003   PAD
-    0x0800e830   0x0000000b   Data   RO         8340    .conststring        sicslowpan.o
-    0x0800e83b   0x00000001   PAD
-    0x0800e83c   0x00000008   Data   RO         9359    .conststring        nullsec.o
-    0x0800e844   0x00000005   Data   RO         9405    .conststring        csma.o
-    0x0800e849   0x00000003   PAD
-    0x0800e84c   0x00000008   Data   RO         9858    .conststring        nullrdc.o
-    0x0800e854   0x0000000f   Data   RO        11074    .conststring        ctimer.o
-    0x0800e863   0x00000001   PAD
-    0x0800e864   0x0000000c   Data   RO        11169    .conststring        etimer.o
-    0x0800e870   0x00000007   Data   RO        11475    .conststring        button-sensor.o
-    0x0800e877   0x00000001   PAD
-    0x0800e878   0x00000006   Data   RO        11569    .conststring        radio-sensor.o
-    0x0800e87e   0x00000002   PAD
-    0x0800e880   0x00000014   Data   RO        11933    .conststring        spirit1.o
-    0x0800e894   0x00000020   Data   RO        12618    Region$$Table       anon$$obj.o
+    0x0800a040   0x00000078   Code   RO         6367    i.receiver          unicast-sender.o
+    0x0800a0b8   0x00000048   Code   RO         8606    i.remove_ext_hdr    uip6.o
+    0x0800a100   0x00000064   Code   RO         6979    i.remove_key        nbr-table.o
+    0x0800a164   0x00000038   Code   RO        10091    i.remove_parents    rpl-dag.o
+    0x0800a19c   0x00000002   Code   RO        10662    i.reset             rpl-mrhof.o
+    0x0800a19e   0x00000014   Code   RO         9394    i.rexmit            csma.o
+    0x0800a1b2   0x00000002   PAD
+    0x0800a1b4   0x00000030   Code   RO         9089    i.rm_routelist      uip-ds6-route.o
+    0x0800a1e4   0x00000004   Code   RO         9090    i.rm_routelist_callback  uip-ds6-route.o
+    0x0800a1e8   0x00000094   Code   RO        12183    i.round             m_ws.l(round.o)
+    0x0800a27c   0x00000102   Code   RO        10092    i.rpl_add_dag       rpl-dag.o
+    0x0800a37e   0x00000002   PAD
+    0x0800a380   0x00000034   Code   RO        10093    i.rpl_add_parent    rpl-dag.o
+    0x0800a3b4   0x0000003c   Code   RO         9992    i.rpl_add_route     rpl.o
+    0x0800a3f0   0x00000048   Code   RO        10094    i.rpl_alloc_dag     rpl-dag.o
+    0x0800a438   0x00000048   Code   RO        10095    i.rpl_alloc_instance  rpl-dag.o
+    0x0800a480   0x00000014   Code   RO        10096    i.rpl_dag_init      rpl-dag.o
+    0x0800a494   0x00000018   Code   RO        10097    i.rpl_find_of       rpl-dag.o
+    0x0800a4ac   0x00000016   Code   RO        10098    i.rpl_find_parent   rpl-dag.o
+    0x0800a4c2   0x0000001a   Code   RO        10099    i.rpl_find_parent_any_dag  rpl-dag.o
+    0x0800a4dc   0x0000003c   Code   RO        10100    i.rpl_free_dag      rpl-dag.o
+    0x0800a518   0x00000018   Code   RO        10102    i.rpl_get_any_dag   rpl-dag.o
+    0x0800a530   0x0000004c   Code   RO        10103    i.rpl_get_dag       rpl-dag.o
+    0x0800a57c   0x0000001c   Code   RO        10105    i.rpl_get_instance  rpl-dag.o
+    0x0800a598   0x0000000c   Code   RO         9993    i.rpl_get_mode      rpl.o
+    0x0800a5a4   0x00000010   Code   RO        10107    i.rpl_get_parent    rpl-dag.o
+    0x0800a5b4   0x0000000e   Code   RO        10108    i.rpl_get_parent_ipaddr  rpl-dag.o
+    0x0800a5c2   0x0000000e   Code   RO        10110    i.rpl_get_parent_link_stats  rpl-dag.o
+    0x0800a5d0   0x00000010   Code   RO        10111    i.rpl_get_parent_lladdr  rpl-dag.o
+    0x0800a5e0   0x00000028   Code   RO        10559    i.rpl_icmp6_register_handlers  rpl-icmp6.o
+    0x0800a608   0x00000028   Code   RO        10560    i.rpl_icmp6_update_nbr_table  rpl-icmp6.o
+    0x0800a630   0x00000048   Code   RO         9994    i.rpl_init          rpl.o
+    0x0800a678   0x00000040   Code   RO         9995    i.rpl_ipv6_neighbor_callback  rpl.o
+    0x0800a6b8   0x00000120   Code   RO        10114    i.rpl_join_instance  rpl-dag.o
+    0x0800a7d8   0x00000060   Code   RO         9996    i.rpl_link_neighbor_callback  rpl.o
+    0x0800a838   0x0000008c   Code   RO        10115    i.rpl_local_repair  rpl-dag.o
+    0x0800a8c4   0x00000056   Code   RO        10116    i.rpl_move_parent   rpl-dag.o
+    0x0800a91a   0x00000002   PAD
+    0x0800a91c   0x00000028   Code   RO        10926    i.rpl_nbr_policy_find_removable  rpl-nbr-policy.o
+    0x0800a944   0x00000058   Code   RO        10117    i.rpl_nullify_parent  rpl-dag.o
+    0x0800a99c   0x0000000e   Code   RO        10118    i.rpl_parent_is_fresh  rpl-dag.o
+    0x0800a9aa   0x00000032   Code   RO        10119    i.rpl_parent_is_reachable  rpl-dag.o
+    0x0800a9dc   0x0000022e   Code   RO        10121    i.rpl_process_dio   rpl-dag.o
+    0x0800ac0a   0x0000007a   Code   RO        10122    i.rpl_process_parent_event  rpl-dag.o
+    0x0800ac84   0x0000004c   Code   RO         9997    i.rpl_purge_dags    rpl.o
+    0x0800acd0   0x00000064   Code   RO         9998    i.rpl_purge_routes  rpl.o
+    0x0800ad34   0x0000001a   Code   RO        10123    i.rpl_rank_via_parent  rpl-dag.o
+    0x0800ad4e   0x00000002   PAD
+    0x0800ad50   0x0000003c   Code   RO        10124    i.rpl_recalculate_ranks  rpl-dag.o
+    0x0800ad8c   0x0000008c   Code   RO        10508    i.rpl_remove_header  rpl-ext-header.o
+    0x0800ae18   0x0000001c   Code   RO        10125    i.rpl_remove_parent  rpl-dag.o
+    0x0800ae34   0x00000020   Code   RO         9999    i.rpl_remove_routes  rpl.o
+    0x0800ae54   0x0000003a   Code   RO        10000    i.rpl_remove_routes_by_nexthop  rpl.o
+    0x0800ae8e   0x00000044   Code   RO        10126    i.rpl_repair_root   rpl-dag.o
+    0x0800aed2   0x0000001c   Code   RO        10817    i.rpl_reset_dio_timer  rpl-timers.o
+    0x0800aeee   0x00000002   PAD
+    0x0800aef0   0x00000038   Code   RO        10818    i.rpl_reset_periodic_timer  rpl-timers.o
+    0x0800af28   0x00000008   Code   RO        10819    i.rpl_schedule_dao  rpl-timers.o
+    0x0800af30   0x00000020   Code   RO        10821    i.rpl_schedule_probing  rpl-timers.o
+    0x0800af50   0x00000014   Code   RO        10822    i.rpl_schedule_unicast_dio_immediately  rpl-timers.o
+    0x0800af64   0x00000140   Code   RO        10127    i.rpl_select_dag    rpl-dag.o
+    0x0800b0a4   0x0000004e   Code   RO        10128    i.rpl_select_parent  rpl-dag.o
+    0x0800b0f2   0x0000002c   Code   RO        10130    i.rpl_set_default_route  rpl-dag.o
+    0x0800b11e   0x00000002   PAD
+    0x0800b120   0x00000028   Code   RO        10131    i.rpl_set_preferred_parent  rpl-dag.o
+    0x0800b148   0x0000005c   Code   RO        10132    i.rpl_set_prefix    rpl-dag.o
+    0x0800b1a4   0x00000070   Code   RO        10509    i.rpl_update_header  rpl-ext-header.o
+    0x0800b214   0x000000f4   Code   RO        10510    i.rpl_verify_hbh_header  rpl-ext-header.o
+    0x0800b308   0x00000094   Code   RO        11872    i.rtimer_arch_init  rtimer-arch.o
+    0x0800b39c   0x0000000c   Code   RO        11873    i.rtimer_arch_now   rtimer-arch.o
+    0x0800b3a8   0x00000004   Code   RO        11364    i.rtimer_init       rtimer.o
+    0x0800b3ac   0x00000054   Code   RO        10823    i.schedule_dao      rpl-timers.o
+    0x0800b400   0x0000004c   Code   RO         9395    i.schedule_transmission  csma.o
+    0x0800b44c   0x00000020   Code   RO         9357    i.send              nullsec.o
+    0x0800b46c   0x00000024   Code   RO         9854    i.send_list         nullrdc.o
+    0x0800b490   0x00000068   Code   RO         9855    i.send_one_packet   nullrdc.o
+    0x0800b4f8   0x00000024   Code   RO         8330    i.send_packet       sicslowpan.o
+    0x0800b51c   0x00000130   Code   RO         9396    i.send_packet       csma.o
+    0x0800b64c   0x00000004   Code   RO         9856    i.send_packet       nullrdc.o
+    0x0800b650   0x000000b4   Code   RO         6496    i.send_udp_packet   servreg-hack.o
+    0x0800b704   0x00000024   Code   RO         6869    i.sensors_changed   sensors.o
+    0x0800b728   0x00000034   Code   RO         6497    i.servreg_hack_init  servreg-hack.o
+    0x0800b75c   0x00000018   Code   RO         6500    i.servreg_hack_list_head  servreg-hack.o
+    0x0800b774   0x00000026   Code   RO         6501    i.servreg_hack_lookup  servreg-hack.o
+    0x0800b79a   0x0000000a   Code   RO        10561    i.set16             rpl-icmp6.o
+    0x0800b7a4   0x00000016   Code   RO        10562    i.set32             rpl-icmp6.o
+    0x0800b7ba   0x00000002   PAD
+    0x0800b7bc   0x00000048   Code   RO        10824    i.set_dao_lifetime_timer  rpl-timers.o
+    0x0800b804   0x0000008c   Code   RO         6368    i.set_global_address  unicast-sender.o
+    0x0800b890   0x0000002c   Code   RO        10134    i.set_ip_from_prefix  rpl-dag.o
+    0x0800b8bc   0x00000040   Code   RO         8331    i.set_packet_attrs  sicslowpan.o
+    0x0800b8fc   0x00000024   Code   RO         8333    i.sicslowpan_init   sicslowpan.o
+    0x0800b920   0x00000080   Code   RO         7744    i.simple_udp_register  simple-udp.o
+    0x0800b9a0   0x0000001c   Code   RO         7746    i.simple_udp_sendto  simple-udp.o
+    0x0800b9bc   0x000000a8   Code   RO        12038    i.spirit1_arch_refresh_status  spirit1-arch.o
+    0x0800ba64   0x000000c4   Code   RO        11917    i.spirit1_interrupt_callback  spirit1.o
+    0x0800bb28   0x000000d4   Code   RO        11919    i.spirit_radio_channel_clear  spirit1.o
+    0x0800bbfc   0x00000130   Code   RO        11920    i.spirit_radio_init  spirit1.o
+    0x0800bd2c   0x000000a0   Code   RO        11921    i.spirit_radio_off  spirit1.o
+    0x0800bdcc   0x000000b4   Code   RO        11922    i.spirit_radio_on   spirit1.o
+    0x0800be80   0x00000010   Code   RO        11923    i.spirit_radio_pending_packet  spirit1.o
+    0x0800be90   0x0000004c   Code   RO        11924    i.spirit_radio_prepare  spirit1.o
+    0x0800bedc   0x000000c0   Code   RO        11925    i.spirit_radio_read  spirit1.o
+    0x0800bf9c   0x0000000c   Code   RO        11926    i.spirit_radio_receiving_packet  spirit1.o
+    0x0800bfa8   0x00000018   Code   RO        11927    i.spirit_radio_send  spirit1.o
+    0x0800bfc0   0x0000011c   Code   RO        11928    i.spirit_radio_transmit  spirit1.o
+    0x0800c0dc   0x0000004e   Code   RO        11929    i.spirit_set_ready_state  spirit1.o
+    0x0800c12a   0x00000002   PAD
+    0x0800c12c   0x0000001c   Code   RO         7785    i.start_periodic_tcp_timer  tcpip.o
+    0x0800c148   0x00000014   Code   RO        11472    i.status            button-sensor.o
+    0x0800c15c   0x00000014   Code   RO        11566    i.status            radio-sensor.o
+    0x0800c170   0x00000020   Code   RO        11391    i.stimer_expired    stimer.o
+    0x0800c190   0x0000000e   Code   RO        11395    i.stimer_set        stimer.o
+    0x0800c19e   0x00000002   PAD
+    0x0800c1a0   0x00000064   Code   RO         8334    i.store_fragment    sicslowpan.o
+    0x0800c204   0x00000024   Code   RO         7790    i.tcpip_input       tcpip.o
+    0x0800c228   0x000000ac   Code   RO         7791    i.tcpip_ipv6_output  tcpip.o
+    0x0800c2d4   0x00000018   Code   RO         7792    i.tcpip_output      tcpip.o
+    0x0800c2ec   0x0000000c   Code   RO         7795    i.tcpip_set_outputfunc  tcpip.o
+    0x0800c2f8   0x0000006c   Code   RO         7796    i.tcpip_uipcall     tcpip.o
+    0x0800c364   0x0000001c   Code   RO        11432    i.timer_expired     timer.o
+    0x0800c380   0x0000000a   Code   RO        11434    i.timer_reset       timer.o
+    0x0800c38a   0x0000000c   Code   RO        11435    i.timer_restart     timer.o
+    0x0800c396   0x0000000e   Code   RO        11436    i.timer_set         timer.o
+    0x0800c3a4   0x00000028   Code   RO         9397    i.transmit_packet_list  csma.o
+    0x0800c3cc   0x0000002a   Code   RO         9398    i.tx_done           csma.o
+    0x0800c3f6   0x00000002   PAD
+    0x0800c3f8   0x00000018   Code   RO        11719    i.uart_send_char    console.o
+    0x0800c410   0x00000042   Code   RO         7798    i.udp_broadcast_new  tcpip.o
+    0x0800c452   0x00000002   PAD
+    0x0800c454   0x00000020   Code   RO         7799    i.udp_new           tcpip.o
+    0x0800c474   0x0000005c   Code   RO         8607    i.uip_add32         uip6.o
+    0x0800c4d0   0x0000002c   Code   RO         8608    i.uip_add_rcv_nxt   uip6.o
+    0x0800c4fc   0x000000c0   Code   RO         8143    i.uip_debug_ipaddr_print  uip-debug.o
+    0x0800c5bc   0x00000090   Code   RO         8769    i.uip_ds6_addr_add  uip-ds6.o
+    0x0800c64c   0x0000002c   Code   RO         8770    i.uip_ds6_addr_lookup  uip-ds6.o
+    0x0800c678   0x00000048   Code   RO         8771    i.uip_ds6_addr_rm   uip-ds6.o
+    0x0800c6c0   0x00000034   Code   RO         8772    i.uip_ds6_compute_reachable_time  uip-ds6.o
+    0x0800c6f4   0x00000058   Code   RO         9091    i.uip_ds6_defrt_add  uip-ds6-route.o
+    0x0800c74c   0x00000034   Code   RO         9092    i.uip_ds6_defrt_choose  uip-ds6-route.o
+    0x0800c780   0x0000002c   Code   RO         9094    i.uip_ds6_defrt_lookup  uip-ds6-route.o
+    0x0800c7ac   0x00000034   Code   RO         9095    i.uip_ds6_defrt_periodic  uip-ds6-route.o
+    0x0800c7e0   0x00000040   Code   RO         9096    i.uip_ds6_defrt_rm  uip-ds6-route.o
+    0x0800c820   0x00000040   Code   RO         8774    i.uip_ds6_get_link_local  uip-ds6.o
+    0x0800c860   0x000000d0   Code   RO         8775    i.uip_ds6_init      uip-ds6.o
+    0x0800c930   0x0000003c   Code   RO         8776    i.uip_ds6_is_addr_onlink  uip-ds6.o
+    0x0800c96c   0x00000038   Code   RO         8919    i.uip_ds6_link_neighbor_callback  uip-ds6-nbr.o
+    0x0800c9a4   0x00000048   Code   RO         8777    i.uip_ds6_list_loop  uip-ds6.o
+    0x0800c9ec   0x00000040   Code   RO         8778    i.uip_ds6_maddr_add  uip-ds6.o
+    0x0800ca2c   0x0000002c   Code   RO         8779    i.uip_ds6_maddr_lookup  uip-ds6.o
+    0x0800ca58   0x0000000a   Code   RO         8780    i.uip_ds6_maddr_rm  uip-ds6.o
+    0x0800ca62   0x00000002   PAD
+    0x0800ca64   0x00000034   Code   RO         8920    i.uip_ds6_nbr_add   uip-ds6-nbr.o
+    0x0800ca98   0x00000010   Code   RO         8922    i.uip_ds6_nbr_get_ll  uip-ds6-nbr.o
+    0x0800caa8   0x00000004   Code   RO         8923    i.uip_ds6_nbr_ipaddr_from_lladdr  uip-ds6-nbr.o
+    0x0800caac   0x00000010   Code   RO         8924    i.uip_ds6_nbr_ll_lookup  uip-ds6-nbr.o
+    0x0800cabc   0x00000014   Code   RO         8925    i.uip_ds6_nbr_lladdr_from_ipaddr  uip-ds6-nbr.o
+    0x0800cad0   0x00000038   Code   RO         8926    i.uip_ds6_nbr_lookup  uip-ds6-nbr.o
+    0x0800cb08   0x00000020   Code   RO         8928    i.uip_ds6_nbr_rm    uip-ds6-nbr.o
+    0x0800cb28   0x0000001c   Code   RO         8929    i.uip_ds6_neighbors_init  uip-ds6-nbr.o
+    0x0800cb44   0x00000048   Code   RO         8781    i.uip_ds6_periodic  uip-ds6.o
+    0x0800cb8c   0x00000058   Code   RO         8782    i.uip_ds6_prefix_add  uip-ds6.o
+    0x0800cbe4   0x000000e0   Code   RO         9099    i.uip_ds6_route_add  uip-ds6-route.o
+    0x0800ccc4   0x0000000c   Code   RO         9100    i.uip_ds6_route_head  uip-ds6-route.o
+    0x0800ccd0   0x0000003c   Code   RO         9101    i.uip_ds6_route_init  uip-ds6-route.o
+    0x0800cd0c   0x00000024   Code   RO         9102    i.uip_ds6_route_is_nexthop  uip-ds6-route.o
+    0x0800cd30   0x00000064   Code   RO         9103    i.uip_ds6_route_lookup  uip-ds6-route.o
+    0x0800cd94   0x0000000a   Code   RO         9104    i.uip_ds6_route_next  uip-ds6-route.o
+    0x0800cd9e   0x00000002   PAD
+    0x0800cda0   0x00000020   Code   RO         9105    i.uip_ds6_route_nexthop  uip-ds6-route.o
+    0x0800cdc0   0x00000094   Code   RO         9107    i.uip_ds6_route_rm  uip-ds6-route.o
+    0x0800ce54   0x0000009c   Code   RO         8785    i.uip_ds6_select_src  uip-ds6.o
+    0x0800cef0   0x00000012   Code   RO         8786    i.uip_ds6_set_addr_iid  uip-ds6.o
+    0x0800cf02   0x00000004   Code   RO         8611    i.uip_htonl         uip6.o
+    0x0800cf06   0x00000002   PAD
+    0x0800cf08   0x0000011c   Code   RO         9240    i.uip_icmp6_error_output  uip-icmp6.o
+    0x0800d024   0x00000018   Code   RO         9241    i.uip_icmp6_init    uip-icmp6.o
+    0x0800d03c   0x00000040   Code   RO         9242    i.uip_icmp6_input   uip-icmp6.o
+    0x0800d07c   0x00000010   Code   RO         9243    i.uip_icmp6_register_input_handler  uip-icmp6.o
+    0x0800d08c   0x00000080   Code   RO         9244    i.uip_icmp6_send    uip-icmp6.o
+    0x0800d10c   0x00000006   Code   RO         8613    i.uip_icmp6chksum   uip6.o
+    0x0800d112   0x00000002   PAD
+    0x0800d114   0x0000005c   Code   RO         8614    i.uip_init          uip6.o
+    0x0800d170   0x0000000c   Code   RO         9311    i.uip_nd6_init      uip-nd6.o
+    0x0800d17c   0x00000bbc   Code   RO         8616    i.uip_process       uip6.o
+    0x0800dd38   0x00000006   Code   RO         8618    i.uip_tcpchksum     uip6.o
+    0x0800dd3e   0x00000002   PAD
+    0x0800dd40   0x0000009c   Code   RO         8619    i.uip_udp_new       uip6.o
+    0x0800dddc   0x00000038   Code   RO         8296    i.uip_udp_packet_send  uip-udp-packet.o
+    0x0800de14   0x0000003e   Code   RO         8297    i.uip_udp_packet_sendto  uip-udp-packet.o
+    0x0800de52   0x00000006   Code   RO         8620    i.uip_udpchksum     uip6.o
+    0x0800de58   0x00000020   Code   RO         8621    i.uip_unlisten      uip6.o
+    0x0800de78   0x00000074   Code   RO         8335    i.uncompress_addr   sicslowpan.o
+    0x0800deec   0x000002dc   Code   RO         8336    i.uncompress_hdr_iphc  sicslowpan.o
+    0x0800e1c8   0x000000d4   Code   RO        10511    i.update_hbh_header  rpl-ext-header.o
+    0x0800e29c   0x00000006   Code   RO        10663    i.update_metric_container  rpl-mrhof.o
+    0x0800e2a2   0x00000002   PAD
+    0x0800e2a4   0x000000d4   Code   RO        10927    i.update_nbr        rpl-nbr-policy.o
+    0x0800e378   0x00000038   Code   RO        11168    i.update_time       etimer.o
+    0x0800e3b0   0x00000050   Code   RO         8622    i.upper_layer_chksum  uip6.o
+    0x0800e400   0x00000006   Code   RO        11473    i.value             button-sensor.o
+    0x0800e406   0x00000002   PAD
+    0x0800e408   0x00000040   Code   RO        11567    i.value             radio-sensor.o
+    0x0800e448   0x00000002   Code   RO        12074    i.watchdog_init     watchdog.o
+    0x0800e44a   0x00000002   Code   RO        12075    i.watchdog_periodic  watchdog.o
+    0x0800e44c   0x00000002   Code   RO        12077    i.watchdog_start    watchdog.o
+    0x0800e44e   0x00000008   Data   RO          643    .constdata          spirit_management.o
+    0x0800e456   0x00000002   PAD
+    0x0800e458   0x00000154   Data   RO         1532    .constdata          spirit_radio.o
+    0x0800e5ac   0x00000006   Data   RO         2209    .constdata          stm32l1xx_nucleo.o
+    0x0800e5b2   0x00000002   PAD
+    0x0800e5b4   0x00000048   Data   RO         2528    .constdata          radio_gpio.o
+    0x0800e5fc   0x00000002   Data   RO         2698    .constdata          radio_shield_config.o
+    0x0800e5fe   0x00000019   Data   RO         2836    .constdata          system_stm32l1xx.o
+    0x0800e617   0x00000008   Data   RO         2837    .constdata          system_stm32l1xx.o
+    0x0800e61f   0x00000001   PAD
+    0x0800e620   0x00000008   Data   RO         6370    .constdata          unicast-sender.o
+    0x0800e628   0x00000008   Data   RO         6931    .constdata          linkaddr.o
+    0x0800e630   0x00000012   Data   RO         8338    .constdata          sicslowpan.o
+    0x0800e642   0x00000002   PAD
+    0x0800e644   0x0000000c   Data   RO         8339    .constdata          sicslowpan.o
+    0x0800e650   0x00000010   Data   RO         9358    .constdata          nullsec.o
+    0x0800e660   0x0000001c   Data   RO         9404    .constdata          csma.o
+    0x0800e67c   0x0000000c   Data   RO         9670    .constdata          framer-802154.o
+    0x0800e688   0x00000020   Data   RO         9857    .constdata          nullrdc.o
+    0x0800e6a8   0x00000004   Data   RO        10137    .constdata          rpl-dag.o
+    0x0800e6ac   0x00000010   Data   RO        11474    .constdata          button-sensor.o
+    0x0800e6bc   0x00000010   Data   RO        11568    .constdata          radio-sensor.o
+    0x0800e6cc   0x00000038   Data   RO        11931    .constdata          spirit1.o
+    0x0800e704   0x00000030   Data   RO        11932    .constdata          spirit1.o
+    0x0800e734   0x0000001f   Data   RO         6371    .conststring        unicast-sender.o
+    0x0800e753   0x00000001   PAD
+    0x0800e754   0x0000009d   Data   RO         6506    .conststring        servreg-hack.o
+    0x0800e7f1   0x00000003   PAD
+    0x0800e7f4   0x00000008   Data   RO         6873    .conststring        sensors.o
+    0x0800e7fc   0x00000013   Data   RO         7749    .conststring        simple-udp.o
+    0x0800e80f   0x00000001   PAD
+    0x0800e810   0x0000000d   Data   RO         7801    .conststring        tcpip.o
+    0x0800e81d   0x00000003   PAD
+    0x0800e820   0x0000000b   Data   RO         8340    .conststring        sicslowpan.o
+    0x0800e82b   0x00000001   PAD
+    0x0800e82c   0x00000008   Data   RO         9359    .conststring        nullsec.o
+    0x0800e834   0x00000005   Data   RO         9405    .conststring        csma.o
+    0x0800e839   0x00000003   PAD
+    0x0800e83c   0x00000008   Data   RO         9858    .conststring        nullrdc.o
+    0x0800e844   0x0000000f   Data   RO        11074    .conststring        ctimer.o
+    0x0800e853   0x00000001   PAD
+    0x0800e854   0x0000000c   Data   RO        11169    .conststring        etimer.o
+    0x0800e860   0x00000007   Data   RO        11475    .conststring        button-sensor.o
+    0x0800e867   0x00000001   PAD
+    0x0800e868   0x00000006   Data   RO        11569    .conststring        radio-sensor.o
+    0x0800e86e   0x00000002   PAD
+    0x0800e870   0x00000014   Data   RO        11933    .conststring        spirit1.o
+    0x0800e884   0x00000020   Data   RO        12618    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00003e08, Max: 0x00014000, ABSOLUTE, COMPRESSED[0x00000174])
@@ -7971,8 +7974,8 @@ Memory Map of the image
     0x20000040   0x00000004   Data   RW         2895    .data               stm32l1xx_hal.o
     0x20000044   0x00000004   Data   RW         6100    .data               stm32l1xx_hal_msp.o
     0x20000048   0x00000010   Data   RW         6372    .data               unicast-sender.o
-    0x20000058   0x00000001   Data   RW         6373    .data               unicast-sender.o
-    0x20000059   0x00000003   PAD
+    0x20000058   0x00000003   Data   RW         6373    .data               unicast-sender.o
+    0x2000005b   0x00000001   PAD
     0x2000005c   0x00000004   Data   RW         6507    .data               servreg-hack.o
     0x20000060   0x00000030   Data   RW         6508    .data               servreg-hack.o
     0x20000090   0x00000004   Data   RW         6509    .data               servreg-hack.o
@@ -8178,13 +8181,13 @@ Image component sizes
        548         26          0         28          0       3859   uip-nd6.o
        118         14          0          0          0       2525   uip-udp-packet.o
       3804        108          0         48       1892      29384   uip6.o
-       444        140         39         17         36      33035   unicast-sender.o
+       428        118         39         19         36      33035   unicast-sender.o
          6          0          0          0          0       1641   watchdog.o
 
     ----------------------------------------------------------------------
-     54264       4298       1402        940      14932    1271963   Object Totals
+     54248       4276       1402        940      14932    1271963   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        92          0         23         11          9          0   (incl. Padding)
+        92          0         23          9          9          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -8259,15 +8262,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     58170       4394       1402        948      14932    1244739   Grand Totals
-     58170       4394       1402        372      14932    1244739   ELF Image Totals (compressed)
-     58170       4394       1402        372          0          0   ROM Totals
+     58154       4372       1402        948      14932    1244739   Grand Totals
+     58154       4372       1402        372      14932    1244739   ELF Image Totals (compressed)
+     58154       4372       1402        372          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                59572 (  58.18kB)
+    Total RO  Size (Code + RO Data)                59556 (  58.16kB)
     Total RW  Size (RW Data + ZI Data)             15880 (  15.51kB)
-    Total ROM Size (Code + RO Data + RW Data)      59944 (  58.54kB)
+    Total ROM Size (Code + RO Data + RW Data)      59928 (  58.52kB)
 
 ==============================================================================
 

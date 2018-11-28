@@ -59,6 +59,8 @@
 static struct simple_udp_connection unicast_connection;
 process_event_t sender_event;
 
+
+
 //extern variable --------------------------------------
 //extern  volatile uint8_t ADC_Flag;
 /*---------------------------------------------------------------------------*/
@@ -74,18 +76,23 @@ receiver(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-  printf("Data received on port %d from port %d with length %d\n",
-         receiver_port, sender_port, datalen);
-
-  uint8_t buf[2];
-  buf[0]=51;
-  buf[1]=1; //ack to host  
+ 
+  //uip_ipaddr_t *addr;
+  static char buf[2];
   
+ // addr = servreg_hack_lookup(SERVICE_ID); 
   
+  printf("Data received %d,%d \n",data[0],data[1]);  
   if(data[0]==51 && data[1]==0)
   {
-     printf("send data \r\n"); 
-     simple_udp_sendto(&unicast_connection, buf, 2,sender_addr);
+        buf[0]=51;
+        buf[1]=1; //ack to host 
+           
+       // if(addr!=NULL)
+       // {    
+             simple_udp_sendto(&unicast_connection, buf,strlen(buf),sender_addr);
+             printf("alarm disabled \n\r");
+       //} 
   }
   
   
@@ -142,6 +149,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
     addr = servreg_hack_lookup(SERVICE_ID);
     
     if(addr != NULL) {
+            
       BSP_LED_Toggle(LED_GREEN);
       buf[0]=0x01; // report type: 0,periodic 1,alarm
       buf[1]=0x04; // device ID:0x04 door detector
@@ -153,31 +161,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       printf("Door state: %d\n", buf[4]);
       
     }
-    
-    
- #if 0   
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-    etimer_reset(&periodic_timer);
-    etimer_set(&send_timer, SEND_TIME);
    
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&send_timer));
-    addr = servreg_hack_lookup(SERVICE_ID);
-    if(addr != NULL) {
-      static unsigned long int message_number;
-      char buf[20];
-
-      printf("Sending unicast to ");
-      uip_debug_ipaddr_print(addr);
-      printf("\n");
-      sprintf(buf, "Message %d", message_number);
-//Use next line instead to match the simpler CSV "sender,msg" code of the receiver
-//      sprintf(buf, "%lu", message_number);
-      message_number++;
-      simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
-    } else {
-      printf("Service %d not found\n", SERVICE_ID);
-    }
-     #endif 
   }
   
   PROCESS_END();

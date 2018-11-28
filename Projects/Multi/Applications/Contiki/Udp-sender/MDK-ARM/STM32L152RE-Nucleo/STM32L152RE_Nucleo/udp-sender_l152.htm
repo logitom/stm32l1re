@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM32L152RE_Nucleo\udp-sender_l152.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM32L152RE_Nucleo\udp-sender_l152.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue Nov 27 15:42:56 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Nov 28 14:24:52 2018
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -451,7 +451,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[22c]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_unicast_sender_process
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receiver
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_unicast_sender_process
 </UL>
 
 <P><STRONG><a name="[167]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
@@ -4736,11 +4737,12 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> unicast-sender.o(.data)
 </UL>
-<P><STRONG><a name="[5f]"></a>receiver</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, unicast-sender.o(i.receiver))
+<P><STRONG><a name="[5f]"></a>receiver</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, unicast-sender.o(i.receiver))
 <BR><BR>[Stack]<UL><LI>Max Depth = 308<LI>Call Chain = receiver &rArr; simple_udp_sendto &rArr; uip_udp_packet_sendto &rArr; uip_udp_packet_send &rArr; tcpip_ipv6_output &rArr; rpl_update_header &rArr; insert_hbh_header &rArr; update_hbh_header &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_sendto
 <LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> unicast-sender.o(i.process_thread_unicast_sender_process)
 </UL>
