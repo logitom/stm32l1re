@@ -77,7 +77,18 @@ receiver(struct simple_udp_connection *c,
   printf("Data received on port %d from port %d with length %d\n",
          receiver_port, sender_port, datalen);
 
-
+  uint8_t buf[2];
+  buf[0]=51;
+  buf[1]=1; //ack to host  
+  
+  
+  if(data[0]==51 && data[1]==0)
+  {
+     printf("send data \r\n"); 
+     simple_udp_sendto(&unicast_connection, buf, 2,sender_addr);
+  }
+  
+  
 }
 /*---------------------------------------------------------------------------*/
 static void
