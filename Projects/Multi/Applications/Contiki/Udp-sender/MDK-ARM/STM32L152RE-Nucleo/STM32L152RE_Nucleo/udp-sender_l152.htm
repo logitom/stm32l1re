@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM32L152RE_Nucleo\udp-sender_l152.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM32L152RE_Nucleo\udp-sender_l152.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Dec 12 15:21:30 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu Dec 13 12:23:20 2018
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -382,13 +382,13 @@ Global Symbols
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ds6_defrt_add
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ds6_nbr_add
 <LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ds6_prefix_add
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_ip_from_prefix
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dao_output
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dio_output
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dio_input
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dao_output_target_seq
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dao_input_storing
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spirit_radio_read
 </UL>
 
@@ -396,9 +396,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;frame802154_parse
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_join_instance
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_add_dag
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spirit_radio_init
 </UL>
 
@@ -772,7 +772,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 </UL>
 
 <P><STRONG><a name="[b8]"></a>BSP_LED_Off</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32l1xx_nucleo.o(i.BSP_LED_Off))
@@ -994,7 +994,7 @@ Global Symbols
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioGpioInit
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PB_Init
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTConfig
@@ -1037,7 +1037,7 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_WaitForSynchro
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 
 <P><STRONG><a name="[169]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l1xx_hal.o(i.HAL_IncTick))
@@ -1078,7 +1078,7 @@ Global Symbols
 <P><STRONG><a name="[c0]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32l1xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioGpioInterruptCmd
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PB_Init
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
@@ -1093,7 +1093,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioGpioInterruptCmd
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PB_Init
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
@@ -1127,11 +1127,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[16d]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32l1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq))
-<BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[16c]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32l1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq))
-<BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[da]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, stm32l1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
@@ -1364,15 +1364,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 </UL>
 
-<P><STRONG><a name="[ff]"></a>HAL_TIM_PWM_Start</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32l1xx_hal_tim.o(i.HAL_TIM_PWM_Start))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
-</UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_unicast_sender_process
-</UL>
-
-<P><STRONG><a name="[101]"></a>HAL_TIM_PWM_Stop</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, stm32l1xx_hal_tim.o(i.HAL_TIM_PWM_Stop))
+<P><STRONG><a name="[ff]"></a>HAL_TIM_PWM_Stop</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, stm32l1xx_hal_tim.o(i.HAL_TIM_PWM_Stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_TIM_PWM_Stop &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
@@ -1380,33 +1372,33 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receiver
 </UL>
 
-<P><STRONG><a name="[102]"></a>HAL_UART_Init</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, stm32l1xx_hal_uart.o(i.HAL_UART_Init))
+<P><STRONG><a name="[101]"></a>HAL_UART_Init</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, stm32l1xx_hal_uart.o(i.HAL_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTConfig
 </UL>
 
-<P><STRONG><a name="[103]"></a>HAL_UART_MspInit</STRONG> (Thumb, 122 bytes, Stack size 40 bytes, stm32l1xx_hal_msp.o(i.HAL_UART_MspInit))
+<P><STRONG><a name="[102]"></a>HAL_UART_MspInit</STRONG> (Thumb, 122 bytes, Stack size 40 bytes, stm32l1xx_hal_msp.o(i.HAL_UART_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
 <P><STRONG><a name="[16f]"></a>HAL_UART_Receive_IT</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, stm32l1xx_hal_uart.o(i.HAL_UART_Receive_IT))
 <BR><BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTConfig
 </UL>
 
-<P><STRONG><a name="[105]"></a>HAL_UART_Transmit</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, stm32l1xx_hal_uart.o(i.HAL_UART_Transmit))
+<P><STRONG><a name="[104]"></a>HAL_UART_Transmit</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, stm32l1xx_hal_uart.o(i.HAL_UART_Transmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_char
 </UL>
@@ -1418,6 +1410,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l152xe.o(RESET)
 </UL>
+<P><STRONG><a name="[106]"></a>LED_Init</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(i.LED_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = LED_Init &rArr; BSP_LED_Init &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
 <P><STRONG><a name="[107]"></a>MX_ADC_Init</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, cube_hal_l1.o(i.MX_ADC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_ADC_Init &rArr; HAL_ADC_Init &rArr; HAL_ADC_MspInit &rArr; HAL_GPIO_Init
 </UL>
@@ -2273,7 +2273,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2495,8 +2495,8 @@ Global Symbols
 <P><STRONG><a name="[1a6]"></a>etimer_reset</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, etimer.o(i.etimer_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = etimer_reset &rArr; add_timer &rArr; update_time
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_reset
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_timer
+<BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_timer
+<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_unicast_sender_process
 <LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_thread_servreg_hack_process
@@ -2839,7 +2839,7 @@ Global Symbols
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_one_packet
 </UL>
 
-<P><STRONG><a name="[58]"></a>main</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[58]"></a>main</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = main &rArr; RTC_Config &rArr; HAL_RTC_Init &rArr; HAL_RTC_MspInit &rArr; HAL_RCC_OscConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
@@ -2847,7 +2847,6 @@ Global Symbols
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DBGMCU_EnableDBGStopMode
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioShieldLedInit
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PB_Init
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_run
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTConfig
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
@@ -2858,6 +2857,7 @@ Global Symbols
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC_Init
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 <LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -3586,8 +3586,7 @@ Global Symbols
 <P><STRONG><a name="[269]"></a>rpl_join_instance</STRONG> (Thumb, 284 bytes, Stack size 32 bytes, rpl-dag.o(i.rpl_join_instance))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = rpl_join_instance &rArr; rpl_add_parent &rArr; nbr_table_add_lladdr &rArr; nbr_table_allocate &rArr; rpl_nbr_policy_find_removable &rArr; find_removable_dao &rArr; update_nbr &rArr; uip_ds6_route_is_nexthop &rArr; uip_ds6_nbr_lladdr_from_ipaddr &rArr; uip_ds6_nbr_lookup &rArr; nbr_table_head &rArr; nbr_table_next &rArr; nbr_get_bit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
-<LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_rank_via_parent
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_rank_via_parent
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_find_of
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_alloc_dag
 <LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_add_parent
@@ -3595,6 +3594,7 @@ Global Symbols
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_prefix
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_schedule_dao
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_reset_dio_timer
+<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_process_dio
@@ -3660,10 +3660,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;link_stats_is_fresh
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_get_parent_link_stats
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
-<LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_parent_is_reachable
+<BR>[Called By]<UL><LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_parent_is_reachable
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;best_parent
 <LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_probing_target
+<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
 </UL>
 
 <P><STRONG><a name="[271]"></a>rpl_parent_is_reachable</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, rpl-dag.o(i.rpl_parent_is_reachable))
@@ -3678,7 +3678,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 292<LI>Call Chain = rpl_process_dio &rArr; rpl_add_dag &rArr; rpl_process_parent_event &rArr; rpl_local_repair &rArr; rpl_nullify_parent &rArr; dao_output &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ds6_defrt_add
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_process_parent_event
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_move_parent
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_join_instance
@@ -3692,6 +3691,7 @@ Global Symbols
 <LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_nbr_from_dio
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_schedule_dao
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_reset_dio_timer
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dio_input
@@ -3735,12 +3735,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1ee]"></a>rpl_rank_via_parent</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, rpl-dag.o(i.rpl_rank_via_parent))
-<BR><BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
+<BR><BR>[Called By]<UL><LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_join_instance
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_add_dag
 <LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;global_repair
 <LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_probing_target
+<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
 </UL>
 
 <P><STRONG><a name="[1ff]"></a>rpl_recalculate_ranks</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, rpl-dag.o(i.rpl_recalculate_ranks))
@@ -3844,9 +3844,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctimer_set
 <LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_probing_delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
-<LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_alloc_instance
+<BR>[Called By]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_alloc_instance
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_probing_timer
+<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
 </UL>
 
 <P><STRONG><a name="[27d]"></a>rpl_schedule_unicast_dio_immediately</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, rpl-timers.o(i.rpl_schedule_unicast_dio_immediately))
@@ -3860,9 +3860,7 @@ Global Symbols
 <P><STRONG><a name="[277]"></a>rpl_select_dag</STRONG> (Thumb, 320 bytes, Stack size 32 bytes, rpl-dag.o(i.rpl_select_dag))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = rpl_select_dag &rArr; dao_output &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
-<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
-<LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_rank_via_parent
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_rank_via_parent
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_get_parent_ipaddr
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_preferred_parent
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_prefix
@@ -3871,6 +3869,8 @@ Global Symbols
 <LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_remove_routes
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_schedule_dao
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_reset_dio_timer
+<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
+<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_process_parent_event
 </UL>
@@ -4177,7 +4177,7 @@ Global Symbols
 <P><STRONG><a name="[1e2]"></a>uart_send_char</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, console.o(i.uart_send_char))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = uart_send_char &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
@@ -4269,8 +4269,8 @@ Global Symbols
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stimer_set
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_process_dio
+<BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_process_dio
+<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
 </UL>
 
 <P><STRONG><a name="[292]"></a>uip_ds6_defrt_choose</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, uip-ds6-route.o(i.uip_ds6_defrt_choose))
@@ -4314,9 +4314,9 @@ Global Symbols
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;call_route_callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ds6_defrt_periodic
-<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
 <LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_nullify_parent
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_move_parent
+<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_default_route
 </UL>
 
 <P><STRONG><a name="[1f4]"></a>uip_ds6_get_link_local</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, uip-ds6.o(i.uip_ds6_get_link_local))
@@ -4870,8 +4870,7 @@ Local Symbols
 <P><STRONG><a name="[100]"></a>TIM_CCxChannelCmd</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32l1xx_hal_tim.o(i.TIM_CCxChannelCmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_CCxChannelCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
 </UL>
 
 <P><STRONG><a name="[f0]"></a>TIM_ETR_SetConfig</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32l1xx_hal_tim.o(i.TIM_ETR_SetConfig))
@@ -4924,31 +4923,30 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
-<P><STRONG><a name="[104]"></a>UART_SetConfig</STRONG> (Thumb, 666 bytes, Stack size 24 bytes, stm32l1xx_hal_uart.o(i.UART_SetConfig))
+<P><STRONG><a name="[103]"></a>UART_SetConfig</STRONG> (Thumb, 666 bytes, Stack size 24 bytes, stm32l1xx_hal_uart.o(i.UART_SetConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
 
-<P><STRONG><a name="[106]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, stm32l1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout))
+<P><STRONG><a name="[105]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, stm32l1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[0]"></a>process_thread_unicast_sender_process</STRONG> (Thumb, 206 bytes, Stack size 32 bytes, unicast-sender.o(i.process_thread_unicast_sender_process))
+<P><STRONG><a name="[0]"></a>process_thread_unicast_sender_process</STRONG> (Thumb, 198 bytes, Stack size 32 bytes, unicast-sender.o(i.process_thread_unicast_sender_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = process_thread_unicast_sender_process &rArr; simple_udp_sendto &rArr; uip_udp_packet_sendto &rArr; uip_udp_packet_send &rArr; tcpip_ipv6_output &rArr; rpl_update_header &rArr; insert_hbh_header &rArr; update_hbh_header &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Toggle
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_On
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_sendto
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_register
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servreg_hack_lookup
@@ -4967,7 +4965,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 308<LI>Call Chain = receiver &rArr; simple_udp_sendto &rArr; uip_udp_packet_sendto &rArr; uip_udp_packet_send &rArr; tcpip_ipv6_output &rArr; rpl_update_header &rArr; insert_hbh_header &rArr; update_hbh_header &rArr; dao_output_target &rArr; dao_output_target_seq &rArr; uip_icmp6_send &rArr;  tcpip_ipv6_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Off
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_udp_sendto
 <LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -5718,10 +5716,10 @@ Local Symbols
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_ip_from_prefix
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
+<BR>[Called By]<UL><LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_join_instance
 <LI><a href="#[25e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_free_dag
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_set_prefix
 </UL>
 
 <P><STRONG><a name="[1d9]"></a>find_parent_any_dag_any_instance</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, rpl-dag.o(i.find_parent_any_dag_any_instance))
@@ -5784,12 +5782,12 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nbr_table_unlock
 <LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nbr_table_lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
+<BR>[Called By]<UL><LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_dag
 <LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_nullify_parent
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_move_parent
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_join_instance
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_add_dag
+<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rpl_select_parent
 </UL>
 
 <P><STRONG><a name="[18f]"></a>set_ip_from_prefix</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, rpl-dag.o(i.set_ip_from_prefix))

@@ -169,7 +169,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       {
           simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
           //buzzer on
-          HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
+          //HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
           BSP_LED_On(LED3_ALARM);
       }
       printf("ADC state: %d\n", buf[4]);

@@ -59,7 +59,7 @@
 
 void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
-
+void LED_Init(void);
 /* Private variable prototypes -----------------------------------------------*/
 TIM_HandleTypeDef htim3;
 ADC_HandleTypeDef hadc;
@@ -92,12 +92,13 @@ int main()
    //HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
    /* USER CODE END 2 */  
   
-  
+    // LED Init
+    LED_Init();
     /* Initialize LEDs */
-    BSP_LED_Init(LED2);
+    //BSP_LED_Init(LED2);
     
     /* Alarm  LED */ 
-    BSP_LED_Init(LED3_ALARM);
+    //BSP_LED_Init(LED3_ALARM);
 
     RadioShieldLedInit(RADIO_SHIELD_LED);
 
@@ -163,7 +164,12 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
   }    
 }  
 /* USER CODE END 4 */
-
+void LED_Init(void)
+{
+  int i;
+  for(i=LED2;i<=LED3_ALARM;i++)  
+  BSP_LED_Init(i); 
+}
 
 /**
   * @}
