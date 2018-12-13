@@ -68,6 +68,7 @@ process_event_t sender_event;
 volatile uint8_t ADC_data;
 /* ADC sensor value---------------------------------------------------------*/
 
+extern TIM_HandleTypeDef htim3;
 extern ADC_HandleTypeDef hadc;
 extern uint32_t adcValue;
 /*---------------------------------------------------------------------------*/
@@ -95,7 +96,10 @@ receiver(struct simple_udp_connection *c,
   
   if(data[0]==51 && data[1]==0)
   {
-     printf("send data \r\n"); 
+     printf("send data \r\n");
+     //buzzer off 
+     BSP_LED_Off(LED3_ALARM);
+     HAL_TIM_PWM_Stop(&htim3,TIM_CHANNEL_4);    
      simple_udp_sendto(&unicast_connection, buf, 2,sender_addr);
   }  
   
@@ -162,7 +166,12 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[4]=(uint8_t)ADC_data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
       if(buf[4]>0)
-      {simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);}
+      {
+          simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+          //buzzer on
+          HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
+          BSP_LED_On(LED3_ALARM);
+      }
       printf("ADC state: %d\n", buf[4]);
       
     }

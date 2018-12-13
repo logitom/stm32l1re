@@ -61,11 +61,13 @@ void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
 
 /* Private variable prototypes -----------------------------------------------*/
+TIM_HandleTypeDef htim3;
 ADC_HandleTypeDef hadc;
 DMA_HandleTypeDef hdma_adc;
 uint32_t adcValue;
 
 /* extern variable prototypes -----------------------------------------------*/
+extern TIM_OC_InitTypeDef sConfigOC;
 extern const struct sensors_sensor button_sensor;
 extern volatile uint8_t ADC_data;
 
@@ -85,7 +87,7 @@ int main()
     MX_GPIO_Init();
     MX_DMA_Init();
     MX_ADC_Init();
- 
+    MX_TIM3_Init();
    /* USER CODE BEGIN 2 */
    //HAL_ADC_Start_DMA(&hadc, (uint32_t*)&adcValue, 1);
    /* USER CODE END 2 */  
@@ -93,6 +95,9 @@ int main()
   
     /* Initialize LEDs */
     BSP_LED_Init(LED2);
+    
+    /* Alarm  LED */ 
+    BSP_LED_Init(LED3_ALARM);
 
     RadioShieldLedInit(RADIO_SHIELD_LED);
 
@@ -122,7 +127,16 @@ int main()
 
 
     Stack_6LoWPAN_Init();
+    
+     /* USER CODE END 2 */
+  
+ 
+ 
+    //HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
+    //HAL_Delay(100);
+    //HAL_TIM_PWM_Stop(&htim3,TIM_CHANNEL_4);
 
+    
     while(1) {
       int r = 0;
       do {
@@ -138,7 +152,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
   //volatile int i;
   //HAL_ADC_Start_DMA(hadc, (uint32_t*)&adcValue, 1);   
-  if(adcValue<=0x800)
+  //printf("adc Value:%d\r\n",adcValue);
+  if(adcValue<=0x640)
   {
       ADC_data=0;
   }

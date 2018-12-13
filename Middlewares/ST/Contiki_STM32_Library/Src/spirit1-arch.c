@@ -40,7 +40,7 @@
  * @ingroup STM32_Contiki_Library
  * @{
  */
-
+ 
 #ifdef USE_STM32L1XX_NUCLEO
 #include "stm32l1xx.h"
 #endif

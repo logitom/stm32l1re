@@ -1,5 +1,4 @@
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\Src\cube_hal_l1.c
-.\stm32l152re_nucleo\cube_hal_l1.o: ..\..\Inc\cube_hal.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\Inc\stm32l1xx_hal_conf.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_rcc.h
@@ -52,6 +51,7 @@
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_irda.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_smartcard.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Drivers\STM32L1xx_HAL_Driver\Inc\stm32l1xx_hal_wwdg.h
+.\stm32l152re_nucleo\cube_hal_l1.o: ..\..\Inc\cube_hal.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\Inc\stm32l1xx_it.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki.h
 .\stm32l152re_nucleo\cube_hal_l1.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Contiki\core\contiki-version.h
