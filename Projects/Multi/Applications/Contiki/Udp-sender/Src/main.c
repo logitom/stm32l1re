@@ -59,8 +59,10 @@
 
 void USARTConfig(void);
 void Stack_6LoWPAN_Init(void);
+void LED_Init(void);
 
 /* Private variable prototypes -----------------------------------------------*/
+TIM_HandleTypeDef htim3; 
 ADC_HandleTypeDef hadc;
 DMA_HandleTypeDef hdma_adc;
 uint32_t adcValue;
@@ -83,12 +85,12 @@ int main()
     MX_GPIO_Init();
    // MX_DMA_Init();
    // MX_ADC_Init();
- 
+    MX_TIM3_Init();
+    LED_Init();
   
-  
-  
+      
     /* Initialize LEDs */
-    BSP_LED_Init(LED2);
+   // BSP_LED_Init(LED2);
 
     RadioShieldLedInit(RADIO_SHIELD_LED);
 
@@ -134,6 +136,14 @@ int main()
 
 
 /* USER CODE END 4 */
+
+  /* USER CODE END 4 */
+void LED_Init(void)
+{
+  int i;
+  for(i=LED2;i<=LED3_ALARM;i++)  
+  BSP_LED_Init(i); 
+}
 
 
 /**

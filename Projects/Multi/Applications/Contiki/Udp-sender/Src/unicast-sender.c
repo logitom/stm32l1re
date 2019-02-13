@@ -59,7 +59,7 @@
 static struct simple_udp_connection unicast_connection;
 process_event_t sender_event;
 
-
+extern TIM_HandleTypeDef htim3; 
 
 //extern variable --------------------------------------
 //extern  volatile uint8_t ADC_Flag;
@@ -91,6 +91,8 @@ receiver(struct simple_udp_connection *c,
        // if(addr!=NULL)
        // {    
              simple_udp_sendto(&unicast_connection, buf,strlen(buf),sender_addr);
+             BSP_LED_Off(LED3_ALARM);
+             HAL_TIM_PWM_Stop(&htim3,TIM_CHANNEL_4); 
              printf("alarm disabled \n\r");
        //} 
   }
@@ -125,6 +127,7 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   static struct etimer periodic_timer;
   static struct etimer send_timer;
   uip_ipaddr_t *addr;
+  int reg_err;
   char buf[5];
   char msg[20];
  
@@ -135,10 +138,13 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
   servreg_hack_init();
 
   set_global_address();
-
-  simple_udp_register(&unicast_connection, UDP_PORT,
+  
+  do{
+      reg_err=simple_udp_register(&unicast_connection, UDP_PORT,
                       NULL, UDP_PORT, receiver);
-
+      HAL_Delay(2000);
+      printf("reg err:%d\r\n",reg_err);
+  }while(reg_err==0);    
  // etimer_set(&periodic_timer, SEND_INTERVAL);
   while(1) {
     
@@ -147,7 +153,10 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
    // PROCESS_PAUSE();
     //HAL_Delay(1000);
     addr = servreg_hack_lookup(SERVICE_ID);
-    
+    if(addr==NULL)
+    {
+         printf("ser look up addr is NULL!!\r\n");
+    }      
     if(addr != NULL) {
             
       BSP_LED_Toggle(LED_GREEN);
@@ -157,7 +166,13 @@ PROCESS_THREAD(unicast_sender_process, ev, data)
       buf[3]=0x40; // battery
       buf[4]=(char)data; 
       //simple_udp_sendto(&unicast_connection, buf, strlen(buf) + 1, addr);
-      simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+      if(data==1)
+      {
+        simple_udp_sendto(&unicast_connection, buf, strlen(buf),addr);
+        BSP_LED_On(LED3_ALARM);
+        HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4); 
+      }
+      
       printf("Door state: %d\n", buf[4]);
       
     }

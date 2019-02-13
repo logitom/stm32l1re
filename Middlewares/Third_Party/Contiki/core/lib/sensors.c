@@ -127,7 +127,7 @@ PROCESS_THREAD(sensors_process, ev, data)
       for(i = 0; i < num_sensors; ++i) {
    if(sensors_flags[i] & FLAG_CHANGED) {
           
-	 HAL_Delay(1000);
+	// HAL_Delay(1000);
 #if 1     
      //read sensor pin
      if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)==GPIO_PIN_SET)
@@ -136,7 +136,7 @@ PROCESS_THREAD(sensors_process, ev, data)
      }
      else
      {
-         sensor_pin=99; //door close
+         sensor_pin=0; //door close
      }       
 #endif     
      
